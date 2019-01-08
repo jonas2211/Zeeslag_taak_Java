@@ -22,7 +22,9 @@ public class BordView extends Region {
     
     
     void update(){  
-        this.rechthoek = new Rectangle (300,300,Color.BLUE);
+        this.rechthoek = new Rectangle (300,300,Color.AQUAMARINE);
+        //twijfel tusse aquamarine en paleturquoise
+        this.getChildren().addAll(rechthoek);
         for (int i = 0; i < 11; i++){ //verticaal
             Line lijn = new Line();
             lijn.setFill(Color.BLACK);
