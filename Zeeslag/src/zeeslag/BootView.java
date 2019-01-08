@@ -12,5 +12,14 @@ import javafx.scene.image.ImageView;
  * @author jonas
  */
 public class BootView extends Region {
+    private Boot boot;
+    
+    public BootView(){
+        this.update();
+    }
+    
+    public void update(){
+        
+    }
     
 }

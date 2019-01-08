@@ -23,14 +23,29 @@ public class BordView extends Region {
     
     void update(){  
         this.rechthoek = new Rectangle (300,300,Color.BLUE);
-        for (int i = 0; i < 12; i++){ //verticaal
+        for (int i = 0; i < 11; i++){ //verticaal
             Line lijn = new Line();
-            lijn.setStartX(50.0*i);
+            lijn.setFill(Color.BLACK);
+            lijn.setStartX(30.0*i);
             lijn.setStartY(0.0);
-            lijn.setEndX(50.0*i);
+            lijn.setEndX(30.0*i);
             lijn.setEndY(300);
-            this.getChildren();
-        } 
+            this.getChildren().addAll(lijn);
+        }
+        
+        for (int j = 0; j < 11; j++){ //horizontaal
+            Line lijn = new Line();
+            lijn.setFill(Color.BLACK);
+            lijn.setStartX(0.0);
+            lijn.setStartY(30.0*j);
+            lijn.setEndX(300);
+            lijn.setEndY(30.0*j);
+            this.getChildren().addAll(lijn);
+        }
+        
+        
+            
+        
     }
 
 }
