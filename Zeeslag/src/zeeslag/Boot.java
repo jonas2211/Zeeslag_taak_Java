@@ -50,6 +50,12 @@ public class Boot {
         return levens;
     }
 
+    public Orientatie getOrientatie() {
+        return orientatie;
+    }
+    
+    
+
     public boolean isGezonken() {
         return gezonken;
     }

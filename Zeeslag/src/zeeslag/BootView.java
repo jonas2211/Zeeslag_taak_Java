@@ -24,17 +24,22 @@ public class BootView extends Region {
     }
 
     public BootView(Boot boot) {
-        this.boot = boot;
-        Rectangle achtergrond = new Rectangle(30,30);
-        achtergrond.setFill(Color.GRAY);
-        if (boot.HORIZONTAAL()) {
-            
-            
+        this.boot=boot;
+        
+        
+        if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
+            Rectangle achtergrond = new Rectangle(30*boot.getSize(),30);
+            achtergrond.setFill(Color.GRAY);
+            getChildren().addAll(achtergrond);
         }
         else
         {
-            
-    }
+            Rectangle achtergrond = new Rectangle(30,30*boot.getSize());
+            achtergrond.setFill(Color.GRAY);
+            getChildren().addAll(achtergrond);
+        }
+        }
+        
     
     
     public void update(){
