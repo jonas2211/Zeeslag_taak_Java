@@ -22,10 +22,10 @@ public class ZeeslagController {
     @FXML
     void initialize() {
         SpelerBordView spelerBordView = new SpelerBordView();
-        TegenstanderBordView tegenstanderBordView = new TegenstanderBordView();
+        TegenstanderBordView TegenstanderBordView = new TegenstanderBordView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         spelerPane.getChildren().add(spelerBordView);
-        tegenstanderPane.getChildren().add(tegenstanderBordView);
+        tegenstanderPane.getChildren().add(TegenstanderBordView);
     }
 }

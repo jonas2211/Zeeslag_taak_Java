@@ -19,21 +19,8 @@ public class SpelerBordView extends Region {
     public SpelerBordView() {
         
         this.update();
-        //this.spelerBordView();
-        //this.tegenstanderBordView();
-    }
-    
-    /*
-    void spelerBordView(){
-        //this.update();
-        this.update2();
-    }
 
-    void tegenstanderBordView(){
-         //this.update();
-        
     }
-*/
     
     
     void update(){  
