@@ -5,12 +5,14 @@
  */
 package zeeslag;
 import java.util.ArrayList;
+import javafx.scene.transform.Rotate;
 /**
  *
  * @author Bavo, Jonas, Rens
  */
 public class Bord {
     private ArrayList<Boot> boten;
+    private Boot boot;
     
     public Bord(){
     boten = new ArrayList<>();
@@ -51,7 +53,11 @@ public class Bord {
                 return b;
             }
         }
-    
+    public void roteer(){
+        if(boot.getOrientatie() == Orientatie.HORIZONTAAL){
+            
+        }
+    }
 
    
     
