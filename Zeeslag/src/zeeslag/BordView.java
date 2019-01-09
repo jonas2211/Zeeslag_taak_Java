@@ -17,12 +17,22 @@ public class BordView extends Region {
     private Rectangle rechthoek;
 
     public BordView() {
-        this.update();
+        this.spelerBordView();
+        this.tegenstanderBordView();
     }
     
+    void spelerBordView(){
+        //this.update();
+        this.update2();
+    }
+
+    void tegenstanderBordView(){
+         //this.update();
+        
+    } 
     
     void update(){  
-        this.rechthoek = new Rectangle (300,300,Color.AQUAMARINE);
+        this.rechthoek = new Rectangle (300,300,Color.ROYALBLUE);
         //twijfel tusse aquamarine en paleturquoise
         this.getChildren().addAll(rechthoek);
         for (int i = 0; i < 11; i++){ //verticaal
@@ -48,6 +58,10 @@ public class BordView extends Region {
         
             
         
+    }
+    void update2(){  
+        this.rechthoek = new Rectangle (300,300,Color.RED);
+        this.getChildren().addAll(rechthoek);
     }
 
 }
