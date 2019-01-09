@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
 /**
  *
  * @author Bavo, Jonas, Rens
@@ -39,7 +40,10 @@ public class BootView extends Region {
             achtergrond.setFill(Color.GRAY);
             getChildren().addAll(achtergrond);
         }
-        }
+     
+    
+    
+    }
         
     
 
