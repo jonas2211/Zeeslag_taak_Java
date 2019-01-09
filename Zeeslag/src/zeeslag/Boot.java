@@ -17,6 +17,8 @@ public class Boot {
     private int x,y;
     //private String Boot2,Boot3,Boot4,Boot5;
     private Orientatie orientatie;
+    
+    private int rotatieHoek;
 
    
     public Boot(String naam, int size, int x, int y, Orientatie o) {
@@ -27,6 +29,7 @@ public class Boot {
         this.x = x;
         this.y = y;
         this.orientatie = o;
+        rotatieHoek = 0;
     }
 
     public int getX() {
@@ -60,6 +63,12 @@ public class Boot {
         return gezonken;
     }
 
+    public int getRotatieHoek() {
+        return rotatieHoek;
+    }
+    
+    
+
     /*public Positie getPositie() {
         return positie;
     }*/
@@ -84,6 +93,17 @@ public class Boot {
             levens --;
     }
     
-    //test
+    public void roteer(boolean roteerRechts){
+        int rotatieHoek = 0;
+        if(roteerRechts && rotatieHoek ==0){
+            rotatieHoek = 90;
+        }         
+        else 
+        {if(!roteerRechts && rotatieHoek==90){
+            rotatieHoek = - 90;
+        }}
+    }
+            
+    
     
 }

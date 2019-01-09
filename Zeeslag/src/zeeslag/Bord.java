@@ -53,12 +53,10 @@ public class Bord {
                 return b;
             }
         }
-    public void roteer(){
-        if(boot.getOrientatie() == Orientatie.HORIZONTAAL){
-            
-        }
-    }
 
+    
+ 
+    
    
     
 }
