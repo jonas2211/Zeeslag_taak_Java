@@ -21,8 +21,8 @@ public class ZeeslagController {
 
     @FXML
     void initialize() {
-        BordView spelerBordView = new BordView();
-        BordView tegenstanderBordView = new BordView();
+        SpelerBordView spelerBordView = new SpelerBordView();
+        TegenstanderBordView tegenstanderBordView = new TegenstanderBordView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         spelerPane.getChildren().add(spelerBordView);

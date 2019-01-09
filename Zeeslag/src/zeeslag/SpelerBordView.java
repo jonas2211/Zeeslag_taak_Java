@@ -13,14 +13,17 @@ import javafx.scene.shape.*;
  *
  * @author jonas
  */
-public class BordView extends Region {
+public class SpelerBordView extends Region {
     private Rectangle rechthoek;
 
-    public BordView() {
-        this.spelerBordView();
-        this.tegenstanderBordView();
+    public SpelerBordView() {
+        
+        this.update();
+        //this.spelerBordView();
+        //this.tegenstanderBordView();
     }
     
+    /*
     void spelerBordView(){
         //this.update();
         this.update2();
@@ -29,7 +32,9 @@ public class BordView extends Region {
     void tegenstanderBordView(){
          //this.update();
         
-    } 
+    }
+*/
+    
     
     void update(){  
         this.rechthoek = new Rectangle (300,300,Color.ROYALBLUE);
