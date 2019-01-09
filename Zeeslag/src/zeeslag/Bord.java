@@ -13,7 +13,7 @@ import javafx.scene.transform.Rotate;
 public class Bord {
     private ArrayList<Boot> boten;
     private Boot boot;
-    
+    /*
     public Bord(){
     boten = new ArrayList<>();
     boten.add(vliegdekschip); // lengte5
@@ -53,7 +53,7 @@ public class Bord {
                 return b;
             }
         }
-
+*/
     
  
     
