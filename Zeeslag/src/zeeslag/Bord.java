@@ -5,9 +5,6 @@
  */
 package zeeslag;
 import java.util.ArrayList;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 /**
  *
  * @author Bavo, Jonas, Rens
@@ -21,7 +18,7 @@ public class Bord {
     boten = new ArrayList<>();
     boten.add(vliegdekschip); // lengte5
     boten.add(slagschip); //lengte4
-    boten.add(onderzeeer); //lengte3
+    boten.add(duikboot); //lengte3
     boten.add(torpedobootjager); //lengte3
     boten.add(Patrouilleschip); //lengte2
     }
@@ -58,8 +55,5 @@ public class Bord {
             }
         }
 */
-    
-   
-    
 }
    
