@@ -23,15 +23,26 @@ public class BotenList {
     }
     
     
-    public void addBoten(Boot Boten)
+   /* public void addBoten(Boot Boten)
     {
         list.add(Boten);
     }
- 
+ */
     public static void Main(){
-        Boten vliegdekschip;
-        vliegdekschip = new Boot(5,5,false,x,y,HORIZONTAAL,0);
-    } 
+        Boot boot1;
+        boot1 = new Boot(5,"vliegdekschip",5,false,x,y,HORIZONTAAL,0);
+    
+        Boot boot2;
+        boot2 = new Boot(4,"slagschip",4,false,x,y,HORIZONTAAL,0);
+        
+        Boot boot3;
+        boot3 = new Boot(3,"duikboot",3,false,x,y,HORIZONTAAL,0);
+        
+        Boot boot4;
+        boot4 = new Boot(3,"torpedobootjager",3,false,x,y,HORIZONTAAL,0);
+        
+        Boot boot5;
+        bott5 = new Boot(2,"patrouilleschip",false,x,y,HORIZONTAAL,0);
 
 
 

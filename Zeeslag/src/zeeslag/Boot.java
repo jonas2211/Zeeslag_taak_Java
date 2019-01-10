@@ -28,10 +28,11 @@ public class Boot {
         this.orientatie = o;
         rotatieHoek = 0;
     }
+    // getters
     
-    
-    
-    
+    public String getNaam() {
+        return naam;
+    }
 
     public int getX() {
         return x;
@@ -39,10 +40,6 @@ public class Boot {
 
     public int getY() {
         return y;
-    }
-
-    public String getNaam() {
-        return naam;
     }
 
     public int getSize() {
@@ -61,18 +58,12 @@ public class Boot {
     public int getRotatieHoek(){
         return rotatieHoek;
     }
+    
+    //setters
 
     public boolean isGezonken() {
         return gezonken;
     }
-
-    
-    
-    
-
-    /*public Positie getPositie() {
-        return positie;
-    }*/
 
     public void setNaam(String naam) {
         this.naam = naam;
@@ -106,11 +97,5 @@ public class Boot {
             }
         }
     }
-    
-    //test
-    
-            
-    
-
-    
+     
 }
