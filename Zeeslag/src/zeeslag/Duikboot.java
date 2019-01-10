@@ -9,28 +9,23 @@ package zeeslag;
  *
  * @author Rens Remans
  */
-public class Duikboot extends Boot
-{
-    private String naam;
-    private int size;
-    private boolean gezonken;
-    private Orientatie orientatie;
-    private int rotatieHoek;
+public class Duikboot extends Boot{
 
     public Duikboot(String naam, int size, int x, int y, Orientatie o) {
         super(naam, size, x, y, o);
+        naam = "onderzeeer";
+        size = 3;
         gezonken = false;
-        this.naam = "onderzeeër";
-        this.size = 3;
-    }
-
-   
-    
-       
-
-    
+        levens = size;
+        x = x;
+        y = y;
+        orientatie o = Orientatie.HORIZONTAAL;
         
     }
     
+ 
     
-}
+    }
+    
+    
+
