@@ -5,12 +5,12 @@
  */
 package zeeslag;
 
+import java.awt.geom.Arc2D;
 import javafx.scene.layout.Region;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.scene.transform.Rotate;
 
 /**
  *
@@ -18,27 +18,34 @@ import javafx.scene.transform.Rotate;
  */
 public class BootView extends Region {
 
-    private Boot boot;
+    //private Boot boot;
     private Orientatie orientatie; // is gelijk aan boot.getOrientatie
     private int x, y; //nodig?
 
-    public BootView(Boot boot) {
-        this.boot = boot;
-        update();
+    public BootView() {
+        //this.boot = boot;
+        this.update();
     }
 
     public void update() {
-        if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
-            Rectangle bootBody = new Rectangle(30 * boot.getSize(), 30);
+        //if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
+            Polygon bootNeus = new Polygon(100,100,100);
+            bootNeus.setFill(Color.GRAY);
+            Rectangle bootBody = new Rectangle(30 * 5 +15, 30); //5 moet getSize worden
             bootBody.setFill(Color.GRAY);
-            getChildren().addAll(bootBody);
+            Circle bootStaart = new Circle(15, Color.GRAY);
+
+            getChildren().addAll(bootNeus, bootBody, bootStaart);
+            /*
         } else {
 
             Rectangle achtergrond = new Rectangle(30, 30 * boot.getSize());
             achtergrond.setFill(Color.GRAY);
             getChildren().addAll(achtergrond);
         }
+*/
     }
-
 }
+
+
 //test
