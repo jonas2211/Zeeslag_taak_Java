@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package zeeslag;
-//bavo was hier
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class Boot {
     private String naam;

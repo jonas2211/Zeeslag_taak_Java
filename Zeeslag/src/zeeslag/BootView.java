@@ -9,7 +9,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.image.ImageView;
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class BootView extends Region {
     private Boot boot;

@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class ZeeslagMain extends Application {
     

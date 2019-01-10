@@ -7,7 +7,7 @@ package zeeslag;
 
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public enum Orientatie {
     HORIZONTAAL, VERTICAAL

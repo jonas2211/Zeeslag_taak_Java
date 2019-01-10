@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*; 
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class SpelerBordView extends Region {
     private Rectangle rechthoek;

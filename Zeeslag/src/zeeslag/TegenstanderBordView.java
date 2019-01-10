@@ -14,7 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class TegenstanderBordView extends Region {
     private Rectangle rechthoek;
