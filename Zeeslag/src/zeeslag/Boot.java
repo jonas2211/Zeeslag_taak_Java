@@ -116,6 +116,10 @@ public class Boot {
         return gezonken;
     }
 
+    
+    
+    
+
     /*public Positie getPositie() {
         return positie;
     }*/
@@ -142,6 +146,7 @@ public class Boot {
     
     public void roteer(boolean roteerRechts){
         int rotatieHoek = 0;
+
         if(roteerRechts && rotatieHoek == 0){
             rotatieHoek = 90;
         }
@@ -153,5 +158,9 @@ public class Boot {
     }
     
     //test
+    
+            
+    
+
     
 }
