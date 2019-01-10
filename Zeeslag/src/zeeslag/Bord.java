@@ -5,13 +5,19 @@
  */
 package zeeslag;
 import java.util.ArrayList;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 /**
  *
  * @author Bavo, Jonas, Rens
  */
 public class Bord {
     private ArrayList<Boot> boten;
+    private int Raw;
+    private int Column;
     
+    /*
     public Bord(){
     boten = new ArrayList<>();
     boten.add(vliegdekschip); // lengte5
@@ -44,13 +50,20 @@ public class Bord {
     };
     //de coordinaten die hierboven nu staan moeten uiteindelijk vervangen
     //door de coordinaten die de speler kiest
+
     
     public Boot Raak(int row, int column) {
         for (Boot b : boten) {
-            if (b.getRow() == row && b.getColumn() == column) {
+            if (b.getRaw() == row && b.getColumn() == column) {
                 return b;
             }
         }
+*/
+
+
+    
+    
+
     
 
    

@@ -55,12 +55,12 @@ public class SpelerBordView extends Region {
         this.rechthoek = new Rectangle (300,300,Color.RED);
         this.getChildren().addAll(rechthoek);
     }
-        public int getColumn(int x){
-        return x/70;//70 veranderen door dikte vakje
+    public int getColumn(int x){
+        return x/30;// dikte vakje = 30
     }
 
     public int getRow(int y){
-        return y/70;//70 veranderen door dikte vakje
+        return y/30;// dikte vakje = 30
     
     }
 
