@@ -5,6 +5,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import static javafx.scene.paint.Color.RED;
+import javafx.scene.shape.Rectangle;
 
 public class ZeeslagController {
 
@@ -20,8 +22,6 @@ public class ZeeslagController {
     @FXML
     private AnchorPane tegenstanderPane;
     
-    private int Column;
-    private int Raw;
     private ZeeslagSpel model;
     private TegenstanderBordView view;
 
@@ -34,33 +34,38 @@ public class ZeeslagController {
         spelerPane.getChildren().add(spelerBordView);
         tegenstanderPane.getChildren().add(TegenstanderBordView);
     }
+    /*   
+    public void setModel(ZeeslagSpel model) {
+        this.model = model;
+        view = new TegenstanderBordView(model);
+        tegenstanderPane.getChildren().add(view);
+    }
+*/
     void handleMouseClick(MouseEvent e) {
         int x = (int) e.getX();
         int y = (int) e.getY();
-        }
+        // @lowie zegt: laat model weten dat er op vakje n geschoten is
+        // @lowie zegt: update view
+        
+        /*if (view.getVakjeOn.isGeraakt()){
+            Vakje newVakje = new Rectangle(Column,Raw,30,30);
+            newVakje.setFill(RED);
+            model.addVakje(newVakje);
+            view.update();
+        }*/
     
-    public int Column(int x){
-        return x/30;//70 veranderen door dikte vakje
+  
     }
-
-    public int Row(int y){
-        return y/30;//70 veranderen door dikte vakje
-    }
-    
-    Vakje newRechthoek = new Vakje(Column,Raw);
-    model.addRechthoek(newRechthoek);
-    view.update();
     
     void update(){
         view.update();
     }
-    public int getColumn() {
-        return Column;
+    
+    void updateCon(){
+        view.update();
     }
+    
+    
 
-    public int getRaw() {
-        return Raw;
-    }
-
-    }
+    
 }
