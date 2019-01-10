@@ -11,7 +11,7 @@ package zeeslag;
 public class Boot {
     private String naam;
     private int size;
-    private int levens;
+    int levens;
     private boolean gezonken;
     //private Positie positie;
     private int x,y;
