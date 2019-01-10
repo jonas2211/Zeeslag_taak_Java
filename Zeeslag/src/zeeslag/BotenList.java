@@ -31,7 +31,18 @@ public class BotenList {
     public static void Main(){
         Boten vliegdekschip;
         vliegdekschip = new Boot(5,5,false,x,y,HORIZONTAAL,0);
-    } 
+    
+        Boten slagschip;
+        slagschip = new Boot(4,4,false,x,y,HORIZONTAAL,0);
+        
+        Boten Duikboot;
+        Duikboot = new Boot(3,3,false,x,y,HORIZONTAAL,0);
+        
+        Boten torpedobootjager;
+        torpedobootjager = new Boot(5,5,false,x,y,HORIZONTAAL,0);
+        
+        Boten patrouilleschip;
+        patrouilleschip = new Boot(5,5,false,x,y,HORIZONTAAL,0);
 
 
 
