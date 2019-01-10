@@ -18,13 +18,13 @@ public class Duikboot extends Boot
     private int rotatieHoek;
 
     public Duikboot(String naam, int size, int x, int y, Orientatie o) {
-        super(naam, sizejhgkyjthj, x, y, o);
+        super(naam, size, x, y, o);
         gezonken = false;
         this.naam = "onderzeeër";
         this.size = 3;
     }
 
-   //test
+   
     
        
 
