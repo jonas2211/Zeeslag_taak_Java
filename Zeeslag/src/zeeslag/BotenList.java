@@ -23,23 +23,28 @@ public class BotenList {
     }
     
     
-    public void addBoten(Boot boten)
+    public void addBoten(Boot Boten)
     {
-        list.add(boten);
+        list.add(Boten);
     }
-   
-    
-
- public static void BotenArrayList(){
-        Arraylist<Boot> boten = new ArrayList;   
+ 
+    public static void Main(){
+        Boten vliegdekschip;
+        vliegdekschip = new Boot(5,5,false,x,y,HORIZONTAAL,0);
     } 
 
 
 
+/*
+private String naam;
+    private int size;
+    int levens;
+    private boolean gezonken;
+    private int x,y;
+    private Orientatie orientatie;
+    private int rotatieHoek;
 
-
-
-
+*/
 
 
 }
