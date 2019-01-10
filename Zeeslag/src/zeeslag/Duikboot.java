@@ -9,6 +9,14 @@ package zeeslag;
  *
  * @author Rens Remans
  */
-public class Duikboot {
+public class Duikboot extends Boot
+{
+    private int size;
+
+    public Duikboot(int size, String naam, int size, int x, int y, Orientatie o) {
+        super(naam, size, x, y, o);
+        this.size = 3;
+    }
+    
     
 }
