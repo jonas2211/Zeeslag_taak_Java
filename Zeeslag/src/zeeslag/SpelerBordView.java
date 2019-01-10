@@ -14,8 +14,6 @@ import javafx.scene.shape.*;
  * @author Bavo, Jonas, Rens
  */
 public class SpelerBordView extends Region {
-    private Rectangle rechthoek;
-
     public SpelerBordView() {
         
         this.update();
@@ -24,7 +22,7 @@ public class SpelerBordView extends Region {
     
     
     void update(){  
-        this.rechthoek = new Rectangle (300,300,Color.ROYALBLUE);
+        Rectangle rechthoek = new Rectangle (300,300,Color.rgb(55, 131, 186));
         //twijfel tusse aquamarine en paleturquoise
         this.getChildren().addAll(rechthoek);
         for (int i = 0; i < 11; i++){ //verticaal
@@ -51,8 +49,9 @@ public class SpelerBordView extends Region {
             
         
     }
+    /*
     void update2(){  
-        this.rechthoek = new Rectangle (300,300,Color.RED);
+        Rectangle rechthoek = new Rectangle (300,300,Color.RED);
         this.getChildren().addAll(rechthoek);
     }
     public int getColumn(int x){
@@ -63,5 +62,13 @@ public class SpelerBordView extends Region {
         return y/30;// dikte vakje = 30
     
     }
+*/
+    public int Column(int x){
+        return x/30;//70 veranderen door dikte vakje
+    }
 
+    public int Raw(int y){
+        return y/30;//70 veranderen door dikte vakje
+    }
+   
 }
