@@ -21,9 +21,10 @@ public class TegenstanderBordView extends Region {
 
     // lowie zegt: bordView moet een bord uit het model afbeelden, en meot dus een data member bordModel hebben.
     private Rectangle rechthoek;
+    private TegenstanderBordView bordModel;
 
     public TegenstanderBordView() { //in de constructor komt welk bord het moet afbeelden
-        //this.bordModel = model va het bord
+        this.bordModel = bordModel; //model van het bord
         this.update();
         /* this.update2();
         this.update3();*/
@@ -61,11 +62,41 @@ public class TegenstanderBordView extends Region {
     }
 
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        /*for (Mark m : bordModel.getHitmakrs()){
-        //teken kruis in juiste kleur hier
+        for (Mark hit : bordModel.getHitmarks()){
+            //nieuwe klasse Mark aanmaken
+            if(hit==bordModel.getHitmarks()){
+                Rectangle rechth= new Rectangle(x, y, 30, 30);
+                rechth.setFill(Color.RED);
+             //rechth omdat rechthoek al in gebruik was   
+                Line lijn= new Line(); 
+                lijn.setFill(Color.BLACK);
+                lijn.setStartX(x);
+                lijn.setStartY(y);
+                lijn.setEndX(x);
+                lijn.setEndY(y);
+            //eerste lijn voor kruis op rood vierkant    
+                Line lijn2= new Line();
+                lijn2.setFill(Color.BLACK);
+                lijn2.setStartX(x);
+                lijn2.setStartY(y);
+                lijn2.setEndX(x);
+                lijn2.setEndY(y);
+            //tweede lijn voor kruis op rood vierkant    
+            //x en y moet nog vervangen worden bij lijn en rechthoek    
+                this.getChildren().addAll(rechth, lijn, lijn2);
+                }
+            else
+            {
+                Rectangle rechth= new Rectangle(x, y, 30, 30);
+                rechth.setFill(Color.WHITE);
+                this.getChildren().addAll(rechth);
+                //x en y nog vervangen
+            }
+        }
+       /* //teken kruis in juiste kleur hier
         kruis.trans... //peer kruis op juiste plaats
-        this.getChildren().add(kruis);
-         */
+        this.getChildren().add(kruis);*/
+         
 //TODO
     }
 
