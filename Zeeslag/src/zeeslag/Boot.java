@@ -28,6 +28,58 @@ public class Boot {
         this.y = y;
         this.orientatie = o;
     }
+    void Vliegdekschip(){
+        this.naam = "vliegdekschip";
+        this.size = 5;
+        this.gezonken = false;
+        this.levens = size;
+        this.x = x;
+        this.y = y;
+        this.orientatie = Orientatie.HORIZONTAAL;
+    }
+    
+    void slagschip(){
+        this.naam = "slagschip";
+        this.size = 4;
+        this.gezonken = false;
+        this.levens = size;
+        this.x = x;
+        this.y = y;
+        this.orientatie = Orientatie.HORIZONTAAL;
+    }
+    
+    void onderzeeer(){
+        this.naam = "onderzeeer";
+        this.size = 3;
+        this.gezonken = false;
+        this.levens = size;
+        this.x = x;
+        this.y = y;
+        this.orientatie = Orientatie.HORIZONTAAL;
+    }
+    
+    void torpedobootjager(){
+        this.naam = "torpedobootjager";
+        this.size = 3;
+        this.gezonken = false;
+        this.levens = size;
+        this.x = x;
+        this.y = y;
+        this.orientatie = Orientatie.HORIZONTAAL;
+    }
+    
+    void Patrouilleschip(){
+        this.naam = "Patrouilleschip";
+        this.size = 2;
+        this.gezonken = false;
+        this.levens = size;
+        this.x = x;
+        this.y = y;
+        this.orientatie = Orientatie.HORIZONTAAL;
+    }
+    
+    
+    
 
     public int getX() {
         return x;
