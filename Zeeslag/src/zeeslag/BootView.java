@@ -19,16 +19,15 @@ import javafx.scene.transform.Rotate;
 public class BootView extends Region {
 
     private Boot boot;
-    private Orientatie orientatie;
-    private int x, y;
-
-    public BootView() {
-        this.update();
-    }
+    private Orientatie orientatie; // is gelijk aan boot.getOrientatie
+    private int x, y; //nodig?
 
     public BootView(Boot boot) {
         this.boot = boot;
+        update();
+    }
 
+    public void update() {
         if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
             Rectangle bootBody = new Rectangle(30 * boot.getSize(), 30);
             bootBody.setFill(Color.GRAY);
@@ -39,11 +38,6 @@ public class BootView extends Region {
             achtergrond.setFill(Color.GRAY);
             getChildren().addAll(achtergrond);
         }
-
-    }
-
-    public void update() {
-
     }
 
 }
