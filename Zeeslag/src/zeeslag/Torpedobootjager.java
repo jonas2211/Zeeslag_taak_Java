@@ -10,5 +10,16 @@ package zeeslag;
  * @author Rens Remans
  */
 public class Torpedobootjager {
-    
+    private String naam;
+    private int size;
+    private boolean gezonken;
+    private Orientatie orientatie;
+    private int rotatieHoek;
+
+    public Torpedobootjager(String naam, int size, int x, int y, Orientatie o) {
+        super(naam, size, x, y, o);
+        gezonken = false;
+        this.naam = "Torpedojager";
+        this.size = 3;
+}
 }
