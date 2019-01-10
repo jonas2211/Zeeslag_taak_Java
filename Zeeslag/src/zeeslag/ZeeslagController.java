@@ -7,6 +7,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import static javafx.scene.paint.Color.RED;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Button;
 
 public class ZeeslagController {
 
@@ -22,17 +23,35 @@ public class ZeeslagController {
     @FXML
     private AnchorPane tegenstanderPane;
     
+    @FXML
+    private AnchorPane botenPane;
+
+    @FXML
+    private Button btnStart;
+
+    @FXML
+    private Button btnDraaien;
+
+    
     private ZeeslagSpel model;
     private TegenstanderBordView view;
+    private SpelerBordView view2;
+    private BootView view3;
 
     @FXML
     void initialize() {
         SpelerBordView spelerBordView = new SpelerBordView();
         TegenstanderBordView TegenstanderBordView = new TegenstanderBordView();
+        BootView bootView = new BootView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
+        assert botenPane != null : "fx:id=\"botenPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
+        assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
+        assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
+
         spelerPane.getChildren().add(spelerBordView);
         tegenstanderPane.getChildren().add(TegenstanderBordView);
+        botenPane.getChildren().add(bootView);
     }
     /*   
     public void setModel(ZeeslagSpel model) {
@@ -59,12 +78,15 @@ public class ZeeslagController {
     
     void update(){
         view.update();
+        view2.update();
+        view3.update();
     }
     
+    /*
     void updateCon(){
         view.update();
     }
-    
+    */
     
 
     
