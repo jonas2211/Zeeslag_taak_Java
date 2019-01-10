@@ -11,4 +11,15 @@ package zeeslag;
  */
 public class Patrouilleboot {
     
+    private String naam;
+    private int size;
+    private boolean gezonken;
+    private Orientatie orientatie;
+    private int rotatieHoek;
+
+    public Patrouilleboot(String naam, int size, int x, int y, Orientatie o) {
+        super(naam, size, x, y, o);
+        gezonken = false;
+        this.naam = "Patrouilleboot";
+        this.size = 3;
 }
