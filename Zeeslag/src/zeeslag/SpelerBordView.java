@@ -19,7 +19,7 @@ public class SpelerBordView extends Region {
         this.update();
 
     }
-    
+    private BootView view;
     
     void update(){  
         Rectangle rechthoek = new Rectangle (300,300,Color.rgb(55, 131, 186));
