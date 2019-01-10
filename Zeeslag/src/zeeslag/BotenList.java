@@ -42,7 +42,7 @@ public class BotenList {
         boot4 = new Boot(3,"torpedobootjager",3,false,x,y,HORIZONTAAL,0);
         
         Boot boot5;
-        bott5 = new Boot(2,"patrouilleschip",false,x,y,HORIZONTAAL,0);
+        boot5 = new Boot(2,"patrouilleschip",false,x,y,HORIZONTAAL,0);
 
 
 
