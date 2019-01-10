@@ -9,7 +9,7 @@ package zeeslag;
  *
  * @author Rens Remans
  */
-public class Torpedobootjager {
+public class Torpedobootjager extends Boot{
     private String naam;
     private int size;
     private boolean gezonken;
@@ -20,6 +20,9 @@ public class Torpedobootjager {
         super(naam, size, x, y, o);
         gezonken = false;
         this.naam = "Torpedojager";
-        this.size = 3;
+        levens = size;
+        x = x;
+        y = y;
+        orientatie = Orientatie.HORIZONTAAL;
 }
 }

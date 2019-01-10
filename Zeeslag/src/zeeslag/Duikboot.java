@@ -10,7 +10,12 @@ package zeeslag;
  * @author Rens Remans
  */
 public class Duikboot extends Boot{
-
+    private String naam;
+    private int size;
+    private boolean gezonken;
+    private Orientatie orientatie;
+    private int rotatieHoek;
+    
     public Duikboot(String naam, int size, int x, int y, Orientatie o) {
         super(naam, size, x, y, o);
         naam = "onderzeeer";
@@ -19,7 +24,7 @@ public class Duikboot extends Boot{
         levens = size;
         x = x;
         y = y;
-        orientatie o = Orientatie.HORIZONTAAL;
+        orientatie = Orientatie.HORIZONTAAL;
         
     }
     

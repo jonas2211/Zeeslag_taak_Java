@@ -9,7 +9,7 @@ package zeeslag;
  *
  * @author Rens Remans
  */
-public class Vliegdekschip {
+public class Vliegdekschip extends Boot{
     private String naam;
     private int size;
     private boolean gezonken;
@@ -21,6 +21,9 @@ public class Vliegdekschip {
         super(naam,size, x, y, o);
         gezonken = false;
         this.naam = "Vliegdekschip";
-        this.size = 5;
+        levens = size;
+        x = x;
+        y = y;
+        orientatie = Orientatie.HORIZONTAAL;
     }
 }

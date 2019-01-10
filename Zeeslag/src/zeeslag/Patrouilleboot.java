@@ -9,7 +9,7 @@ package zeeslag;
  *
  * @author Rens Remans
  */
-public class Patrouilleboot {
+public class Patrouilleboot extends Boot{
     
     private String naam;
     private int size;
@@ -21,5 +21,9 @@ public class Patrouilleboot {
         super(naam, size, x, y, o);
         gezonken = false;
         this.naam = "Patrouilleboot";
-        this.size = 3;
+        levens = size;
+        x = x;
+        y = y;
+        orientatie = Orientatie.HORIZONTAAL;
+    }
 }
