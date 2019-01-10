@@ -47,9 +47,9 @@ public class ZeeslagController {
         return y/30;//70 veranderen door dikte vakje
     }
     
-    //Vakje newRechthoek = new Vakje(Column,Raw);
-    //model.addRechthoek(newRechthoek);
-    //view.update();
+    Vakje newRechthoek = new Vakje(Column,Raw);
+    model.addRechthoek(newRechthoek);
+    view.update();
     
     void update(){
         view.update();
