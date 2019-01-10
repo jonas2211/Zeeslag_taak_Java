@@ -14,8 +14,6 @@ import javafx.scene.shape.Rectangle;
  */
 public class Bord {
     private ArrayList<Boot> boten;
-    private int Raw;
-    private int Column;
     
     /*
     public Bord(){
@@ -59,9 +57,6 @@ public class Bord {
             }
         }
 */
-
-
-    
     
 
     

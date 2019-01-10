@@ -17,6 +17,7 @@ public class Boot {
     private int x,y;
     //private String Boot2,Boot3,Boot4,Boot5;
     private Orientatie orientatie;
+    private int rotatieHoek;
 
    
     public Boot(String naam, int size, int x, int y, Orientatie o) {
@@ -27,6 +28,7 @@ public class Boot {
         this.x = x;
         this.y = y;
         this.orientatie = o;
+        rotatieHoek = 0;
     }
     void Vliegdekschip(){
         this.naam = "vliegdekschip";
@@ -102,6 +104,14 @@ public class Boot {
         return levens;
     }
 
+    public Orientatie getOrientatie() {
+        return orientatie;
+    }
+    
+    public int getRotatieHoek(){
+        return rotatieHoek;
+    }
+
     public boolean isGezonken() {
         return gezonken;
     }
@@ -130,5 +140,18 @@ public class Boot {
             levens --;
     }
     
+    public void roteer(boolean roteerRechts){
+        int rotatieHoek = 0;
+        if(roteerRechts && rotatieHoek == 0){
+            rotatieHoek = 90;
+        }
+        else{
+            if(!roteerRechts && rotatieHoek == 90){
+                rotatieHoek = -90;
+            }
+        }
+    }
+    
+    //test
     
 }
