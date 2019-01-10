@@ -16,8 +16,8 @@ public class ZeeslagSpel {
     
     
     public ZeeslagSpel(){
-        this.boten = new ArrayList<>();
-        boten.add(new Boot());
+        //this.boten = new ArrayList<>();
+        //boten.add(new Boot());
     }
 
     
