@@ -22,7 +22,7 @@ public class BootView extends Region {
     public BootView(){
         this.update();
     }
-
+/*
     public BootView(Boot boot) {
         this.boot = boot;
         Rectangle achtergrond = new Rectangle(30,30);
@@ -35,7 +35,7 @@ public class BootView extends Region {
         {
             
     }
-    
+    */
     
     public void update(){
         
