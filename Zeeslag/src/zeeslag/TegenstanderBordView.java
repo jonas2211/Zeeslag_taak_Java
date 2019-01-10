@@ -63,8 +63,8 @@ public class TegenstanderBordView extends Region {
     void update3(){
         
         this.rechthoek = new Rectangle (30,30,Color.RED);
-        rechthoek.setTranslateX(ZeeslagController.Column);
-        rechthoek.setTranslateY(ZeeslagController.Raw);
+      //  rechthoek.setTranslateX(ZeeslagController.Column);
+      //  rechthoek.setTranslateY(ZeeslagController.Raw);
         getChildren().add(rechthoek);
         }
     

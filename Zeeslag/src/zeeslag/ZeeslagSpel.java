@@ -15,10 +15,10 @@ public class ZeeslagSpel {
     private ArrayList<Boot>boten;
     
     
-    public ZeeslagSpel(){
+  /*  public ZeeslagSpel(){
         this.boten = new ArrayList<>();
         boten.add(new Boot());
     }
-
+*/
     
 }
