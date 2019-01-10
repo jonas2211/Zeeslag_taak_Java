@@ -18,11 +18,12 @@ import javafx.scene.input.MouseEvent;
  */
 public class TegenstanderBordView extends Region {
     private Rectangle rechthoek;
+    
 
     public TegenstanderBordView() {
         this.update();
         this.update2();
-        //this.handleMouseClick(MouseEvent);
+        this.update3();
 
         
     } 
@@ -50,27 +51,26 @@ public class TegenstanderBordView extends Region {
             lijn.setEndY(30.0*j);
             this.getChildren().addAll(lijn);
         }
-        
-        
-            
-        
     }
+    
+    
     
     void update2(){
         this.rechthoek = new Rectangle (30,30,Color.RED);
         this.getChildren().addAll(rechthoek);
     }
-    /*
-    void handleMouseClick(MouseEvent mouseEvent) {
-        int x = (int) mouseEvent.getX();
-        int y = (int) mouseEvent.getY();
-        if (x == 2 && y == 2){
-            this.rechthoek = new Rectangle (30,30,Color.RED);
-            rechthoek.setTranslateX(x); //one tile on the board is 70x70, +10 because a piece is 50x50
-            rechthoek.setTranslateY(y);
-            getChildren().add(rechthoek);
+    
+    void update3(){
+        
+        this.rechthoek = new Rectangle (30,30,Color.RED);
+        rechthoek.setTranslateX(ZeeslagController.Column);
+        rechthoek.setTranslateY(ZeeslagController.Raw);
+        getChildren().add(rechthoek);
         }
+    
+        
+    
+    
+    
 
-    }
-*/
 }
