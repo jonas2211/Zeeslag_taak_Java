@@ -55,5 +55,17 @@ public class Bord {
             }
         }
 */
+    
+    //getters
+    public Boot getBootOn(int row, int column) {
+        for (Boot boot : boten) {
+            if (boot.getRow() == row && boot.getColumn() == column) {
+                return boot;
+            }
+            //boot op meegegeven rij en kolom
+        }
+        return null;
+            //geen boot op gegeven rij en kolom
+    }
 }
    
