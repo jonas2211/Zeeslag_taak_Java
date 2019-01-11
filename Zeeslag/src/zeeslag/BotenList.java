@@ -30,19 +30,19 @@ public class BotenList {
  */
     public static void Main(){
         Boot boot1;
-        boot1 = new Boot(5,"vliegdekschip",5,false,x,y,HORIZONTAAL,0);
+        boot1 = new Boot(5,"vliegdekschip",5,false,x,y,Orientatie.HORIZONTAAL,0);
     
         Boot boot2;
-        boot2 = new Boot(4,"slagschip",4,false,x,y,HORIZONTAAL,0);
+        boot2 = new Boot(4,"slagschip",4,false,x,y,Orientatie.HORIZONTAAL,0);
         
         Boot boot3;
-        boot3 = new Boot(3,"duikboot",3,false,x,y,HORIZONTAAL,0);
+        boot3 = new Boot(3,"duikboot",3,false,x,y,Orientatie.HORIZONTAAL,0);
         
         Boot boot4;
-        boot4 = new Boot(3,"torpedobootjager",3,false,x,y,HORIZONTAAL,0);
+        boot4 = new Boot(3,"torpedobootjager",3,false,x,y,Orientatie.HORIZONTAAL,0);
         
         Boot boot5;
-        boot5 = new Boot(2,"patrouilleschip",false,x,y,HORIZONTAAL,0);
+        boot5 = new Boot(2,"patrouilleschip",false,x,y,Orientatie.HORIZONTAAL,0);
 
 
 
