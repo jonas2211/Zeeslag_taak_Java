@@ -42,11 +42,7 @@ public class ZeeslagController {
     void initialize() {
         SpelerBordView spelerBordView = new SpelerBordView();
         TegenstanderBordView TegenstanderBordView = new TegenstanderBordView();
-<<<<<<< HEAD
         BootView bootView = new BootView();
-=======
-        
->>>>>>> 7d620a43590c1a73bd2d093cfb33735236797d50
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert botenPane != null : "fx:id=\"botenPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
