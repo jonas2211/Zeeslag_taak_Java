@@ -20,13 +20,13 @@ public class Mark {
         this.y = y;
     }
     //getters
-    public getHitmarks(){
+    /*public getHitmarks(){
     for(: Boot boot);{
         
     }
 //geen idee
     
-    }
+    }*/
     
   
     
