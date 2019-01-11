@@ -49,7 +49,7 @@ public class Bord {
     public Bord(){
         
         for (int i =0; i<bootBody.length; i++){
-            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL, Soort.BODY));
+            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL));
         }
         
         for (int i =0; i<bootNeus.length; i++){
@@ -96,11 +96,6 @@ public class Bord {
         return null;
             //geen boot op gegeven rij en kolom
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-*/
->>>>>>> da99afd680d36d3809ce4bf37555f0fe9986170b
     
     public Boot getGeselecteerdeBoot() {
         return geselecteerdeBoot;
