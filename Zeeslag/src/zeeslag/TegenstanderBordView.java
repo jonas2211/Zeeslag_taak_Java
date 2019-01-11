@@ -99,7 +99,7 @@ public class TegenstanderBordView extends Region {
          
 //TODO
     }
-
+    
     /*
     void update2(){
         this.rechthoek = new Rectangle (30,30,Color.RED);

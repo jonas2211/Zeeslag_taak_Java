@@ -96,6 +96,11 @@ public class Bord {
         return null;
             //geen boot op gegeven rij en kolom
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+*/
+>>>>>>> da99afd680d36d3809ce4bf37555f0fe9986170b
     
     public Boot getGeselecteerdeBoot() {
         return geselecteerdeBoot;
