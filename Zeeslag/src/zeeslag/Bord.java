@@ -72,7 +72,6 @@ public class Bord {
     }
 <<<<<<< HEAD
 */
-=======
     
     public Boot getGeselecteerdeBoot() {
         return geselecteerdeBoot;
@@ -92,10 +91,6 @@ public class Bord {
         }
         return onBoot;
     }
-    
-    
-    
->>>>>>> 97118f5c68e64243df6c972052a09bf9d673691d
 }
 
 
