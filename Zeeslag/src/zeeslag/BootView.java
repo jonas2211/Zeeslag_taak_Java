@@ -29,8 +29,8 @@ public class BootView extends Region {
 
     public void update() {
         //if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
-            Polygon bootNeus = new Polygon(100,100,100);
-            bootNeus.setFill(Color.GRAY);
+            Polygon bootNeus = new Polygon(1,2,1);
+            bootNeus.setFill(Color.RED);
             Rectangle bootBody = new Rectangle(30 * 5 +15, 30); //5 moet getSize worden
             bootBody.setFill(Color.GRAY);
             Circle bootStaart = new Circle(15, Color.GRAY);
