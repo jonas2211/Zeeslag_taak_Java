@@ -21,14 +21,34 @@ public class BootView extends Region {
     //private Boot boot;
     private Orientatie orientatie; // is gelijk aan boot.getOrientatie
     private int x, y; //nodig?
+    private Boot bootModel;
+    private Type type;
 
-    public BootView() {
-        //this.boot = boot;
+    public BootView(Boot bootModel) {
+        this.bootModel = bootModel;
         this.update();
     }
 
     public void update() {
-        //if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
+        if (bootModel.getType() == Type.DUIKBOOT){
+            //teken duikboot
+        }
+        else if (bootModel.getType() == Type.VLIEGDEKSCHIP){
+            //teken vliegdekschip
+        }
+        else if (bootModel.getType() == Type.TORPEDOBOOTJAGER){
+            //teken torpedobootjager
+        }
+        else if (bootModel.getType() == Type.SLAGSCHIP){
+            //teken slagschip
+        }
+        else if (bootModel.getType() == Type.PATROUILLESCHIP){
+            //teken patrouilleschip
+        }
+        
+
+/*
+            //if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
             Polygon bootNeus = new Polygon(1,2,1);
             bootNeus.setFill(Color.RED);
             Rectangle bootBody = new Rectangle(30 * 5 +15, 30); //5 moet getSize worden
@@ -36,6 +56,7 @@ public class BootView extends Region {
             Circle bootStaart = new Circle(15, Color.GRAY);
 
             getChildren().addAll(bootNeus, bootBody, bootStaart);
+        */
             /*
         } else {
 
