@@ -13,18 +13,18 @@ public class Boot {
     private int size;
     int levens;
     private boolean gezonken;
-    private int x,y;
+    private int row,column;
     private Orientatie orientatie;
     private int rotatieHoek;
 
    
-    public Boot(String naam, int size, int x, int y, Orientatie o) {
+    public Boot(String naam, int size, int column, int row, Orientatie o) {
         this.naam = naam;
         this.size = size;
         this.gezonken = false;
         this.levens = size;
-        this.x = x;
-        this.y = y;
+        this.row = row;
+        this.column = column;
         this.orientatie = o;
         rotatieHoek = 0;
     }
@@ -34,12 +34,12 @@ public class Boot {
         return naam;
     }
 
-    public int getX() {
-        return x;
+    public int getRow() {
+        return row;
     }
 
-    public int getY() {
-        return y;
+    public int getColumn() {
+        return column;
     }
 
     public int getSize() {
