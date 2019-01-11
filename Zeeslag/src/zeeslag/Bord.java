@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Bord {
     private ArrayList<Boot> boten;
     private Boot boot;
+    private Boot geselecteerdeBoot;
 
     /*
     public Bord(){
@@ -67,5 +68,31 @@ public class Bord {
         return null;
             //geen boot op gegeven rij en kolom
     }
+    
+    public Boot getGeselecteerdeBoot() {
+        return geselecteerdeBoot;
+    }
+    
+    public boolean isBootGeselecteerd() {
+        return (geselecteerdeBoot!= null);
+    }
+    
+    public boolean selecteerBootOn(int row, int column) {
+        boolean onBoot = false;
+        //eerst boot niet geselecteerd
+        geselecteerdeBoot = this.getBootOn(row, column);
+        if (geselecteerdeBoot != null) {
+            onBoot = true;
+            //als er niet geen boot wordt geselecteerd(boot wel geselecteerd),zet onBoot is waar
+        }
+        return onBoot;
+    }
+    
+    
+    
 }
+
+
+
+
    
