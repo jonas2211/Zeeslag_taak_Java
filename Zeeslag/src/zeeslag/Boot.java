@@ -16,12 +16,16 @@ public class Boot {
     private int row,column;
     private Orientatie orientatie;
     private int rotatieHoek;
+    private Soort soort;
+    
 
    
-    public Boot(String naam, int size, int column, int row, Orientatie o) {
-        this.naam = naam;
+    public Boot( int size, int column, int row, Orientatie o, Soort soort) {
+        //this.naam = naam;
+        // naam geeft struggles om boten te tonen
         this.size = size;
         this.gezonken = false;
+        this.soort = soort;
         //this.levens = size;
             //niks met boot te maken, maar met totaalAantal levens
         this.row = row;
@@ -29,7 +33,18 @@ public class Boot {
         this.orientatie = o;
         rotatieHoek = 0;
     }
+    
+    public Boot(int[]Coordinaten, Soort soort){
+        this.row = Coordinaten[0];
+        this.column = Coordinaten[1];
+        this.soort = soort;
+        this.gezonken = false;
+    }
     // getters
+    public int[] getCoordinaten(){
+        int[] c = {this.row,this.column};
+        return c;
+    }
     
     public String getNaam() {
         return naam;
@@ -61,7 +76,7 @@ public class Boot {
     }
     
     //setters en andere methodes
-
+    
     public boolean isGezonken() {
         return gezonken;
     }
