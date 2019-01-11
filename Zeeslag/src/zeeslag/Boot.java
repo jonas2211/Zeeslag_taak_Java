@@ -22,7 +22,8 @@ public class Boot {
         this.naam = naam;
         this.size = size;
         this.gezonken = false;
-        this.levens = size;
+        //this.levens = size;
+            //niks met boot te maken, maar met totaalAantal levens
         this.row = row;
         this.column = column;
         this.orientatie = o;
@@ -59,7 +60,7 @@ public class Boot {
         return rotatieHoek;
     }
     
-    //setters
+    //setters en andere methodes
 
     public boolean isGezonken() {
         return gezonken;
@@ -83,6 +84,21 @@ public class Boot {
         }
         else 
             levens --;
+    }
+    
+    private void setCoordinaten(int row, int column) {
+        this.row = row;
+        this.column = column;
+    }
+    
+    public boolean verplaatsNaar(int row, int column) {
+        if (this.row == row || this.column == column) {
+            setCoordinaten(row, column);
+            return true;
+            //stel de nieuwe kolom en/of nieuwe rij in als rij en/of kolom;
+        } else {
+            return false;
+        }
     }
     
     public void roteer(boolean roteerRechts){
