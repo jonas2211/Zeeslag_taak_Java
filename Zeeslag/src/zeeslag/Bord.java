@@ -166,6 +166,22 @@ public class Bord {
         }
         return true;
     }
+    
+    public void hitmark(int row, int column){
+        for(Boot bootModel : Botenlist){
+            if (bootModel.getRow() == row && bootModel.getColumn() == column){
+                if (bootModel.getLevens() == 0){
+                    bootModel.isGezonken();
+                    System.out.println("gezonken");
+                }
+                else
+                {
+                    bootModel.Geraakt();
+                }
+            }
+        }
+    }
+    
 
 }
 
