@@ -34,6 +34,7 @@ public class ZeeslagController {
 
     
     private ZeeslagSpel model;
+    private Boot bootModel;
     private TegenstanderBordView view;
     private SpelerBordView view2;
     private BootView view3;
@@ -42,7 +43,7 @@ public class ZeeslagController {
     void initialize() {
         SpelerBordView spelerBordView = new SpelerBordView();
         TegenstanderBordView TegenstanderBordView = new TegenstanderBordView();
-        BootView Bootview = new Bootview();
+        BootView bootView = new BootView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert botenPane != null : "fx:id=\"botenPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
@@ -51,7 +52,7 @@ public class ZeeslagController {
 
         spelerPane.getChildren().add(spelerBordView);
         tegenstanderPane.getChildren().add(TegenstanderBordView);
-        botenPane.getChildren().add(view3);
+        botenPane.getChildren().add(bootView);
     }
     /*   
     public void setModel(ZeeslagSpel model) {
