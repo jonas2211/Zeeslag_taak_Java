@@ -50,12 +50,12 @@ public class BootView extends Region {
         
         if (bootModel.getType() == Type.VLIEGDEKSCHIP){
             //teken vliegdekschip
-            driehoek.setCenterX(boot1.getX);
-            driehoek.setCenterY(boot1.getY());
-            rechthoek.setLayoutX(boot1.getX());
-            rechthoek.SetlayoutY(boot1.getY());
-            cirkel.setLayoutX(boot1.getX());
-            cirkel.setLayoutY(boot1.getY());
+            driehoek.setLayoutX(boot1.getRow());
+            driehoek.setLayoutY(boot1.getColumn());
+            rechthoek.setLayoutX(boot1.getRow());
+            rechthoek.setLayoutY(boot1.getColumn());
+            cirkel.setLayoutX(boot1.getRow());
+            cirkel.setLayoutY(boot1.getColumn());
             
         }
         else if (bootModel.getType() == Type.TORPEDOBOOTJAGER){
