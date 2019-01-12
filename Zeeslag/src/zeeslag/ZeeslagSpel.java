@@ -14,11 +14,20 @@ import java.util.ArrayList;
 public class ZeeslagSpel {
     
     private Bord bord;
-    private Speler speler;
+    private Speler huidigeSpeler;
+    private SpelerEcht spelerEcht;
+    private SpelerComputer computer;
+    
 
-    public ZeeslagSpel(Bord bord, Speler speler) {
+    public ZeeslagSpel() {
+        this.start();
+    }
+    
+    public void start(){
         this.bord = new Bord();
-        this.speler = new Speler(bord);
+        this.spelerEcht = new SpelerEcht(bord);
+        this.computer = new SpelerComputer(bord);
+        this.huidigeSpeler = spelerEcht;
     }
 
     public Bord getBord() {
@@ -26,25 +35,19 @@ public class ZeeslagSpel {
     }
 
     public Speler getSpeler() {
-        return speler;
+        return huidigeSpeler;
     }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     public void eindeBeurt(){
-        if 
+        if (huidigeSpeler instanceof SpelerEcht){
+            huidigeSpeler = computer;
+        }
+        else{
+            huidigeSpeler = spelerEcht;
+        }
     }
 }
     
