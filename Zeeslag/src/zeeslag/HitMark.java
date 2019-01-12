@@ -9,24 +9,26 @@ package zeeslag;
  *
  * @author Bavo
  */
-public class Mark {
+public class HitMark {
     private boolean hit;
     private Boot boot;
     private int x,y;
 // x en y coordinaten zijn vaag
-    public Mark(int x, int y) {
-        hit = true;
+    public HitMark(int x, int y) {
+        hit = false;
         this.x = x;
         this.y = y;
     }
-    //getters
-    /*public getHitmarks(){
-    for(: Boot boot);{
+    
+
+//getters
+    public getMarks(){
+        return Mark;
         
     }
 //geen idee
     
-    }*/
+    
     
   
     
