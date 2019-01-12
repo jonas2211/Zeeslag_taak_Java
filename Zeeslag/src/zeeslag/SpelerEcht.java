@@ -10,6 +10,7 @@ package zeeslag;
  * @author Rens Remans
  */
 public class SpelerEcht extends Speler {
+        private Boot bootModel;
 
     public SpelerEcht(Bord bord) {
         super(bord);
@@ -19,24 +20,24 @@ public class SpelerEcht extends Speler {
         boolean gezonken = false; 
         
         for (Boot boot: bord.getBoten()){
-            if(Boot.type == Type.VLIEGDEKSCHIP){
+            if(bootModel.getType() == Type.VLIEGDEKSCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }
                 
-            }else if( Boot.type == Type.SLAGSCHIP){
+            }else if(bootModel.getType() == Type.SLAGSCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }   
-            }else if( Boot.type == Type.TORPEDOBOOTJAGER){
+            }else if(bootModel.getType()== Type.TORPEDOBOOTJAGER){
                 if (boot.isGezonken()== false){
                     return false;
                 }   
-            }else if( Boot.type == Type.DUIKBOOT){
+            }else if(bootModel.getType() == Type.DUIKBOOT){
                 if (boot.isGezonken()== false){
                     return false;
                 }  
-            }else if( Boot.type == Type.PATROUILLESCHIP){
+            }else if(bootModel.getType() == Type.PATROUILLESCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }

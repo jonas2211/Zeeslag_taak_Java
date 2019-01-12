@@ -20,24 +20,24 @@ public class SpelerComputer extends Speler {
         boolean gezonken = false; 
         
         for (Boot boot: bord.getBoten()){
-            if(bootModel.type == Type.VLIEGDEKSCHIP){
+            if(bootModel.getType() == Type.VLIEGDEKSCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }
                 
-            }else if( boot.type == Type.SLAGSCHIP){
+            }else if(bootModel.getType() == Type.SLAGSCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }   
-            }else if( boot.type == Type.TORPEDOBOOTJAGER){
+            }else if(bootModel.getType() == Type.TORPEDOBOOTJAGER){
                 if (boot.isGezonken()== false){
                     return false;
                 }   
-            }else if( boot.type == Type.DUIKBOOT){
+            }else if(bootModel.getType() == Type.DUIKBOOT){
                 if (boot.isGezonken()== false){
                     return false;
                 }  
-            }else if( boot.type == Type.PATROUILLESCHIP){
+            }else if(bootModel.getType() == Type.PATROUILLESCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }
