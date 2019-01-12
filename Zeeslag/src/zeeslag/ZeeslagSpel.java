@@ -12,13 +12,40 @@ import java.util.ArrayList;
  * @author jonas
  */
 public class ZeeslagSpel {
-    private ArrayList<Boot>boten;
     
-    
-    public ZeeslagSpel(){
-        //this.boten = new ArrayList<>();
-        //boten.add(new Boot());
+    private Bord bord;
+    private Speler speler;
+
+    public ZeeslagSpel(Bord bord, Speler speler) {
+        this.bord = new Bord();
+        this.speler = new Speler(bord);
+    }
+
+    public Bord getBord() {
+        return bord;
+    }
+
+    public Speler getSpeler() {
+        return speler;
     }
 
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public void eindeBeurt(){
+        if 
+    }
 }
+    
+

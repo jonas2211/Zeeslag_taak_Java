@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Bavo
  */
 public class Speler {
-    private Bord bord;
+    Bord bord;
     private int spelerLevens;
     
     
