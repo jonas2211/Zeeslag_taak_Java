@@ -20,10 +20,10 @@ public class Vliegdekschip extends Boot{
     private int row;
     private Type type;
     
-    public Vliegdekschip(String naam, int size, int column, int row, Orientatie o, Type type) {
-        super(naam, column, row, o, type);
-        this.naam = "vliegdekschip";
-        this.size = 5;
+    public Vliegdekschip(int size, int column, int row, Orientatie o, Type type) {
+        super(size, column, row, o, type);
+        this.naam = "Vliegdekschip";
+        this.size = 3;
         gezonken = false;
         levens = size;
         this.row = row;
@@ -31,5 +31,5 @@ public class Vliegdekschip extends Boot{
         this.rotatieHoek = 0;
         this.o = Orientatie.HORIZONTAAL;
         this.type = Type.VLIEGDEKSCHIP;
-    }
+    }        
 }

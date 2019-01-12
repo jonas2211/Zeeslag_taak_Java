@@ -18,10 +18,10 @@ public class Duikboot extends Boot{
     private int column;
     private int row;
     private Type type;
-    
-    public Duikboot(String naam, int size, int column, int row, Orientatie o, Type type) {
-        super(naam, column, row, o, type);
-        this.naam = "duikboot";
+
+    public Duikboot(int size, int column, int row, Orientatie o, Type type) {
+        super(size, column, row, o, type);
+        this.naam = "Duikboot";
         this.size = 3;
         gezonken = false;
         levens = size;
@@ -29,6 +29,6 @@ public class Duikboot extends Boot{
         this.column = column;
         this.rotatieHoek = 0;
         this.o = Orientatie.HORIZONTAAL;
-        this.type = Type.DUIKBOOT;
+        this.type = Type.DUIKBOOT;        
     }  
 }

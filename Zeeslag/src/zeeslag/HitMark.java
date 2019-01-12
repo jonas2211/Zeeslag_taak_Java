@@ -9,12 +9,12 @@ package zeeslag;
  *
  * @author Bavo
  */
-public class HitMark {
+public class Hitmark {
     private boolean hit;
     private Boot boot;
     private int x,y;
 // x en y coordinaten zijn vaag
-    public HitMark(int x, int y) {
+    public Hitmark(int x, int y) {
         hit = false;
         this.x = x;
         this.y = y;
@@ -22,8 +22,8 @@ public class HitMark {
     
 
 //getters
-    public getMarks(){
-        return Mark;
+    public getHitmarks(){
+        return ;
         
     }
 //geen idee
