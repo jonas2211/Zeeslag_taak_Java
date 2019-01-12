@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Bord {
     private Boot geselecteerdeBoot;
-    private ArrayList<Boot> Botenlist = new ArrayList<>();
+    private ArrayList<Boot> botenList = new ArrayList<>();
     
     
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
@@ -58,27 +58,27 @@ public class Bord {
     public Bord(){
         for (int i = 0; i < vliegdekschip.length; i++)
         {
-            Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
+            botenList.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
         }
 
         for (int i = 0; i < slagschip.length; i++)
         {
-            Botenlist.add(new Boot (slagschip[i], Type.SLAGSCHIP));
+            botenList.add(new Boot (slagschip[i], Type.SLAGSCHIP));
         }
         
         for (int i = 0; i < duikboot.length; i++)
         {
-            Botenlist.add(new Boot (duikboot[i], Type.DUIKBOOT));
+            botenList.add(new Boot (duikboot[i], Type.DUIKBOOT));
         }
         
         for (int i = 0; i < torpedobootjager.length; i++)
         {
-            Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
+            botenList.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
         }
         
         for (int i = 0; i < patrouilleschip.length; i++)
         {
-            Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
+            botenList.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
         }
 
         /*
@@ -100,8 +100,12 @@ public class Bord {
 
   
     //getters
+    public ArrayList<Boot> getBoten() {
+        return botenList;
+    }
+    
     public Boot getBootOn(int row, int column) {
-        for (Boot boot : Botenlist) {
+        for (Boot boot : botenList) {
             if (boot.getRow() == row && boot.getColumn() == column) {
                 return boot;
             }            
