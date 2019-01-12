@@ -33,16 +33,18 @@ public class Hitmark {
     private Speler spelerModel;
     
     
-    public void hitmark(){
-        for(Boot boten : spelerModel.getBoten()){
-            if (bootModel.getRow() == Coordinaat row && bootModel.getColumn() == coordinaat column){
+    public void hitmark(int row, int column){
+        for(Boot bootModel : boten){
+            if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 if (bootModel.getLevens() == 0){
-                    bootModel.isGezonken() = true;
+                    bootModel.isGezonken();
                     System.out.println("gezonken");
-        }
-                else 
-                    bootModel.getLevens() = bootModel.getLevens() -1;
-        }
+                }
+                else
+                {
+                    bootModel.Geraakt();
+                }
+            }
         }
     }
 
