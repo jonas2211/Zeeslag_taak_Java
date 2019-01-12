@@ -62,7 +62,7 @@ public class TegenstanderBordView extends Region {
     }
 
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        for (Mark hit : bordModel.getHitmarks()){
+        for (HitMark hit : bordModel.getHitmarks()){
             //nieuwe klasse Mark aanmaken
             if(hit==bordModel.getHitmarks()){
                 Rectangle rechth= new Rectangle(x, y, 30, 30);

@@ -23,11 +23,6 @@ public class Boot {
     public Boot(int size, int column, int row, Orientatie o, Type type) {
         //this.naam = naam;
         // naam geeft struggles om boten te tonen
-        // naam is niet nodig omdat we een apparte klasse voor elke boot hebben en dus weten over welke boot het gaat
-        this.size = size;
-        this.gezonken = false;
-        this.type = type;
-        this.levens = size;   //niks met boot te maken, maar met totaalAantal levens
         this.row = row;
         this.column = column;
         this.orientatie = o;
