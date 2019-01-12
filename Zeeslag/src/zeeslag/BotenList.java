@@ -56,4 +56,7 @@ private String naam;
     private int rotatieHoek;
 
 */
-    }}
+
+
+}
+}

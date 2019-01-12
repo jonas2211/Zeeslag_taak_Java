@@ -30,19 +30,15 @@ public class Bord {
     }
     */
         
-    private int[][] bootNeus = {   //coordinaten neus
+    private int[][] CoBoten = {   //coordinaten neus
          
-        {3, 1}, {3, 3}, {3, 5}, {3,7}, {3,9}
+        {3, 1}, {3, 3}, {3, 5}, {3, 7}, {3, 9},
+        {4, 1}, {4, 3}, {4, 5}, {4, 7}, {4, 9},
+                {5, 3}, {5, 5}, {5, 7}, {5, 9},
+                                {6, 7}, {6, 9},
+                                        {7, 7},
+
         //bv. {Boot.getX,Boot.getY}, ....
-    };
-    private int[][] bootBody  = {   //coordinaten Body
-         
-        {4,3}, {4, 5}, {4,7}, {5, 7}, {4, 9}, {5,9}, {6,9}
-    };
-    private int[][] bootStaart = {   //coordinaten Staart
-    
-        
-        {4, 1}, {5, 3}, {5, 5}, {6, 7}, {6, 9}
     };
     
     private ArrayList<Boot> boten;
