@@ -31,5 +31,6 @@ public class Vliegdekschip extends Boot{
         this.rotatieHoek = 0;
         this.o = Orientatie.HORIZONTAAL;
         this.type = Type.VLIEGDEKSCHIP;
-    }        
+    }       
+
 }

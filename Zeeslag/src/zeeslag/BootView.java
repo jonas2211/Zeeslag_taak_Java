@@ -26,28 +26,36 @@ public class BootView extends Region {
     private Rectangle rechthoek;
     private Circle cirkel;
     private Polygon driehoek;
-    private Duikboot boot1;
+    private Vliegdekschip boot1;
+    private Slagschip boot2;
+    private Torpedobootjager boot3;
+    private Duikboot boot4;
+    private Patrouilleschip boot5
+  ;
 
     public BootView(Boot bootModel) {
         this.bootModel = bootModel;
         this.update();
-        this.driehoek = new Polygon(new double[]{0.0, -40.0, 40.0, -10.0, -40.0, -10.0 });
-        this.rechthoek = new Rectangle(30, 30*bootModel.getSize(), 0.0, 0.0);
+        this.driehoek = new Polygon( 0.0, -40.0,40.0, -10.0,-40.0, -10.0 );
+        this.rechthoek = new Rectangle(30, 30*(bootModel.getSize()-2), 0.0, 0.0);
         this.cirkel = new Circle(15, 0.0, 0, Color.GRAY);
         //this.rechthoek = new Rectangle(40, 40, Color.BLUE);
         this.getChildren().addAll(driehoek, rechthoek, cirkel);
+        
     }
+    
+    
 
     public void update() {
         
         if (bootModel.getType() == Type.VLIEGDEKSCHIP){
             //teken vliegdekschip
-            driehoek.setCenterX(boot1.getX());
-            driehoek.setCenterY(boot1.gety());
+            driehoek.setCenterX(boot1.getX);
+            driehoek.setCenterY(boot1.getY());
             rechthoek.setLayoutX(boot1.getX());
-            rechthoek.SetlayoutY(boot1.gety());
+            rechthoek.SetlayoutY(boot1.getY());
             cirkel.setLayoutX(boot1.getX());
-            cirkel.setLayoutY(boot1.gety());
+            cirkel.setLayoutY(boot1.getY());
             
         }
         else if (bootModel.getType() == Type.TORPEDOBOOTJAGER){
