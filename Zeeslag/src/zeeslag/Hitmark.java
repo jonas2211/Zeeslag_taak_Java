@@ -60,13 +60,6 @@ public class Hitmark {
         return boot;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
 
    
     /*
