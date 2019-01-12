@@ -15,11 +15,31 @@ public class SpelerEcht extends Speler {
         super(bord);
         
     }
-    public boolean isGezonken(){
+    public boolean isGezonken(Type ype){
         boolean gezonken = false; 
+        
         for (Boot boot: bord.getBoten()){
-            if (boot.isGezonken()== false){
-                return false;
+            if(Boot.type == Type.VLIEGDEKSCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }
+                
+            }else if( Boot.type == Type.SLAGSCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }   
+            }else if( Boot.type == Type.TORPEDOBOOTJAGER){
+                if (boot.isGezonken()== false){
+                    return false;
+                }   
+            }else if( Boot.type == Type.DUIKBOOT){
+                if (boot.isGezonken()== false){
+                    return false;
+                }  
+            }else if( Boot.type == Type.PATROUILLESCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }
             }
         }
         return true;
