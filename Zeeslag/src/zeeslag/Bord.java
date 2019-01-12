@@ -132,10 +132,8 @@ public class Bord {
     public Boot getGeselecteerdeBoot() {
         return geselecteerdeBoot;
     }
-   
     
-    
-    
+    //boolean methodes
     public boolean isBootGeselecteerd() {
         return (geselecteerdeBoot!= null);
     }
