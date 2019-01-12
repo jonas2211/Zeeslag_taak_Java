@@ -23,21 +23,38 @@ public class BootView extends Region {
     private int x, y; //nodig?
     private Boot bootModel;
     private Type type;
+    private Rectangle rechthoek;
+    private Circle cirkel;
+    private Polygon driehoek;
+    private Duikboot boot1;
 
     public BootView(Boot bootModel) {
         this.bootModel = bootModel;
         this.update();
+        this.driehoek = new Polygon(new double[]{0.0, -40.0, 40.0, -10.0, -40.0, -10.0 });
+        this.rechthoek = new Rectangle(30, 30*bootModel.getSize(), 0.0, 0.0);
+        this.cirkel = new Circle(15, 0.0, 0, Color.GRAY);
+        //this.rechthoek = new Rectangle(40, 40, Color.BLUE);
+        this.getChildren().addAll(driehoek, rechthoek, cirkel);
     }
 
     public void update() {
-        if (bootModel.getType() == Type.DUIKBOOT){
-            //teken duikboot
-        }
-        else if (bootModel.getType() == Type.VLIEGDEKSCHIP){
+        
+        if (bootModel.getType() == Type.VLIEGDEKSCHIP){
             //teken vliegdekschip
+            driehoek.setCenterX(boot1.getX());
+            driehoek.setCenterY(boot1.gety());
+            rechthoek.setLayoutX(boot1.getX());
+            rechthoek.SetlayoutY(boot1.gety());
+            cirkel.setLayoutX(boot1.getX());
+            cirkel.setLayoutY(boot1.gety());
+            
         }
         else if (bootModel.getType() == Type.TORPEDOBOOTJAGER){
             //teken torpedobootjager
+        }
+        else if (bootModel.getType() == Type.DUIKBOOT){
+        //teken duikboot
         }
         else if (bootModel.getType() == Type.SLAGSCHIP){
             //teken slagschip
