@@ -21,7 +21,7 @@ public class TegenstanderBordView extends Region {
 
     // lowie zegt: bordView moet een bord uit het model afbeelden, en meot dus een data member bordModel hebben.
     private Rectangle rechthoek;
-    private TegenstanderBordView bordModel;
+    private Bord bordModel;
 
     public TegenstanderBordView() { //in de constructor komt welk bord het moet afbeelden
         this.bordModel = bordModel; //model van het bord
@@ -62,7 +62,7 @@ public class TegenstanderBordView extends Region {
     }
 
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        for (HitMark hit : bordModel.getHitmarks()){
+        for (Hitmark hit : bordModel.getHitmarks()){
             //nieuwe klasse Mark aanmaken
             if(hit==bordModel.getHitmarks()){
                 Rectangle rechth= new Rectangle(x, y, 30, 30);
