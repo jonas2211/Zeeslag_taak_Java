@@ -9,7 +9,7 @@ package zeeslag;
  * @author Bavo, Jonas, Rens
  */
 public class Boot {
-    private String naam;
+    //private String naam;
     private int size;
     int levens;
     private boolean gezonken;
@@ -20,12 +20,20 @@ public class Boot {
     
 
    
-    public Boot(String naam, int column, int row, Orientatie o, Type type) {
-        this.naam = naam;
+    public Boot(int size, int column, int row, Orientatie o, Type type) {
+        //this.naam = naam;
         // naam geeft struggles om boten te tonen
+<<<<<<< HEAD
         this.gezonken = false;
         this.type = type;
         
+=======
+        // naam is niet nodig omdat we een apparte klasse voor elke boot hebben en dus weten over welke boot het gaat
+        this.size = size;
+        this.gezonken = false;
+        this.type = type;
+        this.levens = size;   //niks met boot te maken, maar met totaalAantal levens
+>>>>>>> 059b054a9d9283bf28de449bd3abad84c853f96b
         this.row = row;
         this.column = column;
         this.orientatie = o;
@@ -48,10 +56,11 @@ public class Boot {
         int[] c = {this.row,this.column};
         return c;
     }
-    
+    /*
     public String getNaam() {
         return naam;
     }
+*/
 
     public int getRow() {
         return row;
@@ -84,9 +93,11 @@ public class Boot {
         return gezonken;
     }
 
+    /*
     public void setNaam(String naam) {
         this.naam = naam;
     }
+*/
 
     public void setSize(int size) {
         this.size = size;
@@ -98,7 +109,7 @@ public class Boot {
     public void Geraakt(){
         if (levens == 0){
             gezonken = true;
-            System.out.println(naam + "is gezonken");
+            System.out.println("gezonken");
         }
         else 
             levens --;
@@ -130,6 +141,11 @@ public class Boot {
                 rotatieHoek = -90;
             }
         }
+    }
+    
+    public void Hit() {
+        this.gezonken = false;
+        levens = levens -1;
     }
      
 }

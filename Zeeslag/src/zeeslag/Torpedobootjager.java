@@ -19,9 +19,9 @@ public class Torpedobootjager extends Boot{
     private int row;
     private Type type;
     
-    public Torpedobootjager(String naam, int size, int column, int row, Orientatie o, Type type) {
-        super(naam, column, row, o, type);
-        this.naam = "torpedobootjager";
+    public Torpedobootjager(int size, int column, int row, Orientatie o, Type type) {
+        super(size, column, row, o, type);
+        this.naam = "Torpedobootjager";
         this.size = 3;
         gezonken = false;
         levens = size;

@@ -10,8 +10,9 @@ import java.util.ArrayList;
  * @author Bavo, Jonas, Rens
  */
 public class Bord {
-    private Boot geselecteerdeBoot;
-    private ArrayList<Boot> botenList = new ArrayList<>();
+    private Boot bootModel;
+    private ArrayList<Boot> Botenlist = new ArrayList<>();
+    
     
     
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
@@ -58,27 +59,27 @@ public class Bord {
     public Bord(){
         for (int i = 0; i < vliegdekschip.length; i++)
         {
-            botenList.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
+            Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
         }
 
         for (int i = 0; i < slagschip.length; i++)
         {
-            botenList.add(new Boot (slagschip[i], Type.SLAGSCHIP));
+            Botenlist.add(new Boot (slagschip[i], Type.SLAGSCHIP));
         }
         
         for (int i = 0; i < duikboot.length; i++)
         {
-            botenList.add(new Boot (duikboot[i], Type.DUIKBOOT));
+            Botenlist.add(new Boot (duikboot[i], Type.DUIKBOOT));
         }
         
         for (int i = 0; i < torpedobootjager.length; i++)
         {
-            botenList.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
+            Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
         }
         
         for (int i = 0; i < patrouilleschip.length; i++)
         {
-            botenList.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
+            Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
         }
 
         /*
@@ -100,14 +101,10 @@ public class Bord {
 
   
     //getters
-    public ArrayList<Boot> getBoten() {
-        return botenList;
-    }
-    
     public Boot getBootOn(int row, int column) {
-        for (Boot boot : botenList) {
-            if (boot.getRow() == row && boot.getColumn() == column) {
-                return boot;
+        for (Boot bootModel : Botenlist) {
+            if (bootModel.getRow() == row && bootModel.getColumn() == column) {
+                return bootModel;
             }            
             
             //boot op meegegeven rij en kolom
@@ -115,26 +112,63 @@ public class Bord {
         return null;
             //geen boot op gegeven rij en kolom
     }
+    
+    public ArrayList<Boot> getBoten() {
+        return Botenlist;
+    }
 
     public Boot getGeselecteerdeBoot() {
-        return geselecteerdeBoot;
+        return bootModel;
     }
     
     //boolean methodes
     public boolean isBootGeselecteerd() {
-        return (geselecteerdeBoot!= null);
+        return (bootModel!= null);
     }
     
     public boolean selecteerBootOn(int row, int column) {
         boolean onBoot = false;
         //eerst boot niet geselecteerd
-        geselecteerdeBoot = this.getBootOn(row, column);
-        if (geselecteerdeBoot != null) {
+        bootModel = this.getBootOn(row, column);
+        if (bootModel != null) {
             onBoot = true;
             //als er niet geen boot wordt geselecteerd(boot wel geselecteerd),zet onBoot is waar
         }
         return onBoot;
     }
+    
+    public void selecteerBootOff(){
+        bootModel = null;
+    }
+    
+    public boolean verplaatsBootNaar(int row, int column) {
+        boolean onBoot = false;
+        if (bootModel.getType() == Type.VLIEGDEKSCHIP && isPlaatsVrij(bootModel.getRow(), bootModel.getColumn(), row, column) && (selecteerBootOn(row, column) == null || selecteerBootOn(row, column) == bootModel || getBootOn(row, column).getType() == Type.VLIEGDEKSCHIP)){
+            onBoot = getBootOn(bootModel.getRow(), bootModel.getColumn()).verplaatsNaar(row, column);
+        }
+        else if (bootModel != null && isPlaatsVrij(bootModel.getRow(), bootModel.getColumn(), row, column) && (getBootOn(row, column)== null || getBootOn(row, column) == bootModel)){
+            onBoot = getBootOn(bootModel.getRow(), bootModel.getColumn()).verplaatsNaar(row, column);
+        }
+        if(onBoot){
+            bootModel = null;
+        }
+        return onBoot;
+    }
+    
+    private boolean isPlaatsVrij(int startRow, int startColumn, int endRow, int endColumn) {
+        for (int i = Math.min(startRow, endRow) + 1; i <= Math.max(startRow, endRow) - 1; i++) {
+            if (getBootOn(i, startColumn) != null) {
+                return false;
+            }
+        }
+        for (int j = Math.min(startColumn, endColumn) + 1; j <= Math.max(startColumn, endColumn) - 1; j++) {
+            if (getBootOn(startRow, j) != null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
 
 
