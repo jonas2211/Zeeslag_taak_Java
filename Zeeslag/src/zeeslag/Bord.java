@@ -143,10 +143,8 @@ public class Bord {
     
     public boolean verplaatsBootNaar(int row, int column) {
         boolean onBoot = false;
-        if (bootModel.getType() == Type.VLIEGDEKSCHIP && isPlaatsVrij(bootModel.getRow(), bootModel.getColumn(), row, column) && (selecteerBootOn(row, column) == null || selecteerBootOn(row, column) == bootModel || getBootOn(row, column).getType() == Type.VLIEGDEKSCHIP)){
-            onBoot = getBootOn(bootModel.getRow(), bootModel.getColumn()).verplaatsNaar(row, column);
-        }
-        else if (bootModel != null && isPlaatsVrij(bootModel.getRow(), bootModel.getColumn(), row, column) && (getBootOn(row, column)== null || getBootOn(row, column) == bootModel)){
+        
+        if (bootModel != null && isPlaatsVrij(bootModel.getRow(), bootModel.getColumn(), row, column) && (getBootOn(row, column)== null || getBootOn(row, column) == bootModel)){
             onBoot = getBootOn(bootModel.getRow(), bootModel.getColumn()).verplaatsNaar(row, column);
         }
         if(onBoot){
