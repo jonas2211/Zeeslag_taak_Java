@@ -30,6 +30,26 @@ public class Duikboot extends Boot{
         orientatie = Orientatie.HORIZONTAAL;
         
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public boolean isGezonken() {
+        return gezonken;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public Type getType() {
+        return type;
+    }
     
  
     

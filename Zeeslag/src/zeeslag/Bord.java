@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class Bord {
     private Boot geselecteerdeBoot;
+<<<<<<< HEAD
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
          
         {3, 3}, {3, 4}, {3, 5}, {3,6}, {3,7}
@@ -24,6 +25,50 @@ public class Bord {
          
         {5, 3}, {5, 4}, {5, 5}
     };
+=======
+    
+    /*
+    
+    public Bord(){
+    boten = new ArrayList<>();
+    boten.add(vliegdekschip); // lengte5
+    boten.add(slagschip); //lengte4
+    boten.add(duikboot); //lengte3
+    boten.add(torpedobootjager); //lengte3
+    boten.add(Patrouilleschip); //lengte2
+    }
+    */
+        
+    private int[][] CoBoten = {   //coordinaten neus
+         
+        {3, 1}, {3, 3}, {3, 5}, {3, 7}, {3, 9},
+        {4, 1}, {4, 3}, {4, 5}, {4, 7}, {4, 9},
+                {5, 3}, {5, 5}, {5, 7}, {5, 9},
+                                {6, 7}, {6, 9},
+                                        {7, 7},
+
+        //bv. {Boot.getX,Boot.getY}, ....
+    };
+    
+    private ArrayList<Boot> boten;
+    public Bord(){
+        
+        for (int i =0; i<bootBody.length; i++){
+            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL));
+        }
+        
+        for (int i =0; i<bootNeus.length; i++){
+            boten.add(new Boot (5, bootNeus[i], Orientatie.VERTICAAL, Soort.NEUS));
+        }
+        for (int i =0; i<bootStaart.length; i++){
+            boten.add(new Boot (5, bootStaart[i], Orientatie.VERTICAAL, Soort.NEUS));
+        }
+    }
+        
+    
+    
+    /*
+>>>>>>> 2d615297995df2599a099ad2799c708b788d6151
     private int[][] torpedobootjager = {   //coordinaten torpedoboojager
          
         {7, 3}, {7, 4}, {7, 5}
@@ -79,10 +124,13 @@ public class Bord {
             //geen boot op gegeven rij en kolom
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 */
 
+=======
+>>>>>>> 2d615297995df2599a099ad2799c708b788d6151
     
 
     public Boot getGeselecteerdeBoot() {

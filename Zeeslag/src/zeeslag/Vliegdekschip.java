@@ -16,15 +16,29 @@ public class Vliegdekschip extends Boot{
     private boolean gezonken;
     private Orientatie orientatie;
     private int rotatieHoek;
-
-    public Vliegdekschip(String naam, int size, int x, int y, Orientatie o) 
-    {
-        super(naam,size, x, y, o);
+    private int column;
+    private int row;
+    private Type type;
+    
+    public Vliegdekschip(String naam, int size, int column, int row, Orientatie o, Type type) {
+        super(naam, column, row, o, type);
+        naam = "onderzeeer";
+        size = 3;
         gezonken = false;
-        this.naam = "Vliegdekschip";
         levens = size;
-        x = x;
-        y = y;
+        this.row = row;
+        this.column = column;
         orientatie = Orientatie.HORIZONTAAL;
+        
     }
+    
+ 
+    
+    }
+<<<<<<< HEAD
 }
+=======
+    
+    
+
+>>>>>>> 2d615297995df2599a099ad2799c708b788d6151
