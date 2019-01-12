@@ -66,7 +66,6 @@ public class Boot {
         return size;
     }
     
-
     public int getLevens() {
         return levens;
     }
