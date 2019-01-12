@@ -9,7 +9,9 @@ package zeeslag;
  * @author Bavo, Jonas, Rens
  */
 public class Boot {
-    //private String naam;
+    private ZeeslagController controllerModel;
+    // private String naam;
+    //naam is niet nodig omdat we een apparte klasse voor elke boot hebben en dus weten over welke boot het gaat
     private int size;
     int levens;
     private boolean gezonken;
@@ -21,8 +23,10 @@ public class Boot {
 
    
     public Boot(int size, int column, int row, Orientatie o, Type type) {
-        //this.naam = naam;
-        // naam geeft struggles om boten te tonen
+        this.gezonken = false;
+        this.type = type;
+        this.size = size;
+        this.levens = size;
         this.row = row;
         this.column = column;
         this.orientatie = o;
@@ -103,6 +107,13 @@ public class Boot {
         else 
             levens --;
     }
+    /*
+    public void Hit() {
+        this.gezonken = false;
+        levens = levens -1;
+    } hit en geraakt doen hetzelfde
+*/
+     
     
     private void setCoordinaten(int row, int column) {
         this.row = row;
@@ -132,9 +143,4 @@ public class Boot {
         }
     }
     
-    public void Hit() {
-        this.gezonken = false;
-        levens = levens -1;
-    }
-     
 }
