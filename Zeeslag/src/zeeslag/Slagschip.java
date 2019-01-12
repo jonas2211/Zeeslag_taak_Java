@@ -13,7 +13,7 @@ public class Slagschip extends Boot{
     private String naam;
     private int size;
     private boolean gezonken;
-    private Orientatie orientatie;
+    private Orientatie o;
     private int rotatieHoek;
     private int column;
     private int row;
@@ -21,14 +21,15 @@ public class Slagschip extends Boot{
     
     public Slagschip(String naam, int size, int column, int row, Orientatie o, Type type) {
         super(naam, column, row, o, type);
-        naam = "onderzeeer";
-        size = 3;
+        this.naam = "slagschip";
+        this.size = 4;
         gezonken = false;
         levens = size;
         this.row = row;
         this.column = column;
-        orientatie = Orientatie.HORIZONTAAL;
-        
+        this.rotatieHoek = 0;
+        this.o = Orientatie.HORIZONTAAL;
+        this.type = Type.SLAGSCHIP;
     }
     
  

@@ -13,7 +13,7 @@ public class Duikboot extends Boot{
     private String naam;
     private int size;
     private boolean gezonken;
-    private Orientatie orientatie;
+    private Orientatie o;
     private int rotatieHoek;
     private int column;
     private int row;
@@ -21,39 +21,14 @@ public class Duikboot extends Boot{
     
     public Duikboot(String naam, int size, int column, int row, Orientatie o, Type type) {
         super(naam, column, row, o, type);
-        naam = "duikboot";
-        size = 3;
+        this.naam = "duikboot";
+        this.size = 3;
         gezonken = false;
         levens = size;
         this.row = row;
         this.column = column;
-        orientatie = Orientatie.HORIZONTAAL;
-        
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public boolean isGezonken() {
-        return gezonken;
-    }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public int getRow() {
-        return row;
-    }
-
-    public Type getType() {
-        return type;
-    }
-    
- 
-    
-    }
-    
-    
-
+        this.rotatieHoek = 0;
+        this.o = Orientatie.HORIZONTAAL;
+        this.type = Type.DUIKBOOT;
+    }  
+}

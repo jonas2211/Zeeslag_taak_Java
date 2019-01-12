@@ -13,7 +13,7 @@ public class Torpedobootjager extends Boot{
     private String naam;
     private int size;
     private boolean gezonken;
-    private Orientatie orientatie;
+    private Orientatie o;
     private int rotatieHoek;
     private int column;
     private int row;
@@ -21,24 +21,14 @@ public class Torpedobootjager extends Boot{
     
     public Torpedobootjager(String naam, int size, int column, int row, Orientatie o, Type type) {
         super(naam, column, row, o, type);
-        naam = "onderzeeer";
-        size = 3;
+        this.naam = "torpedobootjager";
+        this.size = 3;
         gezonken = false;
         levens = size;
         this.row = row;
         this.column = column;
-        orientatie = Orientatie.HORIZONTAAL;
-<<<<<<< HEAD
+        this.rotatieHoek = 0;
+        this.o = Orientatie.HORIZONTAAL;
+        this.type = Type.TORPEDOBOOTJAGER;
     }
 }
-=======
-        
-    }
-    
- 
-    
-    }
-    
-    
-
->>>>>>> 2d615297995df2599a099ad2799c708b788d6151
