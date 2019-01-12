@@ -5,9 +5,7 @@
  */
 package zeeslag;
 
-import java.awt.geom.Arc2D;
 import javafx.scene.layout.Region;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
@@ -30,17 +28,20 @@ public class BootView extends Region {
     private Slagschip boot2;
     private Torpedobootjager boot3;
     private Duikboot boot4;
-    private Patrouilleschip boot5
+    private Patrouilleschip boot5;
+
   ;
 
-    public BootView(Boot bootModel) {
+    public BootView() {
         this.bootModel = bootModel;
         this.update();
+        /*
         this.driehoek = new Polygon( 0.0, -40.0,40.0, -10.0,-40.0, -10.0 );
         this.rechthoek = new Rectangle(30, 30*(bootModel.getSize()-2), 0.0, 0.0);
         this.cirkel = new Circle(15, 0.0, 0, Color.GRAY);
         //this.rechthoek = new Rectangle(40, 40, Color.BLUE);
         this.getChildren().addAll(driehoek, rechthoek, cirkel);
+        */
         
     }
     
