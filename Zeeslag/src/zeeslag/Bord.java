@@ -11,7 +11,9 @@ import java.util.ArrayList;
  */
 public class Bord {
     private Boot geselecteerdeBoot;
-<<<<<<< HEAD
+    private ArrayList<Boot> Botenlist = new ArrayList<>();
+    
+    
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
          
         {3, 3}, {3, 4}, {3, 5}, {3,6}, {3,7}
@@ -25,20 +27,34 @@ public class Bord {
          
         {5, 3}, {5, 4}, {5, 5}
     };
-=======
+    private int[][] torpedobootjager = {   //coordinaten torpedoboojager
+         
+        {7, 3}, {7, 4}, {7, 5}
+    };
+    private int[][] patrouilleschip = {   //coordinaten Patrouilleschip
+         
+        {9, 3}, {9, 4}
+    };
     
     /*
+    *alle gegevens voor bootdelen 
+    *
     
-    public Bord(){
-    boten = new ArrayList<>();
-    boten.add(vliegdekschip); // lengte5
-    boten.add(slagschip); //lengte4
-    boten.add(duikboot); //lengte3
-    boten.add(torpedobootjager); //lengte3
-    boten.add(Patrouilleschip); //lengte2
-    }
-    */
+    private int[][] bootNeus = {   //coordinaten neus
+         
+        {3, 1}, {3, 3}, {3, 5}, {3,7}, {3,9}
+        //bv. {Boot.getX,Boot.getY}, ....
+    };
+    private int[][] bootBody  = {   //coordinaten Body
+         
+        {4,3}, {4, 5}, {4,7}, {5, 7}, {4, 9}, {5,9}, {6,9}
+    };
+    private int[][] bootStaart = {   //coordinaten Staart
+    
         
+        {4, 1}, {5, 3}, {5, 5}, {6, 7}, {6, 9}
+    };
+
     private int[][] CoBoten = {   //coordinaten neus
          
         {3, 1}, {3, 3}, {3, 5}, {3, 7}, {3, 9},
@@ -49,38 +65,12 @@ public class Bord {
 
         //bv. {Boot.getX,Boot.getY}, ....
     };
+       
     
-    private ArrayList<Boot> boten;
-    public Bord(){
-        
-        for (int i =0; i<bootBody.length; i++){
-            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL));
-        }
-        
-        for (int i =0; i<bootNeus.length; i++){
-            boten.add(new Boot (5, bootNeus[i], Orientatie.VERTICAAL, Soort.NEUS));
-        }
-        for (int i =0; i<bootStaart.length; i++){
-            boten.add(new Boot (5, bootStaart[i], Orientatie.VERTICAAL, Soort.NEUS));
-        }
-    }
-        
-    
-    
-    /*
->>>>>>> 2d615297995df2599a099ad2799c708b788d6151
-    private int[][] torpedobootjager = {   //coordinaten torpedoboojager
-         
-        {7, 3}, {7, 4}, {7, 5}
-    };
-    private int[][] patrouilleschip = {   //coordinaten Patrouilleschip
-         
-        {9, 3}, {9, 4}
-    };
     //de coordinaten die hierboven nu staan moeten uiteindelijk vervangen
     //door de coordinaten die de speler kiest
-    
-    private ArrayList<Boot> Botenlist = new ArrayList<>();
+    */
+   
     
     public Bord(){
         for (int i = 0; i < Vliegdekschip.size; i++)
@@ -103,12 +93,27 @@ public class Bord {
             Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
         }
         
-         for (int i = 0; i < Patrouilleschip.size; i++)
+        for (int i = 0; i < Patrouilleschip.size; i++)
         {
             Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
         }
 
-
+        /*
+        * for-loops voor bootdelen
+        *
+        
+        for (int i =0; i<bootBody.length; i++){
+            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL));
+        }
+        
+        for (int i =0; i<bootNeus.length; i++){
+            boten.add(new Boot (5, bootNeus[i], Orientatie.VERTICAAL, Soort.NEUS));
+        }
+        for (int i =0; i<bootStaart.length; i++){
+            boten.add(new Boot (5, bootStaart[i], Orientatie.VERTICAAL, Soort.NEUS));
+        }
+        */
+    }
 
   
     //getters
@@ -123,20 +128,14 @@ public class Bord {
         return null;
             //geen boot op gegeven rij en kolom
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-*/
-
-=======
->>>>>>> 2d615297995df2599a099ad2799c708b788d6151
-    
 
     public Boot getGeselecteerdeBoot() {
         return geselecteerdeBoot;
-}
+    }
    
+    
+    
+    
     public boolean isBootGeselecteerd() {
         return (geselecteerdeBoot!= null);
     }
