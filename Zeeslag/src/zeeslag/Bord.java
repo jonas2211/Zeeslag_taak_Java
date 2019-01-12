@@ -37,24 +37,6 @@ public class Bord {
     };
     
     /*
-    *alle gegevens voor bootdelen 
-    *
-    
-    private int[][] bootNeus = {   //coordinaten neus
-         
-        {3, 1}, {3, 3}, {3, 5}, {3,7}, {3,9}
-        //bv. {Boot.getX,Boot.getY}, ....
-    };
-    private int[][] bootBody  = {   //coordinaten Body
-         
-        {4,3}, {4, 5}, {4,7}, {5, 7}, {4, 9}, {5,9}, {6,9}
-    };
-    private int[][] bootStaart = {   //coordinaten Staart
-    
-        
-        {4, 1}, {5, 3}, {5, 5}, {6, 7}, {6, 9}
-    };
-
     private int[][] CoBoten = {   //coordinaten neus
          
         {3, 1}, {3, 3}, {3, 5}, {3, 7}, {3, 9},
@@ -65,6 +47,7 @@ public class Bord {
 
         //bv. {Boot.getX,Boot.getY}, ....
     };
+    
        
     
     //de coordinaten die hierboven nu staan moeten uiteindelijk vervangen
@@ -73,27 +56,27 @@ public class Bord {
    
     
     public Bord(){
-        for (int i = 0; i < Vliegdekschip.size; i++)
+        for (int i = 0; i < vliegdekschip.length; i++)
         {
             Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
         }
 
-        for (int i = 0; i < Slagschip.size; i++)
+        for (int i = 0; i < slagschip.length; i++)
         {
             Botenlist.add(new Boot (slagschip[i], Type.SLAGSCHIP));
         }
         
-        for (int i = 0; i < Duikboot.size; i++)
+        for (int i = 0; i < duikboot.length; i++)
         {
             Botenlist.add(new Boot (duikboot[i], Type.DUIKBOOT));
         }
         
-        for (int i = 0; i < Torpedobootjager.size; i++)
+        for (int i = 0; i < torpedobootjager.length; i++)
         {
             Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
         }
         
-        for (int i = 0; i < Patrouilleschip.size; i++)
+        for (int i = 0; i < patrouilleschip.length; i++)
         {
             Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
         }
@@ -118,7 +101,7 @@ public class Bord {
   
     //getters
     public Boot getBootOn(int row, int column) {
-        for (Boot boot : boten) {
+        for (Boot boot : Botenlist) {
             if (boot.getRow() == row && boot.getColumn() == column) {
                 return boot;
             }            
