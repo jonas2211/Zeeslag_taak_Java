@@ -4,85 +4,67 @@
  * and open the template in the editor.
  */
 package zeeslag;
-import java.awt.Color;
 import java.util.ArrayList;
 /**
  *
  * @author Bavo, Jonas, Rens
  */
-
-
-    
-
 public class Bord {
-    private Boot boot;
     private Boot geselecteerdeBoot;
-    
-    /*
-    
-    public Bord(){
-    boten = new ArrayList<>();
-    boten.add(vliegdekschip); // lengte5
-    boten.add(slagschip); //lengte4
-    boten.add(duikboot); //lengte3
-    boten.add(torpedobootjager); //lengte3
-    boten.add(Patrouilleschip); //lengte2
-    }
-    */
-        
-    private int[][] bootNeus = {   //coordinaten neus
+    private int[][] vliegdekschip = {   //coordinaten vliegdekschip
          
-        {3, 1}, {3, 3}, {3, 5}, {3,7}, {3,9}
+        {3, 3}, {3, 4}, {3, 5}, {3,6}, {3,7}
         //bv. {Boot.getX,Boot.getY}, ....
     };
-    private int[][] bootBody  = {   //coordinaten Body
+    private int[][] slagschip  = {   //coordinaten slagschip
          
-        {4,3}, {4, 5}, {4,7}, {5, 7}, {4, 9}, {5,9}, {6,9}
+        {1, 3}, {1, 4}, {1, 5}, {1,6}
     };
-    private int[][] bootStaart = {   //coordinaten Staart
-    
-        
-        {4, 1}, {5, 3}, {5, 5}, {6, 7}, {6, 9}
+    private int[][] duikboot = {   //coordinaten onderzeeer
+         
+        {5, 3}, {5, 4}, {5, 5}
     };
-    
-    private ArrayList<Boot> boten;
-    public Bord(){
-        
-        for (int i =0; i<bootBody.length; i++){
-            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL, Soort.BODY));
-        }
-        
-        for (int i =0; i<bootNeus.length; i++){
-            boten.add(new Boot (5, bootNeus[i], Orientatie.VERTICAAL, Soort.NEUS));
-        }
-        for (int i =0; i<bootStaart.length; i++){
-            boten.add(new Boot (5, bootStaart[i], Orientatie.VERTICAAL, Soort.NEUS));
-        }
-    }
-        
-    
-    
-    /*
     private int[][] torpedobootjager = {   //coordinaten torpedoboojager
          
         {7, 3}, {7, 4}, {7, 5}
     };
-    private int[][] Patrouilleschip = {   //coordinaten Patrouilleschip
+    private int[][] patrouilleschip = {   //coordinaten Patrouilleschip
          
         {9, 3}, {9, 4}
     };
     //de coordinaten die hierboven nu staan moeten uiteindelijk vervangen
     //door de coordinaten die de speler kiest
-        */
-
-    /*
-    public Boot Raak(int row, int column) {
-        for (Boot b : boten) {
-            if (b.getRaw() == row && b.getColumn() == column) {
-                return b;
-            }
+    
+    private ArrayList<Boot> Botenlist = new ArrayList<>();
+    
+    public Bord(){
+        for (int i = 0; i < Vliegdekschip.size; i++)
+        {
+            Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
         }
-*/
+
+        for (int i = 0; i < Slagschip.size; i++)
+        {
+            Botenlist.add(new Boot (slagschip[i], Type.SLAGSCHIP));
+        }
+        
+        for (int i = 0; i < Duikboot.size; i++)
+        {
+            Botenlist.add(new Boot (duikboot[i], Type.DUIKBOOT));
+        }
+        
+        for (int i = 0; i < Torpedobootjager.size; i++)
+        {
+            Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
+        }
+        
+         for (int i = 0; i < Patrouilleschip.size; i++)
+        {
+            Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
+        }
+
+
+
   
     //getters
     public Boot getBootOn(int row, int column) {
@@ -97,11 +79,12 @@ public class Bord {
             //geen boot op gegeven rij en kolom
     }
 <<<<<<< HEAD
-=======
+
 <<<<<<< HEAD
 */
->>>>>>> da99afd680d36d3809ce4bf37555f0fe9986170b
+
     
+
     public Boot getGeselecteerdeBoot() {
         return geselecteerdeBoot;
 }

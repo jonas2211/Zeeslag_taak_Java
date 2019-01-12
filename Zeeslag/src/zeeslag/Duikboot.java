@@ -21,7 +21,7 @@ public class Duikboot extends Boot{
     
     public Duikboot(String naam, int size, int column, int row, Orientatie o, Type type) {
         super(naam, column, row, o, type);
-        naam = "onderzeeer";
+        naam = "duikboot";
         size = 3;
         gezonken = false;
         levens = size;

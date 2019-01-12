@@ -9,7 +9,7 @@ package zeeslag;
  *
  * @author Rens Remans
  */
-public class Patrouilleboot extends Boot {
+public class Patrouilleschip extends Boot {
     
     private String naam;
     private int size;
@@ -17,7 +17,7 @@ public class Patrouilleboot extends Boot {
     private Orientatie orientatie;
     private int rotatieHoek;
 
-    public Patrouilleboot(String naam, int size, int x, int y, Orientatie o) {
+    public Patrouilleschip(String naam, int size, int x, int y, Orientatie o) {
         super(naam, size, x, y,o);
         
         naam = "Patrouilleboot";

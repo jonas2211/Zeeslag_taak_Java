@@ -24,5 +24,5 @@ public class Torpedobootjager extends Boot{
         x = x;
         y = y;
         orientatie = Orientatie.HORIZONTAAL;
-}
+    }
 }
