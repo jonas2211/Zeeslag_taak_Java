@@ -9,25 +9,49 @@ package zeeslag;
  *
  * @author Bavo
  */
-public class Mark {
+public class HitMark {
     private boolean hit;
     private Boot boot;
     private int x,y;
 // x en y coordinaten zijn vaag
-    public Mark(int x, int y) {
+    public HitMark(int x, int y) {
         hit = true;
         this.x = x;
         this.y = y;
     }
+    
+
     //getters
-    /*public getHitmarks(){
-    for(: Boot boot);{
-        
+    
+    
+    public boolean isHit() {
+        return hit;
     }
-//geen idee
+
+    public Boot getBoot() {
+        return boot;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
     
-    }*/
     
-  
     
+    /*
+    //probeersel, wss fout
+    public getHitMarks(){
+        for (Slagschip:Boot boot);{
+            if (x == Slagschip.row ){
+                
+            }
+    }
+    */
 }
+    
+ 
+
