@@ -167,7 +167,7 @@ public class Bord {
         return true;
     }
     
-    public void hitmark(int row, int column){
+    public void setHitmark(int row, int column){
         for(Boot bootModel : Botenlist){
             if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 if (bootModel.getLevens() == 0){
