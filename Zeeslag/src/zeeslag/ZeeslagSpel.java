@@ -29,6 +29,9 @@ public class ZeeslagSpel {
         this.computer = new SpelerComputer(bord);
         this.huidigeSpeler = spelerEcht;
     }
+    public void start(){
+        
+    }
     
     
     //getters
