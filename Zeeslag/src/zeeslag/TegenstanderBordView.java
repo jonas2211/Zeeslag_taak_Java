@@ -70,7 +70,7 @@ public class TegenstanderBordView extends Region {
                 }
     */
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        for (Hitmark hit : bordModel.hitmark(int row, int column))
+        for (Hitmark hit : bordModel.sethitmark(int row, int column))
         {
             //for en if regel moet aagepast worden dit weet ik niet
             if (hit == bordModel.hitmark(int row, int column))
