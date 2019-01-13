@@ -10,7 +10,6 @@ package zeeslag;
  * @author Rens Remans
  */
 public class Slagschip extends Boot{
-    private String naam;
     private int size;
     private boolean gezonken;
     private Orientatie o;
@@ -21,8 +20,7 @@ public class Slagschip extends Boot{
     
     public Slagschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
-        this.naam = "Slagschip";
-        this.size = 3;
+        this.size = 4;
         gezonken = false;
         levens = size;
         this.row = row;

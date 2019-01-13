@@ -11,7 +11,6 @@ package zeeslag;
  * @author Rens Remans
  */
 public class Vliegdekschip extends Boot{
-    private String naam;
     private int size;
     private boolean gezonken;
     private Orientatie o;
@@ -22,8 +21,7 @@ public class Vliegdekschip extends Boot{
     
     public Vliegdekschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
-        this.naam = "Vliegdekschip";
-        this.size = 3;
+        this.size = 5;
         gezonken = false;
         levens = size;
         this.row = row;

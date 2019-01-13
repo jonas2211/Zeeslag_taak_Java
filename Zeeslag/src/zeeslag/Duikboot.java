@@ -10,7 +10,6 @@ package zeeslag;
  * @author Rens Remans
  */
 public class Duikboot extends Boot{
-    private String naam;
     private int size;
     private boolean gezonken;
     private Orientatie o;
@@ -21,7 +20,6 @@ public class Duikboot extends Boot{
 
     public Duikboot(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
-        this.naam = "Duikboot";
         this.size = 3;
         gezonken = false;
         levens = size;

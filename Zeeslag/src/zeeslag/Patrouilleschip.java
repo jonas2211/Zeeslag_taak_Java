@@ -12,8 +12,6 @@ package zeeslag;
 
 
 public class Patrouilleschip extends Boot{
-
-    private String naam;
     private int size;
     private boolean gezonken;
     private Orientatie o;
@@ -24,7 +22,7 @@ public class Patrouilleschip extends Boot{
     
     public Patrouilleschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
-        this.size = 3;
+        this.size = 2;
         gezonken = false;
         levens = size;
         this.row = row;
