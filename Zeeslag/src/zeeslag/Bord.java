@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Bord {
     private Boot bootModel;
     private ArrayList<Boot> Botenlist = new ArrayList<>();
+    private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
     
     
     
@@ -116,6 +117,10 @@ public class Bord {
     public ArrayList<Boot> getBoten() {
         return Botenlist;
     }
+    
+    public ArrayList<Hitmark> getHitmarks(){
+        return HitmarkList;
+    }
 
     public Boot getGeselecteerdeBoot() {
         return bootModel;
@@ -170,20 +175,15 @@ public class Bord {
     public void setHitmark(int row, int column){
         for(Boot bootModel : Botenlist){
             if (bootModel.getRow() == row && bootModel.getColumn() == column){
-                if (bootModel.getLevens() == 0){
-                    bootModel.isGezonken();
-                    System.out.println("gezonken");
-                }
-                else
-                {
+                HitmarkList.add(new Hitmark(row,column));
+                
                     bootModel.Geraakt();
-                }
             }
         }
     }
+}
     
 
-}
 
 
 
