@@ -13,6 +13,7 @@ public class Bord {
     private Boot bootModel;
     private ArrayList<Boot> Botenlist = new ArrayList<>();
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
+    // moet er een klasse hitmark zijn of kunnen we een arraylist maken via klasse Bord voor hitmarks?
     
     
     
@@ -175,7 +176,7 @@ public class Bord {
     public void setHitmark(int row, int column){
         for(Boot bootModel : Botenlist){
             if (bootModel.getRow() == row && bootModel.getColumn() == column){
-                HitmarkList.add(new Hitmark(row,column));
+                HitmarkList.add(new Hitmark(row, column));
                 
                     bootModel.Geraakt();
             }
