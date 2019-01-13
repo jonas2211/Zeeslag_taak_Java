@@ -29,18 +29,43 @@ public class ZeeslagSpel {
         this.computer = new SpelerComputer(bord);
         this.huidigeSpeler = spelerEcht;
     }
-
+    //getters
     public Bord getBord() {
         return bord;
     }
 
-    public Speler getSpeler() {
+    public Speler getHuidigeSpeler() {
         return huidigeSpeler;
     }
 
+    public SpelerEcht getSpelerEcht() {
+        return spelerEcht;
+    }
+
+    public SpelerComputer getComputer() {
+        return computer;
+    }
     
-  
     
+    //andere methodes
+    public boolean isBootGeselecteerd() {
+         return bord.isBootGeselecteerd();
+     }
+     
+    public boolean verplaatsBootNaar(int row, int column){
+        return bord.verplaatsBootNaar(row, column);
+    }
+    
+     public boolean selecteerBootOn(int row, int column) {
+         return bord.selecteerBootOn(row, column);
+     }
+    
+     public void selecteerBootOff(){
+         bord.selecteerBootOff();
+     }
+ 
+     
+    //methode spelerwissel
     public void eindeBeurt(){
         if (huidigeSpeler instanceof SpelerEcht){
             huidigeSpeler = computer;
