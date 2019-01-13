@@ -2,6 +2,7 @@ package zeeslag;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -31,6 +32,9 @@ public class ZeeslagController {
 
     @FXML
     private Button btnDraaien;
+    
+    @FXML
+    private Button btnOpstarten;
 
     
     private ZeeslagSpel model;
@@ -73,7 +77,25 @@ public class ZeeslagController {
             model.addVakje(newVakje);
             view.update();
         }*/
+    }
+    void btnOpstartenHandler(ActionEvent event){
+        System.out.println("Reset spel");
+        model.opstarten();
+        update();
+        
+    }
     
+    void btnStartHandler(ActionEvent event){
+        System.out.println("Start het spel");
+        model.start();
+        update();
+        
+    }
+    
+    void btnDraaienHandler(ActionEvent event){
+        System.out.println("Draai boot");
+        bootModel.roteer();
+        update();
   
     }
     
