@@ -20,15 +20,17 @@ public class ZeeslagSpel {
     
 
     public ZeeslagSpel() {
-        this.start();
+        this.opstarten();
     }
     
-    public void start(){
+    public void opstarten(){
         this.bord = new Bord();
         this.spelerEcht = new SpelerEcht(bord);
         this.computer = new SpelerComputer(bord);
         this.huidigeSpeler = spelerEcht;
     }
+    
+    
     //getters
     public Bord getBord() {
         return bord;
