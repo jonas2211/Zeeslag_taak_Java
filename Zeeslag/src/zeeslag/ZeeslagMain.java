@@ -19,6 +19,8 @@ public class ZeeslagMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        //model 
+        ZeeslagSpel model = new model();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLZeeslagView.fxml"));
         
         Scene scene = new Scene(root);

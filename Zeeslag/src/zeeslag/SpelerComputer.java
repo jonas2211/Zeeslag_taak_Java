@@ -11,10 +11,10 @@ package zeeslag;
  */
 public class SpelerComputer extends Speler {
        private Boot bootModel;
+       
     public SpelerComputer(Bord bord) {
         super(bord);
-        
-        
+         
     }
     public boolean isGezonken(Type type){
         boolean gezonken = false; 

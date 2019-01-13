@@ -32,7 +32,7 @@ public class BootView extends Region {
 
   ;
 
-    public BootView() {
+    public BootView(){
         this.bootModel = bootModel;
         this.update();
         /*
@@ -46,7 +46,7 @@ public class BootView extends Region {
     }
     
     
-
+// moet nog aangewerkt worden
     public void update() {
         
         if (bootModel.getType() == Type.VLIEGDEKSCHIP){
