@@ -130,15 +130,15 @@ public class Boot {
         }
     }
     
-    public void roteer(boolean roteerRechts){
+    public void roteer(){
         int rotatieHoek = 0;
 
-        if(roteerRechts && rotatieHoek == 0){
+        if(rotatieHoek == 0){
             rotatieHoek = 90;
         }
         else{
-            if(!roteerRechts && rotatieHoek == 90){
-                rotatieHoek = -90;
+            if(rotatieHoek == 90){
+                rotatieHoek = 0;
             }
         }
     }
