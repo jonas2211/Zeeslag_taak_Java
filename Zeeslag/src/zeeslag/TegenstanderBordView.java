@@ -62,6 +62,7 @@ public class TegenstanderBordView extends Region {
             this.getChildren().addAll(lijn);
         }
     }
+
     
     /*for (Boot boot: bord.getBoten()){
             if(bootModel.getType() == Type.VLIEGDEKSCHIP){
@@ -69,6 +70,7 @@ public class TegenstanderBordView extends Region {
                     return false;
                 }
     */
+    
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
         for (Hitmark hit : bordModel.sethitmark(int row, int column))
         {
@@ -104,11 +106,12 @@ public class TegenstanderBordView extends Region {
             }
         }
     
+}
        /* //teken kruis in juiste kleur hier
         kruis.trans... //peer kruis op juiste plaats
         this.getChildren().add(kruis);*/
 //TODO
-    }
+    
     
     /*
     void update2(){
@@ -123,4 +126,5 @@ public class TegenstanderBordView extends Region {
         getChildren().add(rechthoek);
         }
      */
-}
+   
+

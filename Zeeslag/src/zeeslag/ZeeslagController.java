@@ -53,7 +53,7 @@ public class ZeeslagController {
         assert botenPane != null : "fx:id=\"botenPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
-
+        tegenstanderPane.setOnMouseclicked(event-> handleMouseClick(event));
         spelerPane.getChildren().add(spelerBordView);
         tegenstanderPane.getChildren().add(TegenstanderBordView);
         botenPane.getChildren().add(bootView);

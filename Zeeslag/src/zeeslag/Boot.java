@@ -9,9 +9,7 @@ package zeeslag;
  * @author Bavo, Jonas, Rens
  */
 public class Boot {
-    private ZeeslagController controllerModel;
-    // private String naam;
-    //naam is niet nodig omdat we een apparte klasse voor elke boot hebben en dus weten over welke boot het gaat
+    //private ZeeslagController controllerModel;
     private int size;
     int levens;
     private boolean gezonken;
@@ -39,8 +37,12 @@ public class Boot {
         this.type = type;
         this.gezonken = false;
     }
+    
     // getters
-
+    public boolean isGezonken() {
+        return gezonken;
+    }
+    
     public Type getType() {
         return type;
     }
@@ -49,12 +51,7 @@ public class Boot {
         int[] c = {this.row,this.column};
         return c;
     }
-    /*
-    public String getNaam() {
-        return naam;
-    }
-*/
-
+    
     public int getRow() {
         return row;
     }
@@ -80,18 +77,6 @@ public class Boot {
     }
     
     //setters en andere methodes
-    
-    
-    public boolean isGezonken() {
-        return gezonken;
-    }
-
-    /*
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
-*/
-
     public void setSize(int size) {
         this.size = size;
     }
@@ -99,6 +84,7 @@ public class Boot {
     public void setGezonken(boolean gezonken) {
         this.gezonken = gezonken;
     }
+    
     public void Geraakt(){
         if (levens == 0){
             gezonken = true;
@@ -107,13 +93,6 @@ public class Boot {
         else 
             levens --;
     }
-    /*
-    public void Hit() {
-        this.gezonken = false;
-        levens = levens -1;
-    } hit en geraakt doen hetzelfde
-*/
-     
     
     private void setCoordinaten(int row, int column) {
         this.row = row;
@@ -143,4 +122,12 @@ public class Boot {
         }
     }
     
+    
+    /*
+    public void Hit() {
+        this.gezonken = false;
+        levens = levens -1;
+    } hit en geraakt doen hetzelfde
+*/
+     
 }
