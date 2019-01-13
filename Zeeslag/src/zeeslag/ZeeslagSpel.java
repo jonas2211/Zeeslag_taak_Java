@@ -74,6 +74,25 @@ public class ZeeslagSpel {
             huidigeSpeler = spelerEcht;
         }
     }
-}
+    // eindespelchecker wie heeft gewonnen
+    public boolean Spelafgelopen(){
+        if (spelerEcht.isGezonken(Type.VLIEGDEKSCHIP) ==true && spelerEcht.isGezonken(Type.SLAGSCHIP)== true && spelerEcht.isGezonken(Type.TORPEDOBOOTJAGER)==true && spelerEcht.isGezonken(Type.DUIKBOOT)==true && spelerEcht.isGezonken(Type.PATROUILLESCHIP)==true)
+        {
+            System.out.println(" De computer heeft gewonnen.");
+            return true;
+        }
+        else if(computer.isGezonken(Type.VLIEGDEKSCHIP) ==true && computer.isGezonken(Type.SLAGSCHIP)== true && computer.isGezonken(Type.TORPEDOBOOTJAGER)==true && computer.isGezonken(Type.DUIKBOOT)==true && computer.isGezonken(Type.PATROUILLESCHIP)==true) 
+        {
+            System.out.println(" Gefeliciteert! Je hebt de computer verslagen!");
+            return true;
+        }
+        else
+        {
+            return false;
+                    
+        }
+    }
     
+    
+}
 
