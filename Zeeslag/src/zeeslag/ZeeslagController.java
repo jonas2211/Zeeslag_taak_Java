@@ -42,6 +42,8 @@ public class ZeeslagController {
     private TegenstanderBordView view;
     private SpelerBordView view2;
     private BootView view3;
+    private ZeeslagSpel zeeslagModel;
+    private BordView bordView;
 
     @FXML
     void initialize() {
@@ -59,6 +61,14 @@ public class ZeeslagController {
         spelerPane.getChildren().add(spelerBordView);
         tegenstanderPane.getChildren().add(TegenstanderBordView);
         botenPane.getChildren().add(bootView);
+    }
+    public void setModel(ZeeslagSpel zeeslagModel) {
+        this.zeeslagModel = zeeslagModel;
+
+        bordView = new BordView(zeeslagModel.getBord());
+        tegenstanderPane.getChildren().add(bordView);
+        tegenstanderPane.setFocusTraversable(true);
+        
     }
     /*   
     public void setModel(ZeeslagSpel model) {
