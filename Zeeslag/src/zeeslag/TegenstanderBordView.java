@@ -5,6 +5,7 @@
  */
 package zeeslag;
 
+import java.util.ArrayList;
 import javafx.scene.layout.Region;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -23,6 +24,7 @@ public class TegenstanderBordView extends Region {
     private Rectangle rechthoek;
     private Bord bordModel;
     private Boot bootModel;
+    private ArrayList<Hitmark>hit;
 
     public TegenstanderBordView() { //in de constructor komt welk bord het moet afbeelden
         this.bordModel = bordModel; //model van het bord
@@ -72,10 +74,10 @@ public class TegenstanderBordView extends Region {
     */
     
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        for (Hitmark hit : bordModel.sethitmark(int row, int column))
+        for (Hitmark hit : bordModel.setHitmark(row, column));
         {
             //for en if regel moet aagepast worden dit weet ik niet
-            if (hit == bordModel.hitmark(int row, int column))
+            if (hit == bordModel.Hitmark(row, column))
             {
                 Rectangle rechth= new Rectangle(bootModel.getRow(), bootModel.getColumn(), 30, 30);
                 rechth.setFill(Color.RED);
