@@ -27,10 +27,10 @@ public class ZeeslagMain extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLZeeslagView.fxml"));
         Parent root = loader.load();
         
-        ZeeslagController zeeSlagcontroller = loader.getController();
+        ZeeslagController zeeslagController = loader.getController();
         
         //controller linken
-        ZeeslagController.setModel(zeeslagModel);
+        zeeslagController.setModel(zeeslagModel);
                 
         Scene scene = new Scene(root);
         stage.setScene(scene);
