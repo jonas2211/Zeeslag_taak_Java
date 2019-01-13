@@ -74,6 +74,7 @@ public class ZeeslagSpel {
             huidigeSpeler = spelerEcht;
         }
     }
+    
     // eindespelchecker wie heeft gewonnen
     public boolean Spelafgelopen(){
         if (spelerEcht.isGezonken(Type.VLIEGDEKSCHIP) ==true && spelerEcht.isGezonken(Type.SLAGSCHIP)== true && spelerEcht.isGezonken(Type.TORPEDOBOOTJAGER)==true && spelerEcht.isGezonken(Type.DUIKBOOT)==true && spelerEcht.isGezonken(Type.PATROUILLESCHIP)==true)
