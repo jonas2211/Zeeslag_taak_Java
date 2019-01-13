@@ -20,7 +20,7 @@ public class ZeeslagMain extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //model 
-        ZeeslagSpel model = new model();
+        ZeeslagSpel model = new ZeeslagSpel();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLZeeslagView.fxml"));
         
         Scene scene = new Scene(root);
