@@ -16,13 +16,13 @@ public class Hitmark {
 
     private boolean hit;
     private Boot boot;
-    private int x,y;
+    private int row,column;
 // x en y coordinaten zijn vaag
-    public Hitmark(int x, int y) {
+    public Hitmark(int row, int column) {
         hit = false;
 
-        this.x = x;
-        this.y = y;
+        this.row = row;
+        this.column = column;
     }
     
     //DOELSTELLINGEN FUNCTIE HITMARKER:
@@ -33,7 +33,7 @@ public class Hitmark {
     private Speler spelerModel;
     
     
-    public void hitmark(int row, int column){
+    public void setHitmark(int row, int column){
         for(Boot bootModel : boten){
             if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 if (bootModel.getLevens() == 0){
