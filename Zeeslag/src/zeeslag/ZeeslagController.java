@@ -25,9 +25,6 @@ public class ZeeslagController {
     private AnchorPane tegenstanderPane;
     
     @FXML
-    private AnchorPane botenPane;
-
-    @FXML
     private Button btnStart;
 
     @FXML
@@ -51,12 +48,11 @@ public class ZeeslagController {
         //BootView bootView = new BootView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
-        assert botenPane != null : "fx:id=\"botenPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
-        botenPane.setOnMouseClicked(event-> handleMouseClick(event));
+        //botenPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.getChildren().add(spelerBordView);
         
         //botenPane.getChildren().add(bootView);
