@@ -5,6 +5,10 @@
  */
 package zeeslag;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonWriter;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
@@ -99,10 +103,18 @@ public class ZeeslagSpel {
         }
     }
     public void saveToJSON(){
-    Gson gson = new Gson();
-    String json = gson.toJson(model);
-}
-    
+    Gson gsonner = new GsonBuilder().setPrettyPrinting().create();
+        String json = gsonner.toJson(this);
+        try {
+            JsonWriter writer = gsonner.newJsonWriter(new FileWriter("savedModel.json.txt"));
+            writer.jsonValue(json);
+        } catch (java.io.IOException e) {
+     
+        }
+    }
+    public static void Save(){
+        
+    }
     
 }
 
