@@ -15,12 +15,16 @@ import javafx.scene.shape.*;
  */
 public class SpelerBordView extends Region {
     public SpelerBordView() {
-        
         this.update();
+//        this.updateHitMarks();
 
     }
     private BootView view;
     private Bord bordModel;
+<<<<<<< HEAD
+=======
+    private ArrayList<Hitmark> hit;
+>>>>>>> 62e49e2c18a8e167db2fe90cb9ed8adf14bc5baa
     
     void update(){  
         Rectangle rechthoek = new Rectangle (300,300,Color.rgb(55, 131, 186));
@@ -67,6 +71,38 @@ public class SpelerBordView extends Region {
         
             
         
+    }
+    
+    private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
+        for (Hitmark hitmrk : bordModel.getHitmarkList()) {
+            Rectangle rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
+            //for en if regel moet aagepast worden dit weet ik niet
+            if (hitmrk.isHit() == true) {
+                //rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
+                rechth.setFill(Color.RED);
+                //rechth omdat rechthoek al in gebruik was   
+                /*Line lijn = new Line();
+                lijn.setFill(Color.BLACK);
+                lijn.setStartX(bootModel.getRow());
+                lijn.setStartY(bootModel.getColumn());              //!!!!! hitmrk ipv bootModel!!!!!
+                lijn.setEndX(bootModel.getRow() + 1);               // * 30 !!
+                lijn.setEndY(bootModel.getColumn() + 1);
+                //eerste lijn voor kruis op rood vierkant    
+                Line lijn2 = new Line();
+                lijn2.setFill(Color.BLACK);
+                lijn2.setStartX(bootModel.getRow());
+                lijn2.setStartY(bootModel.getColumn() + 1);
+                lijn2.setEndX(bootModel.getRow() + 1);
+                lijn2.setEndY(bootModel.getRow());
+                //tweede lijn voor kruis op rood vierkant
+                //x en y moet nog vervangen worden bij lijn en rechthoek    
+                this.getChildren().addAll(rechth, lijn, lijn2);*/
+            } else {
+                rechth.setFill(Color.rgb(55, 131, 186));
+                //x en y nog vervangen
+            }
+            this.getChildren().addAll(rechth);
+        }
     }
     /*
     void update2(){  
