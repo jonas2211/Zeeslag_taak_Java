@@ -16,7 +16,7 @@ import javafx.scene.shape.*;
 public class SpelerBordView extends Region {
     public SpelerBordView() {
         this.update();
-//        this.updateHitMarks();
+       //this.updateHitMarks();
 
     }
     private BootView view;

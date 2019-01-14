@@ -38,6 +38,7 @@ public class ZeeslagController {
     private Boot bootModel;
     private TegenstanderBordView view;
     private SpelerBordView view2;
+    private StartBootView view3;
    // private BootView view3;           //Nieuwe klasse bootselectorview en die tekent alle boten in de zijkant
     //private BordView bordView;
 
@@ -53,8 +54,8 @@ public class ZeeslagController {
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
 
-        //botenPane.setOnMouseClicked(event-> handleMouseClick(event));
-        spelerPane.getChildren().add(spelerBordView);
+        spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
+        //spelerPane.getChildren().add(view2);
 
         //botenPane.setOnMouseClicked(event-> handleMouseClick(event));
         //spelerPane.getChildren().add(spelerBordView);
@@ -71,6 +72,7 @@ public class ZeeslagController {
         spelerPane.setFocusTraversable(true);
         tegenstanderPane.getChildren().add(view);
         tegenstanderPane.setFocusTraversable(true);
+        //spelerPane.getChildren().add(view3);
         
     }
     /*   
