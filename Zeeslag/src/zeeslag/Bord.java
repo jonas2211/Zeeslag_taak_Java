@@ -60,6 +60,13 @@ public class Bord {
    
     
     public Bord(){
+        /*
+        if(bootModel.getType() == Type.VLIEGDEKSCHIP){
+            Botenlist.add(new Boot(bootModel.getType()));
+        }
+        */
+    
+        
         for (int i = 0; i < vliegdekschip.length; i++)
         {
             Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));

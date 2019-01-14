@@ -7,6 +7,8 @@ package zeeslag;
 
 import java.util.ArrayList;
 import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.*;
 
 /**
  *
@@ -24,16 +26,52 @@ public class StartBootView extends Region{
     public void update(){
         ArrayList<Boot> botenList = bordModel.getBoten();
         for (Boot b : botenList) {
+            if(b.getType() == Type.VLIEGDEKSCHIP){
             BootView bootView = new BootView(b);
-            bootView.setTranslateX(b.getColumn() * 30);
-            bootView.setTranslateY(b.getRow() * 30);
+            bootView.setTranslateX(13 * 30);
+            bootView.setTranslateY(1 * 30);
             getChildren().add(bootView);
+            }
+            
+            else if(b.getType() == Type.SLAGSCHIP){
+            BootView bootView = new BootView(b);
+            bootView.setTranslateX(13 * 30);
+            bootView.setTranslateY(3 * 30);
+            getChildren().add(bootView);
+            }
+            
+            else if(b.getType() == Type.DUIKBOOT){
+            BootView bootView = new BootView(b);
+            bootView.setTranslateX(13 * 30);
+            bootView.setTranslateY(5 * 30);
+            getChildren().add(bootView);
+            }
+            
+            else if(b.getType() == Type.TORPEDOBOOTJAGER){
+            BootView bootView = new BootView(b);
+            bootView.setTranslateX(13 * 30);
+            bootView.setTranslateY(7 * 30);
+            getChildren().add(bootView);
+            }
+            
+            else if(b.getType() == Type.PATROUILLESCHIP){
+            BootView bootView = new BootView(b);
+            bootView.setTranslateX(13 * 30);
+            bootView.setTranslateY(9 * 30);
+            getChildren().add(bootView);
+            }
+/*
+            Rectangle rect= new Rectangle(30*b.getSize(), 1*30, Color.GRAY);;
+                    rect.setTranslateX(13*30);
+                    rect.setTranslateY(2*30);
+                    getChildren().addAll(rect);
+*/
 
-
-        }
+            
         }
         
     }
+}
     
     
 

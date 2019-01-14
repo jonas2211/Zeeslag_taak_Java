@@ -37,7 +37,6 @@ public class Boot {
         this.type = type;
         this.gezonken = false;
     }
-    
 
     // getters
     public boolean isGezonken() {

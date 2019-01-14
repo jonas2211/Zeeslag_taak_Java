@@ -6,6 +6,7 @@
 package zeeslag;
 
 import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
@@ -48,6 +49,9 @@ public class BootView extends Region {
 // moet nog aangewerkt worden
     public void update() {
         
+        Rectangle rect= new Rectangle(30*bootModel.getSize(), 1*30, Color.GRAY);;
+        getChildren().add(rect);
+        /*
         if (bootModel.getType() == Type.VLIEGDEKSCHIP){
             //teken vliegdekschip
             driehoek.setLayoutX(boot1.getRow());
@@ -70,6 +74,7 @@ public class BootView extends Region {
         else if (bootModel.getType() == Type.PATROUILLESCHIP){
             //teken patrouilleschip
         }
+        */
         
 
 /*
