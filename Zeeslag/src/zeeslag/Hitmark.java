@@ -5,7 +5,7 @@
  */
 package zeeslag;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 /**
  *
@@ -16,14 +16,13 @@ public class Hitmark {
 
     private boolean hit;
     private int row,column;
-     private Boot bootModel;
-    private ArrayList<Boot>boten;
-    private Speler spelerModel;
+     //private Boot bootModel;
+   //private ArrayList<Boot>boten;
+   // private Speler spelerModel;
     
 // x en y coordinaten zijn vaag
-    public Hitmark(int row, int column) {
-        hit = false;
-
+    public Hitmark(int row, int column, boolean hit) {
+        this.hit = hit;
         this.row = row;
         this.column = column;
     }
@@ -32,7 +31,7 @@ public class Hitmark {
     //    - als de coordinaten van de rij en kolom van waar de speler klikt overeenkomen 
     //      met de coordinaten van een boot, moet het vak waar de hit is gebeurt rood worden.
     
-    public void setHitmark(int row, int column){
+    /*public void setHitmark(int row, int column){
         for(Boot bootModel : boten){
             if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 if (bootModel.getLevens() == 0){
@@ -45,7 +44,7 @@ public class Hitmark {
                 }
             }
         }
-    }
+    }*/
 
 
     //getters
@@ -53,13 +52,15 @@ public class Hitmark {
         return hit;
     }
 
-    public Boot getBoot() {
+    
+    
+    /*public Boot getBoot() {
         return bootModel;
     }
 
     public Speler getSpelerModel() {
         return spelerModel;
-    }
+    }*/
    
     /*
     //probeersel, wss fout
@@ -70,6 +71,14 @@ public class Hitmark {
             }
     }
     */
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
 }
     
  

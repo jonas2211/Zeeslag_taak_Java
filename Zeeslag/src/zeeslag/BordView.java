@@ -1,4 +1,4 @@
-j/*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -26,19 +26,22 @@ public class BordView extends Region {
         ArrayList<Boot> botenList = bordModel.getBoten();
         for (Boot b : botenList) {
             BootView bootView = new BootView(b);
-            bootView.setTranslateX(b.getColumn() * 30 + 10); //one tile on the board is 70x70, +10 because a piece is 50x50
-            bootView.setTranslateY(b.getRow() * 30 + 10);
+            bootView.setTranslateX(b.getColumn() * 30);
+            bootView.setTranslateY(b.getRow() * 30);
             getChildren().add(bootView);
-            
+
+
         }
-    }
+        }
+        
+    
 
     public int getRow(int y) {
-        return y / 70;
+        return y / 30;
     }
 
     public int getColumn(int x) {
-        return x / 70;
+        return x / 30;
     }
 
     public Boot getPieceOn(int y, int x){

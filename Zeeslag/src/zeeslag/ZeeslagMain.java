@@ -21,13 +21,12 @@ public class ZeeslagMain extends Application {
     public void start(Stage stage) throws Exception {
         //model 
         ZeeslagSpel zeeslagModel = new ZeeslagSpel();
-
         
         //view 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLZeeslagView.fxml"));
-        Parent root = loader.load();
+        FXMLLoader lader = new FXMLLoader(getClass().getResource("FXMLZeeslagView.fxml"));
+        Parent root = lader.load();
         
-        ZeeslagController zeeslagController = loader.getController();
+        ZeeslagController zeeslagController = lader.getController();
         
         //controller linken
         zeeslagController.setModel(zeeslagModel);

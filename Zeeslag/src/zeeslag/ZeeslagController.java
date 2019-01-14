@@ -41,14 +41,14 @@ public class ZeeslagController {
     private Boot bootModel;
     private TegenstanderBordView view;
     private SpelerBordView view2;
-    private BootView view3;
+   // private BootView view3;           //Nieuwe klasse bootselectorview en die tekent alle boten in de zijkant
     //private BordView bordView;
 
     @FXML
     void initialize() {
         SpelerBordView spelerBordView = new SpelerBordView();
-        TegenstanderBordView TegenstanderBordView = new TegenstanderBordView();
-        BootView bootView = new BootView();
+        //TegenstanderBordView TegenstanderBordView = new TegenstanderBordView(zeeslagModel.getBord()); // kan foute bord zijn, zeeslagmodel = null.
+        //BootView bootView = new BootView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert botenPane != null : "fx:id=\"botenPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
@@ -58,13 +58,14 @@ public class ZeeslagController {
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         botenPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.getChildren().add(spelerBordView);
-        tegenstanderPane.getChildren().add(TegenstanderBordView);
-        botenPane.getChildren().add(bootView);
+        
+        //botenPane.getChildren().add(bootView);
     }
     public void setModel(ZeeslagSpel zeeslagModel) {
         this.zeeslagModel = zeeslagModel;
 
         view = new TegenstanderBordView(zeeslagModel.getBord());
+        view2 = new SpelerBordView(/*zeeslagModel.getBord()*/);
         spelerPane.getChildren().add(view2);
         spelerPane.setFocusTraversable(true);
         tegenstanderPane.getChildren().add(view);
@@ -115,7 +116,7 @@ public class ZeeslagController {
     void update(){
         view.update();
         view2.update();
-        view3.update();
+        //view3.update();
     }
     
     /*

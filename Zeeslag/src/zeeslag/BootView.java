@@ -31,8 +31,8 @@ public class BootView extends Region {
     
   
 
-    public BootView(){
-        this.bootModel = bootModel;
+    public BootView(Boot model){
+        this.bootModel = model;
         this.update();
         /*
         this.driehoek = new Polygon( 0.0, -40.0,40.0, -10.0,-40.0, -10.0 );

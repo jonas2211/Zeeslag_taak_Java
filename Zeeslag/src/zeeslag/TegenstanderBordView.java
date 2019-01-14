@@ -6,6 +6,7 @@
 package zeeslag;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import javafx.scene.layout.Region;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -21,12 +22,12 @@ import javafx.scene.input.MouseEvent;
 public class TegenstanderBordView extends Region {
 
     // lowie zegt: bordView moet een bord uit het model afbeelden, en meot dus een data member bordModel hebben.
-    private Rectangle rechthoek;
+    // private Rectangle rechthoek;
     private Bord bordModel;
     private Boot bootModel;
-    private ArrayList<Hitmark>hit;
+    private ArrayList<Hitmark> hit;
 
-    public TegenstanderBordView() { //in de constructor komt welk bord het moet afbeelden
+    public TegenstanderBordView(Bord bordModel) { //in de constructor komt welk bord het moet afbeelden
         this.bordModel = bordModel; //model van het bord
         this.bootModel = bootModel;
         this.update();
@@ -41,7 +42,7 @@ public class TegenstanderBordView extends Region {
     }
 
     private void updateBackground() {
-        this.rechthoek = new Rectangle(300, 300, Color.rgb(55, 131, 186));
+        Rectangle rechthoek = new Rectangle(300, 300, Color.rgb(55, 131, 186));
         //twijfel tusse aquamarine en paleturquoise
         this.getChildren().addAll(rechthoek);
         for (int i = 0; i < 11; i++) { //verticaal
@@ -65,57 +66,50 @@ public class TegenstanderBordView extends Region {
         }
     }
 
-    
     /*for (Boot boot: bord.getBoten()){
             if(bootModel.getType() == Type.VLIEGDEKSCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }
-    */
-    
+     */
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        for (Hitmark hit : bordModel.setHitmark(row, column));
-        {
+        for (Hitmark hitmrk : bordModel.getHitmarkList()) {
+            Rectangle rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
             //for en if regel moet aagepast worden dit weet ik niet
-            if (hit == bordModel.Hitmark(row, column))
-            {
-                Rectangle rechth= new Rectangle(bootModel.getRow(), bootModel.getColumn(), 30, 30);
+            if (hitmrk.isHit() == true) {
+                //rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
                 rechth.setFill(Color.RED);
-             //rechth omdat rechthoek al in gebruik was   
-                Line lijn= new Line(); 
+                //rechth omdat rechthoek al in gebruik was   
+                /*Line lijn = new Line();
                 lijn.setFill(Color.BLACK);
                 lijn.setStartX(bootModel.getRow());
-                lijn.setStartY(bootModel.getColumn());
-                lijn.setEndX(bootModel.getRow()+1);
-                lijn.setEndY(bootModel.getColumn()+1);
-            //eerste lijn voor kruis op rood vierkant    
-                Line lijn2= new Line();
+                lijn.setStartY(bootModel.getColumn());              //!!!!! hitmrk ipv bootModel!!!!!
+                lijn.setEndX(bootModel.getRow() + 1);               // * 30 !!
+                lijn.setEndY(bootModel.getColumn() + 1);
+                //eerste lijn voor kruis op rood vierkant    
+                Line lijn2 = new Line();
                 lijn2.setFill(Color.BLACK);
                 lijn2.setStartX(bootModel.getRow());
-                lijn2.setStartY(bootModel.getColumn()+1);
-                lijn2.setEndX(bootModel.getRow()+1);
+                lijn2.setStartY(bootModel.getColumn() + 1);
+                lijn2.setEndX(bootModel.getRow() + 1);
                 lijn2.setEndY(bootModel.getRow());
-            //tweede lijn voor kruis op rood vierkant    
-            //x en y moet nog vervangen worden bij lijn en rechthoek    
-                this.getChildren().addAll(rechth, lijn, lijn2);
-            }
-            else
-            {
-                Rectangle rechth= new Rectangle(bootModel.getRow(), bootModel.getColumn(), 30, 30);
+                //tweede lijn voor kruis op rood vierkant
+                //x en y moet nog vervangen worden bij lijn en rechthoek    
+                this.getChildren().addAll(rechth, lijn, lijn2);*/
+            } else {
                 rechth.setFill(Color.WHITE);
-                this.getChildren().addAll(rechth);
                 //x en y nog vervangen
             }
+            this.getChildren().addAll(rechth);
         }
     }
 }
-       /* //teken kruis in juiste kleur hier
+/* //teken kruis in juiste kleur hier
         kruis.trans... //peer kruis op juiste plaats
         this.getChildren().add(kruis);*/
 //TODO
-    
-    
-    /*
+
+/*
     void update2(){
         this.rechthoek = new Rectangle (30,30,Color.RED);
         this.getChildren().addAll(rechthoek);
@@ -127,6 +121,4 @@ public class TegenstanderBordView extends Region {
         rechthoek.setTranslateY(Bord.getRaw);
         getChildren().add(rechthoek);
         }
-     */
-   
-
+ */

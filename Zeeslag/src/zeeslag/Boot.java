@@ -4,22 +4,22 @@
  * and open the template in the editor.
  */
 package zeeslag;
+
 /**
  *
  * @author Bavo, Jonas, Rens
  */
 public class Boot {
+
     //private ZeeslagController controllerModel;
     private int size;
     int levens;
     private boolean gezonken;
-    private int row,column;
+    private int row, column;
     private Orientatie orientatie;
     private int rotatieHoek;
     private Type type;
-    
 
-   
     public Boot(int size, int column, int row, Orientatie o, Type type) {
         this.gezonken = false;
         this.type = type;
@@ -30,28 +30,28 @@ public class Boot {
         this.orientatie = o;
         rotatieHoek = 0;
     }
-    
-    public Boot(int[]Coordinaten, Type type){
-        this.row = Coordinaten[0];
-        this.column = Coordinaten[1];
+
+    public Boot(int[] coordinaten, Type type) {
+        this.row = coordinaten[0];
+        this.column = coordinaten[1];
         this.type = type;
         this.gezonken = false;
     }
-    
+
     // getters
     public boolean isGezonken() {
         return gezonken;
     }
-    
+
     public Type getType() {
         return type;
     }
-    
-    public int[] getCoordinaten(){
-        int[] c = {this.row,this.column};
+
+    public int[] getCoordinaten() {
+        int[] c = {this.row, this.column};
         return c;
     }
-    
+
     public int getRow() {
         return row;
     }
@@ -63,7 +63,7 @@ public class Boot {
     public int getSize() {
         return size;
     }
-    
+
     public int getLevens() {
         return levens;
     }
@@ -71,11 +71,11 @@ public class Boot {
     public Orientatie getOrientatie() {
         return orientatie;
     }
-    
-    public int getRotatieHoek(){
+
+    public int getRotatieHoek() {
         return rotatieHoek;
     }
-    
+
     //setters en andere methodes
     public void setSize(int size) {
         this.size = size;
@@ -84,21 +84,21 @@ public class Boot {
     public void setGezonken(boolean gezonken) {
         this.gezonken = gezonken;
     }
-    
-    public void Geraakt(){
-        if (levens == 0){
+
+    public void Geraakt() {
+        if (levens == 0) {
             gezonken = true;
             System.out.println("gezonken");
+        } else {
+            levens--;
         }
-        else 
-            levens --;
     }
-    
+
     private void setCoordinaten(int row, int column) {
         this.row = row;
         this.column = column;
     }
-    
+
     public boolean verplaatsNaar(int row, int column) {
         if (this.row == row || this.column == column) {
             setCoordinaten(row, column);
@@ -108,26 +108,36 @@ public class Boot {
             return false;
         }
     }
-    
-    public void roteer(){
+
+    public void roteer() {
         int rotatieHoek = 0;
 
-        if(rotatieHoek == 0){
+        if (rotatieHoek == 0) {
             rotatieHoek = 90;
-        }
-        else{
-            if(rotatieHoek == 90){
+        } else {
+            if (rotatieHoek == 90) {
                 rotatieHoek = 0;
             }
         }
     }
-    
-    
-    /*
+
+    public int[][] getAlleCoordinaten() {
+        int[][] alleCoordinaten = new int[size][2];
+        for (int i = 0; i < size; i++) {
+            if (orientatie == Orientatie.VERTICAAL) {
+                alleCoordinaten[i][0] = row + size * i;
+                alleCoordinaten[i][1] = column;
+            } else {
+                alleCoordinaten[i][0] = row;
+                alleCoordinaten[i][1] = column + size * i;
+            }
+        }
+        return alleCoordinaten;
+    }
+        /*
     public void Hit() {
         this.gezonken = false;
         levens = levens -1;
     } hit en geraakt doen hetzelfde
-*/
-     
-}
+         */
+    }
