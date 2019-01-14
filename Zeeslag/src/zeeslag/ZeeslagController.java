@@ -46,7 +46,7 @@ public class ZeeslagController {
 
     @FXML
     void initialize() {
-        SpelerBordView spelerBordView = new SpelerBordView();
+        //SpelerBordView spelerBordView = new SpelerBordView();
         //TegenstanderBordView TegenstanderBordView = new TegenstanderBordView(zeeslagModel.getBord()); // kan foute bord zijn, zeeslagmodel = null.
         //BootView bootView = new BootView();
         assert spelerPane != null : "fx:id=\"spelerPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
@@ -57,7 +57,7 @@ public class ZeeslagController {
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         botenPane.setOnMouseClicked(event-> handleMouseClick(event));
-        spelerPane.getChildren().add(spelerBordView);
+        //spelerPane.getChildren().add(spelerBordView);
         
         //botenPane.getChildren().add(bootView);
     }
