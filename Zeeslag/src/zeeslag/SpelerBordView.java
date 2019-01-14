@@ -21,10 +21,9 @@ public class SpelerBordView extends Region {
     }
     private BootView view;
     private Bord bordModel;
-<<<<<<< HEAD
-=======
+
     private ArrayList<Hitmark> hit;
->>>>>>> 62e49e2c18a8e167db2fe90cb9ed8adf14bc5baa
+
     
     void update(){  
         Rectangle rechthoek = new Rectangle (300,300,Color.rgb(55, 131, 186));
