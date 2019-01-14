@@ -110,13 +110,13 @@ public class Boot {
     }
 
     public void roteer() {
-        int rotatieHoek = 0;
-
-        if (rotatieHoek == 0) {
-            rotatieHoek = 90;
-        } else {
-            if (rotatieHoek == 90) {
-                rotatieHoek = 0;
+        if(orientatie==Orientatie.HORIZONTAAL){
+            orientatie=Orientatie.VERTICAAL;
+        }   
+        else
+        {
+            if(orientatie==Orientatie.VERTICAAL){
+                orientatie=Orientatie.HORIZONTAAL;
             }
         }
     }
