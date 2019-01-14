@@ -42,6 +42,7 @@ public class ZeeslagController {
    // private BootView view3;           //Nieuwe klasse bootselectorview en die tekent alle boten in de zijkant
     //private BordView bordView;
 
+    
     @FXML
     void initialize() {
         //SpelerBordView spelerBordView = new SpelerBordView();

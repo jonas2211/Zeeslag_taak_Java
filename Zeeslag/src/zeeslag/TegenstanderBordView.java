@@ -36,6 +36,7 @@ public class TegenstanderBordView extends Region {
 
     }
 
+    
     public void update() {
         updateBackground(); //tekend de achtergrond opniew
         updateHitMarks();

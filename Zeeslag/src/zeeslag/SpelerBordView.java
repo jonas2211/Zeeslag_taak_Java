@@ -70,7 +70,6 @@ public class SpelerBordView extends Region {
         
         
             
-        
     }
     
    private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
@@ -118,13 +117,13 @@ public class SpelerBordView extends Region {
     
     }
 */
-    /*public int Column(int x){
+    public int Column(int x){
         return x/30;//70 veranderen door dikte vakje
     }
 
     public int Raw(int y){
         return y/30;//70 veranderen door dikte vakje
-    }*/
+    }
    
 }
 
