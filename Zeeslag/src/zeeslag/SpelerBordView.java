@@ -5,8 +5,8 @@
  */
 package zeeslag;
 
+import java.util.ArrayList;
 import javafx.scene.layout.Region;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*; 
 /**
@@ -20,6 +20,7 @@ public class SpelerBordView extends Region {
 
     }
     private BootView view;
+    private Bord bordModel;
     
     void update(){  
         Rectangle rechthoek = new Rectangle (300,300,Color.rgb(55, 131, 186));
@@ -44,6 +45,24 @@ public class SpelerBordView extends Region {
             lijn.setEndY(30.0*j);
             this.getChildren().addAll(lijn);
         }
+        /*ArrayList<Boot> botenList = bordModel.getBoten();
+            for (Boot b : botenList) {
+                if(b.getType()==Type.VLIEGDEKSCHIP){
+                    BootView bootView = new BootView(b);*/
+                    
+                    Rectangle rect= new Rectangle(30*5, 1*30, Color.GRAY);;
+                    rect.setTranslateX(13*30);
+                    rect.setTranslateY(2*30);
+                    getChildren().addAll(rect);
+                
+                            
+                
+                   
+                /*BootView bootView = new BootView(b);
+                bootView.setTranslateX(b.getColumn() * 30);
+                bootView.setTranslateY(b.getRow() * 30);
+                getChildren().add(bootView);*/
+
         
         
             
@@ -63,12 +82,13 @@ public class SpelerBordView extends Region {
     
     }
 */
-    public int Column(int x){
+    /*public int Column(int x){
         return x/30;//70 veranderen door dikte vakje
     }
 
     public int Raw(int y){
         return y/30;//70 veranderen door dikte vakje
-    }
+    }*/
    
 }
+
