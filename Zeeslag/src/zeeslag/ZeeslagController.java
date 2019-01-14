@@ -26,6 +26,9 @@ public class ZeeslagController {
     
     @FXML
     private Button btnStart;
+    
+    @FXML
+    private Button btnLoad;
 
     @FXML
     private Button btnDraaien;
@@ -52,9 +55,11 @@ public class ZeeslagController {
         assert tegenstanderPane != null : "fx:id=\"tegenstanderPane\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
+        assert btnLoad != null : "fx:id=\"loadBtn\" was not injected: check your FXML file 'FXMLHnefataflView.fxml'.";
+
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
-
+        btnLoad.setOnAction(event -> handleLoadBtn(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         //spelerPane.getChildren().add(view2);
 
@@ -115,6 +120,11 @@ public class ZeeslagController {
         bootModel.roteer();
         update();
   
+    }
+    
+    public void handleLoadBtn(ActionEvent event){
+        System.out.println("laad vorige spel");
+        ZeeslagSpel.loadFromJson();
     }
     
     void update(){

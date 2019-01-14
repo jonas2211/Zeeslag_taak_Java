@@ -117,5 +117,9 @@ public class ZeeslagSpel {
         
     }
     
+    public static void loadFromJson() {
+        //TODO
+    }
+    
 }
 
