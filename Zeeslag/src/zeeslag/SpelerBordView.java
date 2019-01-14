@@ -48,15 +48,16 @@ public class SpelerBordView extends Region {
             lijn.setEndY(30.0*j);
             this.getChildren().addAll(lijn);
         }
-        /*ArrayList<Boot> botenList = bordModel.getBoten();
-            for (Boot b : botenList) {
+       /* ArrayList<Boot> botenList = bordModel.getBoten();
+            for (Boot b : bordModel.getBoten()) {
                 if(b.getType()==Type.VLIEGDEKSCHIP){
-                    BootView bootView = new BootView(b);*/
-                    
-                    Rectangle rect= new Rectangle(30*5, 1*30, Color.GRAY);;
+                                       
+                    Rectangle rect= new Rectangle(30*b.getSize(), 1*30, Color.GRAY);;
                     rect.setTranslateX(13*30);
                     rect.setTranslateY(2*30);
-                    getChildren().addAll(rect);
+                    getChildren().addAll(rect);*/
+       
+       //manier zoeken om boten op begin te plaatsen
                 
                             
                 
@@ -72,7 +73,7 @@ public class SpelerBordView extends Region {
         
     }
     
-    private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
+   private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
         for (Hitmark hitmrk : bordModel.getHitmarkList()) {
             Rectangle rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
             //for en if regel moet aagepast worden dit weet ik niet
@@ -80,23 +81,23 @@ public class SpelerBordView extends Region {
                 //rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
                 rechth.setFill(Color.RED);
                 //rechth omdat rechthoek al in gebruik was   
-                /*Line lijn = new Line();
+                Line lijn = new Line();
                 lijn.setFill(Color.BLACK);
-                lijn.setStartX(bootModel.getRow());
-                lijn.setStartY(bootModel.getColumn());              //!!!!! hitmrk ipv bootModel!!!!!
-                lijn.setEndX(bootModel.getRow() + 1);               // * 30 !!
-                lijn.setEndY(bootModel.getColumn() + 1);
+                lijn.setStartX(hitmrk.getRow()*30);
+                lijn.setStartY(hitmrk.getColumn()*30);              //!!!!! hitmrk ipv bootModel!!!!!
+                lijn.setEndX((hitmrk.getRow() + 1)*30);               // * 30 !!
+                lijn.setEndY((hitmrk.getColumn() + 1)*30);
                 //eerste lijn voor kruis op rood vierkant    
                 Line lijn2 = new Line();
                 lijn2.setFill(Color.BLACK);
-                lijn2.setStartX(bootModel.getRow());
-                lijn2.setStartY(bootModel.getColumn() + 1);
-                lijn2.setEndX(bootModel.getRow() + 1);
-                lijn2.setEndY(bootModel.getRow());
+                lijn2.setStartX(hitmrk.getRow()*30);
+                lijn2.setStartY((hitmrk.getColumn() + 1)*30);
+                lijn2.setEndX((hitmrk.getRow() + 1)*30);
+                lijn2.setEndY(hitmrk.getRow()*30);
                 //tweede lijn voor kruis op rood vierkant
                 //x en y moet nog vervangen worden bij lijn en rechthoek    
-                this.getChildren().addAll(rechth, lijn, lijn2);*/
-            } else {
+                this.getChildren().addAll(rechth, lijn, lijn2);
+           } else {
                 rechth.setFill(Color.rgb(55, 131, 186));
                 //x en y nog vervangen
             }
