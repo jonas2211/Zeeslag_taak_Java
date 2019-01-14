@@ -15,22 +15,21 @@ import javafx.scene.shape.Rectangle;
  * @author Bavo, Jonas, Rens
  */
 public class BootView extends Region {
-
-    //private Boot boot;
-    private Orientatie orientatie; // is gelijk aan boot.getOrientatie
-    private int x, y; //nodig?
+    //private int x, y; 
+    //nodig?
     private Boot bootModel;
-    private Type type;
     private Rectangle rechthoek;
     private Circle cirkel;
     private Polygon driehoek;
+   
+    
     private Vliegdekschip boot1;
     private Slagschip boot2;
     private Torpedobootjager boot3;
     private Duikboot boot4;
     private Patrouilleschip boot5;
-
-  ;
+    
+  
 
     public BootView(){
         this.bootModel = bootModel;

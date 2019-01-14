@@ -15,8 +15,11 @@ import java.util.ArrayList;
 public class Hitmark {
 
     private boolean hit;
-    private Boot boot;
     private int row,column;
+     private Boot bootModel;
+    private ArrayList<Boot>boten;
+    private Speler spelerModel;
+    
 // x en y coordinaten zijn vaag
     public Hitmark(int row, int column) {
         hit = false;
@@ -28,10 +31,6 @@ public class Hitmark {
     //DOELSTELLINGEN FUNCTIE HITMARKER:
     //    - als de coordinaten van de rij en kolom van waar de speler klikt overeenkomen 
     //      met de coordinaten van een boot, moet het vak waar de hit is gebeurt rood worden.
-    private Boot bootModel;
-    private ArrayList<Boot>boten;
-    private Speler spelerModel;
-    
     
     public void setHitmark(int row, int column){
         for(Boot bootModel : boten){
@@ -50,17 +49,17 @@ public class Hitmark {
 
 
     //getters
-    
-    
     public boolean isHit() {
         return hit;
     }
 
     public Boot getBoot() {
-        return boot;
+        return bootModel;
     }
 
-
+    public Speler getSpelerModel() {
+        return spelerModel;
+    }
    
     /*
     //probeersel, wss fout

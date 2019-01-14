@@ -37,13 +37,12 @@ public class ZeeslagController {
     private Button btnOpstarten;
 
     
-    private ZeeslagSpel model;
+    private ZeeslagSpel zeeslagModel;
     private Boot bootModel;
     private TegenstanderBordView view;
     private SpelerBordView view2;
     private BootView view3;
-    private ZeeslagSpel zeeslagModel;
-    private BordView bordView;
+    //private BordView bordView;
 
     @FXML
     void initialize() {
@@ -65,8 +64,10 @@ public class ZeeslagController {
     public void setModel(ZeeslagSpel zeeslagModel) {
         this.zeeslagModel = zeeslagModel;
 
-        bordView = new BordView(zeeslagModel.getBord());
-        tegenstanderPane.getChildren().add(bordView);
+        view = new TegenstanderBordView(zeeslagModel.getBord());
+        spelerPane.getChildren().add(view2);
+        spelerPane.setFocusTraversable(true);
+        tegenstanderPane.getChildren().add(view);
         tegenstanderPane.setFocusTraversable(true);
         
     }
@@ -92,14 +93,14 @@ public class ZeeslagController {
     }
     void btnOpstartenHandler(ActionEvent event){
         System.out.println("Reset spel");
-        model.opstarten();
+        zeeslagModel.opstarten();
         update();
         
     }
     
     void btnStartHandler(ActionEvent event){
         System.out.println("Start het spel");
-        model.start();
+        zeeslagModel.start();
         update();
         
     }

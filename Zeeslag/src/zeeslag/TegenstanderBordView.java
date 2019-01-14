@@ -107,7 +107,7 @@ public class TegenstanderBordView extends Region {
                 //x en y nog vervangen
             }
         }
-    
+    }
 }
        /* //teken kruis in juiste kleur hier
         kruis.trans... //peer kruis op juiste plaats
