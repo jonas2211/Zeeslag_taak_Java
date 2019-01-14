@@ -52,13 +52,13 @@ public class ZeeslagController {
         assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
-<<<<<<< HEAD
+
         //botenPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.getChildren().add(spelerBordView);
-=======
-        botenPane.setOnMouseClicked(event-> handleMouseClick(event));
+
+        //botenPane.setOnMouseClicked(event-> handleMouseClick(event));
         //spelerPane.getChildren().add(spelerBordView);
->>>>>>> 62e49e2c18a8e167db2fe90cb9ed8adf14bc5baa
+
         
         //botenPane.getChildren().add(bootView);
     }
