@@ -98,6 +98,10 @@ public class ZeeslagSpel {
                     
         }
     }
+    public void saveToJSON(){
+    Gson gson = new Gson();
+    String json = gson.toJson(model);
+}
     
     
 }
