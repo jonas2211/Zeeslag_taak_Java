@@ -23,12 +23,12 @@ public class BordView extends Region {
 
     public void update() {
 
-        ArrayList<Boot> boten = bordModel.getBoten();
-        for (Boot b : boten) {
+        ArrayList<Boot> botenList = bordModel.getBoten();
+        for (Boot b : botenList) {
             BootView bootView = new BootView(b);
             bootView.setTranslateX(b.getColumn() * 30 + 10); //one tile on the board is 70x70, +10 because a piece is 50x50
             bootView.setTranslateY(b.getRow() * 30 + 10);
-            getChildren().add(ootView);
+            getChildren().add(bootView);
             
         }
     }
