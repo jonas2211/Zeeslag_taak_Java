@@ -8,7 +8,11 @@ package zeeslag;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
@@ -120,7 +124,12 @@ public class ZeeslagSpel {
     }
     
     public static void loadFromJson() {
-        //TODO
+        Gson gson = new Gson();
+        try {
+            Level nieuw = gson.fromJson(new FileReader("dc.json.txt"),Level.class);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ZeeslagSpel.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
