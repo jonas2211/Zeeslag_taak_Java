@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonWriter;
 import java.io.FileWriter;
-import java.util.ArrayList;
+
 
 
 /**
@@ -22,6 +22,7 @@ public class ZeeslagSpel {
     private Speler huidigeSpeler;
     private SpelerEcht spelerEcht;
     private SpelerComputer computer;
+    private boolean start;
     
 
     public ZeeslagSpel() {
@@ -34,8 +35,8 @@ public class ZeeslagSpel {
         this.computer = new SpelerComputer(bord);
         this.huidigeSpeler = spelerEcht;
     }
-    public void start(){
-        
+    public void Start(){
+        this.start = false;
     }
     
     

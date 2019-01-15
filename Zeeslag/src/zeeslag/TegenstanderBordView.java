@@ -35,6 +35,9 @@ public class TegenstanderBordView extends Region {
         this.update3();*/
 
     }
+     public Bord getBordModel() {
+        return bordModel;
+    }
 
     
     public void update() {
@@ -104,7 +107,11 @@ public class TegenstanderBordView extends Region {
             this.getChildren().addAll(rechth);
         }
     }
+    
 }
+
+
+
 /* //teken kruis in juiste kleur hier
         kruis.trans... //peer kruis op juiste plaats
         this.getChildren().add(kruis);*/

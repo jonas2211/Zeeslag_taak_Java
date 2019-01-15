@@ -42,7 +42,7 @@ public class ZeeslagController {
     private TegenstanderBordView view;
     private SpelerBordView view2;
     private StartBootView view3;
-   // private BootView view3;           //Nieuwe klasse bootselectorview en die tekent alle boten in de zijkant
+    // private BootView view3;           //Nieuwe klasse bootselectorview en die tekent alle boten in de zijkant
     //private BordView bordView;
 
     
@@ -88,19 +88,63 @@ public class ZeeslagController {
         tegenstanderPane.getChildren().add(view);
     }
 */
-    void handleMouseClick(MouseEvent e) {
-        int x = (int) e.getX();
-        int y = (int) e.getY();
+    void handleMouseClick(MouseEvent mouseEvent) {
+        int x = (int) mouseEvent.getX();
+        int y = (int) mouseEvent.getY();
         // @lowie zegt: laat model weten dat er op vakje n geschoten is
         // @lowie zegt: update view
-        
-        /*if (view.getVakjeOn.isGeraakt()){
+        if(zeeslagModel.getBord().getBoten().size ==5 && zeeslagModel.Start(start)== true){
+            if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.spelerEcht)  //is fout denk ik
+            {
+                boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
+                view.update();
+                if (zeeslagModel.Spelafgelopen()){
+                    view.update(); // overbodig tot we na einde iets willen tonen denk ik
+                }
+                else if (madeTurn){
+                    zeeslagModel.eindeBeurt();
+                }
+            }else{
+                boolean madeTurn = zeeslagModel.getBord().setHitmark(view2.getBordModel().getRow(y), view2.getBordModel().getColumn(x));
+                view.update();
+                
+                if (zeeslagModel.Spelafgelopen())
+                {
+                    view2.update(); // overbodig tot we na einde iets willen tonen denk ik
+                }
+                else if (madeTurn)
+                {
+                    zeeslagModel.eindeBeurt();
+                }
+            }
+        }else if(zeeslagModel.getBord().getBoten().size ==5 && zeeslagModel.Start(start)== false){
+            //geen idee wat hier moet
+        }else{
+            zeeslagModel.selecteerBootOn(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
+        }
+    }
+
+    /* if alle boten geplaatst zijn en spelgestart is 
+           if speler is spelerEcht
+              -teken vakje op row en column van hit, kleur rood en wit op tegenstanderPane
+           else 
+             -teken hit enkel , rood op spelerPane
+       else if alle boten geplaatst zijn 
+          - druk op de knop
+       else 
+            -selecteer boot
+            -verplaats boot naar klikcoordinate
+            -rotate (?) 
+    
+    
+    */
+/*if (view.getVakjeOn.isGeraakt()){
             Vakje newVakje = new Rectangle(Column,Raw,30,30);
             newVakje.setFill(RED);
             model.addVakje(newVakje);
             view.update();
-        }*/
-    }
+    */
+
     void btnOpstartenHandler(ActionEvent event){
         System.out.println("Reset spel");
         zeeslagModel.opstarten();
