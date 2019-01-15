@@ -90,6 +90,7 @@ public class ZeeslagController {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
         
+        /*
         if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.spelerEcht)  //is fout denk ik
         {
             boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
@@ -113,7 +114,7 @@ public class ZeeslagController {
                 zeeslagModel.eindeBeurt();
             }
         }
-     
+     */
         
     }
     
