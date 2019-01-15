@@ -6,6 +6,7 @@
 package zeeslag;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -27,7 +28,7 @@ public class Speler {
         return spelerLevens;
     }
     
-    public ArrayList<Boot> getBoten(){
+    public Iterator<Boot> getBoten(){
         return bord.getBoten();
         
         

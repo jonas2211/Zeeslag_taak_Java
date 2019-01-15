@@ -6,6 +6,7 @@
 package zeeslag;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import javafx.scene.layout.Region;
 /**
@@ -23,16 +24,24 @@ public class BordView extends Region {
 
     public void update() {
 
-        ArrayList<Boot> botenList = bordModel.getBoten();
+        Iterator<Boot> botenList = bordModel.getBoten();
+        while (botenList.hasNext()){
+            Boot boten = botenList.next();
+            BootView bootView = new BootView(boten);
+            bootView.setTranslateX(boten.getColumn() * 30);
+            bootView.setTranslateY(boten.getRow() * 30);
+            getChildren().add(bootView);
+        }
+        /*
         for (Boot b : botenList) {
             BootView bootView = new BootView(b);
             bootView.setTranslateX(b.getColumn() * 30);
             bootView.setTranslateY(b.getRow() * 30);
             getChildren().add(bootView);
-
+*/
 
         }
-        }
+        
         
     
 

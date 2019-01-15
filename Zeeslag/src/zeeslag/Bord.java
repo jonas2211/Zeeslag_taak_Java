@@ -5,6 +5,7 @@
  */
 package zeeslag;
 import java.util.ArrayList;
+import java.util.Iterator;
 /**
  *
  * @author Bavo, Jonas, Rens
@@ -123,12 +124,12 @@ public class Bord {
             //geen boot op gegeven rij en kolom
     }
     
-    public ArrayList<Boot> getBoten() {
-        return Botenlist;
+    public Iterator<Boot> getBoten() {
+        return Botenlist.iterator();
     }
     
-    public ArrayList<Hitmark> getHitmarks(){
-        return HitmarkList;
+    public Iterator<Hitmark> getHitmarks(){
+        return HitmarkList.iterator();
     }
 
     public Boot getGeselecteerdeBoot() {

@@ -5,12 +5,15 @@
  */
 package zeeslag;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Rens Remans
  */
 public class SpelerComputer extends Speler {
        private Boot bootModel;
+       private Bord bordModel;
        
     public SpelerComputer(Bord bord) {
         super(bord);
@@ -19,6 +22,36 @@ public class SpelerComputer extends Speler {
     public boolean isGezonken(Type type){
         boolean gezonken = false; 
         
+        Iterator<Boot> botenList = bordModel.getBoten();
+        while (botenList.hasNext()){
+            Boot boot = botenList.next();
+            if(bootModel.getType() == Type.VLIEGDEKSCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }
+                
+            }else if(bootModel.getType() == Type.SLAGSCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }   
+            }else if(bootModel.getType() == Type.TORPEDOBOOTJAGER){
+                if (boot.isGezonken()== false){
+                    return false;
+                }   
+            }else if(bootModel.getType() == Type.DUIKBOOT){
+                if (boot.isGezonken()== false){
+                    return false;
+                }  
+            }else if(bootModel.getType() == Type.PATROUILLESCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }
+            }
+        }
+        return true;
+            
+        }
+    /*
         for (Boot boot: bord.getBoten()){
             if(bootModel.getType() == Type.VLIEGDEKSCHIP){
                 if (boot.isGezonken()== false){
@@ -45,4 +78,5 @@ public class SpelerComputer extends Speler {
         }
         return true;
     }
+*/
 }
