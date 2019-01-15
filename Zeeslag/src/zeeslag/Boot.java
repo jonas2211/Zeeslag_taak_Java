@@ -41,6 +41,14 @@ public class Boot {
         this.type = type;
         this.gezonken = false;
     }
+    
+    
+    public boolean levend(){
+        if(levens>0){
+            return true;
+        }
+        return false;
+    }
 
     // getters
     public boolean isGezonken() {
