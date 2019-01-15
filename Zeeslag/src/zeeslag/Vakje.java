@@ -25,7 +25,7 @@ public class Vakje {
         return gemist;
     }
 
-    public int []getCoordinaat() {
+    public int [] getCoordinaat(int row, int column) {
         int[]coordinaat={this.row,this.column};
         return coordinaat;
     }

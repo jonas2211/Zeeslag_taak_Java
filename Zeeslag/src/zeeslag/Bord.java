@@ -11,7 +11,10 @@ import java.util.Iterator;
  * @author Bavo, Jonas, Rens
  */
 public class Bord {
+    private int boten = 5;
+    private int row, column;
     private Boot bootModel;
+    private Vakje vakje;
     private ArrayList<Boot> Botenlist = new ArrayList<>();
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
     
@@ -95,13 +98,16 @@ public class Bord {
     */
    
     
-    public Bord(){
+    public Bord(boolean tegenstander){
         /*
         if(bootModel.getType() == Type.VLIEGDEKSCHIP){
             Botenlist.add(new Boot(bootModel.getType()));
         }
+        
+        this.tegenstander=tegenstander;
+        this.row = bootModel.getRow();
+        this.column = bootModel.getColumn();
         */
-    
         
         for (int i = 0; i < vliegdekschip.length; i++)
         {
@@ -144,7 +150,17 @@ public class Bord {
         }
         */
     }
-
+    /*
+    public boolean zetSchip (Boot boot, int row, int column){
+        int lengte = bootModel.getSize();
+        
+        if (bootModel.getOrientatie() == Orientatie.VERTICAAL){
+            for(int i = row; i < row + lengte; i++){
+                this.row = 
+            }
+        }
+    }
+    */
   
     //getters
     public Boot getBootOn(int row, int column) {
