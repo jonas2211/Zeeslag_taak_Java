@@ -154,7 +154,7 @@ public class ZeeslagController {
     
     void btnStartHandler(ActionEvent event){
         System.out.println("Start het spel");
-        zeeslagModel.start();
+        zeeslagModel.Start();
         update();
         
     }
