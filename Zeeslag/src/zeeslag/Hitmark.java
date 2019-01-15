@@ -27,6 +27,11 @@ public class Hitmark {
         this.column = column;
     }
     
+    public int[] CoordinatenPaar() {
+        int[] c = {this.row, this.column};
+        return c;
+    }
+    
     //DOELSTELLINGEN FUNCTIE HITMARKER:
     //    - als de coordinaten van de rij en kolom van waar de speler klikt overeenkomen 
     //      met de coordinaten van een boot, moet het vak waar de hit is gebeurt rood worden.

@@ -85,6 +85,7 @@ public class ZeeslagController {
         tegenstanderPane.getChildren().add(view);
     }
 */
+    
     void handleMouseClick(MouseEvent mouseEvent) {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
@@ -115,6 +116,7 @@ public class ZeeslagController {
      
         
     }
+    
 
     /* if alle boten geplaatst zijn en spelgestart is 
            if speler is spelerEcht

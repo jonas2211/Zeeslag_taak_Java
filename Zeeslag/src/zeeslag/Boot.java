@@ -5,6 +5,8 @@
  */
 package zeeslag;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Bavo, Jonas, Rens
@@ -19,6 +21,8 @@ public class Boot {
     private Orientatie orientatie;
     private int rotatieHoek;
     private Type type;
+    private Bord bordModel;
+    private Hitmark hit;
 
     public Boot(int size, int column, int row, Orientatie o, Type type) {
         this.gezonken = false;
@@ -134,6 +138,21 @@ public class Boot {
         }
         return alleCoordinaten;
     }
+    
+    
+    private void CoordinateBoten() {    
+        Iterator<Boot> boten = bordModel.getBoten();
+        while(boten.hasNext()){
+            Boot coordinaten = boten.next();
+            if (hit.CoordinatenPaar() == getCoordinaten()){
+                hit.isHit();    
+            }
+            // voor coordinatenpaar in boot.getbezettevakjes:
+            // if hitMarker.getcoordinatenpaar == coordinatenpaar;
+            //hitmark.hit = true;
+        }
+    }
+    
         /*
     public void Hit() {
         this.gezonken = false;
