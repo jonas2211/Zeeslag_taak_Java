@@ -21,24 +21,24 @@ public class Bord {
     
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
          
-        {3, 3}, {3, 4}, {3, 5}, {3,6}, {3,7}
+        {0, 1}, {1, 1}, {2, 1}, {3,1}, {4,1}
         //bv. {Boot.getX,Boot.getY}, ....
     };
     private int[][] slagschip  = {   //coordinaten slagschip
          
-        {1, 3}, {1, 4}, {1, 5}, {1,6}
+        {8, 6}, {8, 7}, {8, 8}, {8,9}
     };
     private int[][] duikboot = {   //coordinaten onderzeeer
          
-        {5, 3}, {5, 4}, {5, 5}
+        {7, 3}, {8, 3}, {9, 3}
     };
     private int[][] torpedobootjager = {   //coordinaten torpedoboojager
          
-        {7, 3}, {7, 4}, {7, 5}
+        {4, 6}, {4, 7}, {4, 8}
     };
     private int[][] patrouilleschip = {   //coordinaten Patrouilleschip
          
-        {9, 3}, {9, 4}
+        {5, 1}, {6, 1}
     };
     
     /*
