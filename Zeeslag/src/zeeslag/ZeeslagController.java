@@ -60,10 +60,7 @@ public class ZeeslagController {
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         btnLoad.setOnAction(event -> handleLoadBtn(event));
-        spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         //spelerPane.getChildren().add(view2);
-
-        //botenPane.setOnMouseClicked(event-> handleMouseClick(event));
         //spelerPane.getChildren().add(spelerBordView);
 
         
@@ -91,9 +88,8 @@ public class ZeeslagController {
     void handleMouseClick(MouseEvent mouseEvent) {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
-        // @lowie zegt: laat model weten dat er op vakje n geschoten is
-        // @lowie zegt: update view
-      /*  if(zeeslagModel.getBord().getBoten().size == 5 && zeeslagModel.Start(start)== true){
+        
+        if(zeeslagModel.getBord().getBoten().size == 5 && zeeslagModel.Start(start)== true){
             if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.spelerEcht)  //is fout denk ik
             {
                 boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
@@ -121,7 +117,7 @@ public class ZeeslagController {
             //geen idee wat hier moet
         }else{
             zeeslagModel.selecteerBootOn(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
-        }*/
+        }
     }
 
     /* if alle boten geplaatst zijn en spelgestart is 
@@ -136,9 +132,10 @@ public class ZeeslagController {
             -verplaats boot naar klikcoordinate
             -rotate (?) 
     
-    
+    // @lowie zegt: laat model weten dat er op vakje n geschoten is
+    // @lowie zegt: update view
     */
-/*if (view.getVakjeOn.isGeraakt()){
+        /*if (view.getVakjeOn.isGeraakt()){
             Vakje newVakje = new Rectangle(Column,Raw,30,30);
             newVakje.setFill(RED);
             model.addVakje(newVakje);
