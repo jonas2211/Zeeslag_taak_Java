@@ -17,7 +17,9 @@ public class Bord {
     
     // moet er een klasse hitmark zijn of kunnen we een arraylist maken via klasse Bord voor hitmarks?
     
-    
+    /**
+     * coordinaten EchteSpeler
+     */
     
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
          
@@ -40,6 +42,39 @@ public class Bord {
          
         {5, 1}, {6, 1}
     };
+    
+    /**
+     * coordinaten computer
+     */
+    //TODO;
+    private int[][] vliegdekschipComp = {   //coordinaten vliegdekschip
+         
+        {0, 1}, {1, 1}, {2, 1}, {3,1}, {4,1}
+        //bv. {Boot.getX,Boot.getY}, ....
+    };
+    private int[][] slagschipComp  = {   //coordinaten slagschip
+         
+        {8, 6}, {8, 7}, {8, 8}, {8,9}
+    };
+    private int[][] duikbootComp = {   //coordinaten onderzeeer
+         
+        {7, 3}, {8, 3}, {9, 3}
+    };
+    private int[][] torpedobootjagerComp = {   //coordinaten torpedoboojager
+         
+        {4, 6}, {4, 7}, {4, 8}
+    };
+    private int[][] patrouilleschipComp = {   //coordinaten Patrouilleschip
+         
+        {5, 1}, {6, 1}
+    };
+    
+    
+    
+    
+    
+    
+    
     
     /*
     private int[][] CoBoten = {   //coordinaten neus
