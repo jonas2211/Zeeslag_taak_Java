@@ -37,6 +37,7 @@ public class ZeeslagSpel {
     }
     public void Start(){
         this.start = false;
+        
     }
     
     

@@ -93,7 +93,7 @@ public class ZeeslagController {
         int y = (int) mouseEvent.getY();
         // @lowie zegt: laat model weten dat er op vakje n geschoten is
         // @lowie zegt: update view
-        if(zeeslagModel.getBord().getBoten().size ==5 && zeeslagModel.Start(start)== true){
+      /*  if(zeeslagModel.getBord().getBoten().size == 5 && zeeslagModel.Start(start)== true){
             if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.spelerEcht)  //is fout denk ik
             {
                 boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
@@ -106,7 +106,7 @@ public class ZeeslagController {
                 }
             }else{
                 boolean madeTurn = zeeslagModel.getBord().setHitmark(view2.getBordModel().getRow(y), view2.getBordModel().getColumn(x));
-                view.update();
+                view2.update();
                 
                 if (zeeslagModel.Spelafgelopen())
                 {
@@ -121,7 +121,7 @@ public class ZeeslagController {
             //geen idee wat hier moet
         }else{
             zeeslagModel.selecteerBootOn(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
-        }
+        }*/
     }
 
     /* if alle boten geplaatst zijn en spelgestart is 
