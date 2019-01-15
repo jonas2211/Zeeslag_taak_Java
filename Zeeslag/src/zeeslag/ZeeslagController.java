@@ -89,35 +89,31 @@ public class ZeeslagController {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
         
-        if(zeeslagModel.getBord().getBoten().size == 5 && zeeslagModel.Start(start)== true){
-            if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.spelerEcht)  //is fout denk ik
-            {
-                boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
-                view.update();
-                if (zeeslagModel.Spelafgelopen()){
-                    view.update(); // overbodig tot we na einde iets willen tonen denk ik
-                }
-                else if (madeTurn){
-                    zeeslagModel.eindeBeurt();
-                }
-            }else{
-                boolean madeTurn = zeeslagModel.getBord().setHitmark(view2.getBordModel().getRow(y), view2.getBordModel().getColumn(x));
-                view2.update();
-                
-                if (zeeslagModel.Spelafgelopen())
-                {
-                    view2.update(); // overbodig tot we na einde iets willen tonen denk ik
-                }
-                else if (madeTurn)
-                {
-                    zeeslagModel.eindeBeurt();
-                }
+        if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.spelerEcht)  //is fout denk ik
+        {
+            boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
+            view.update();
+            if (zeeslagModel.Spelafgelopen()){
+                view.update(); // overbodig tot we na einde iets willen tonen denk ik
             }
-        }else if(zeeslagModel.getBord().getBoten().size ==5 && zeeslagModel.Start(start)== false){
-            //geen idee wat hier moet
+            else if (madeTurn){
+                zeeslagModel.eindeBeurt();
+            }
         }else{
-            zeeslagModel.selecteerBootOn(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
+            boolean madeTurn = zeeslagModel.getBord().setHitmark(view2.getBordModel().getRow(y), view2.getBordModel().getColumn(x));
+            view2.update();
+
+            if (zeeslagModel.Spelafgelopen())
+            {
+                view2.update(); // overbodig tot we na einde iets willen tonen denk ik
+            }
+            else if (madeTurn)
+            {
+                zeeslagModel.eindeBeurt();
+            }
         }
+     
+        
     }
 
     /* if alle boten geplaatst zijn en spelgestart is 
