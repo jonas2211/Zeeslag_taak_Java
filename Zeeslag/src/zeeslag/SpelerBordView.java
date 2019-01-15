@@ -55,7 +55,24 @@ public class SpelerBordView extends Region {
             lijn.setEndY(30.0*j);
             this.getChildren().addAll(lijn);
         }
-       /* ArrayList<Boot> botenList = bordModel.getBoten();
+        Rectangle vliegdekschip= new Rectangle(0*30, 1*30, 5*30, 30);
+        vliegdekschip.setFill(Color.LIGHTGRAY);
+        Rectangle slagschip= new Rectangle(8*30,6*30,30,4*30);
+        slagschip.setFill(Color.LIGHTGREY);
+        Rectangle duikboot= new Rectangle(7*30, 3*30, 3*30, 1*30);
+        duikboot.setFill(Color.LIGHTGRAY);
+        Rectangle patrouilleship= new Rectangle(1*30, 5*30, 1*30, 2*30);
+        patrouilleship.setFill(Color.LIGHTGRAY);
+        Rectangle torpedojager= new Rectangle(4*30, 6*30, 1*30, 3*30);
+        torpedojager.setFill(Color.LIGHTGRAY);
+        getChildren().addAll(slagschip,vliegdekschip,duikboot,patrouilleship,torpedojager);
+       
+        
+        
+        
+        
+        
+        /* ArrayList<Boot> botenList = bordModel.getBoten();
             for (Boot b : bordModel.getBoten()) {
                 if(b.getType()==Type.VLIEGDEKSCHIP){
                                        
