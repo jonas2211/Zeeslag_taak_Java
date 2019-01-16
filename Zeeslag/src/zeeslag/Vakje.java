@@ -24,7 +24,7 @@ public class Vakje extends Rectangle{
      * @param x
      * @param y 
      */
-    
+    /*
     public Vakje(Bord bordModel, boolean geraakt, int x, int y) {
 
         super(30,30);

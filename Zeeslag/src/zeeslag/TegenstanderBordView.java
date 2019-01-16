@@ -30,7 +30,6 @@ public class TegenstanderBordView extends Region {
      */
     public TegenstanderBordView(Bord bordModel) { //in de constructor komt welk bord het moet afbeelden
         this.bordModel = bordModel; //model van het bord
-        //this.bootModel = bootModel;
         this.update();
         
     /**

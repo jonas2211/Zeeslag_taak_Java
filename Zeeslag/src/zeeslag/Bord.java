@@ -38,9 +38,8 @@ public class Bord {
                 int column = b[1];
                 if(getRow()== bootModel.getRow() && getColumn() == bootModel.getColumn()){
                     HitmarkList.add(hitmrk );
-                    hitmrk.isHit()=true;
-                }// als x en y coo waar geschoten wordt gelijk is x en y coo vakje
-                //hitmark.hit = true
+                    //hitmrk.isHit()=true;
+                }
                 else
                 {
                 return;
@@ -209,24 +208,6 @@ public class Bord {
     }
     */
     
-    public boolean sethitMark(int row, int column){
-        for(Boot j : bootModel.getBoten()){
-            for (int[] coordinaten : bootModel.getAlleCoordinaten()){
-                if(coordinaten == new int[] {row,column}){
-                    HitmarkList.add(new Hitmark(row, column, true));
-                    return true;
-                }
-            }
-        }
-        return false;
-    }    
-
-
-            /*if (bootModel.getRow() == row && bootModel.getColumn() == column){
-                HitmarkList.add(new Hitmark(row, column));
-                
-                    bootModel.Geraakt();
-            }*/
 }
     
 

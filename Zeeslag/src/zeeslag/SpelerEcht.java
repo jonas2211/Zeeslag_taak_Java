@@ -37,19 +37,19 @@ public class SpelerEcht extends Speler {
                 if (boot.isGezonken()== false){
                     return false;
                 }
-            }else if(bootModel.getType() == Type.SLAGSCHIP){
+            }if(bootModel.getType() == Type.SLAGSCHIP){
+                if (boot.isGezonken()== false){
+                    return false;
+                }
+            }if(bootModel.getType() == Type.TORPEDOBOOTJAGER){
                 if (boot.isGezonken()== false){
                     return false;
                 }   
-            }else if(bootModel.getType() == Type.TORPEDOBOOTJAGER){
-                if (boot.isGezonken()== false){
-                    return false;
-                }   
-            }else if(bootModel.getType() == Type.DUIKBOOT){
+            }if(bootModel.getType() == Type.DUIKBOOT){
                 if (boot.isGezonken()== false){
                     return false;
                 }  
-            }else if(bootModel.getType() == Type.PATROUILLESCHIP){
+            }if(bootModel.getType() == Type.PATROUILLESCHIP){
                 if (boot.isGezonken()== false){
                     return false;
                 }

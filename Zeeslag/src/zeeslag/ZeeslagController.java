@@ -35,6 +35,9 @@ public class ZeeslagController {
     
     @FXML
     private Button btnOpstarten;
+    
+    @FXML
+    private Button btnSave;
 
     
     private ZeeslagSpel zeeslagModel;
@@ -56,10 +59,12 @@ public class ZeeslagController {
         assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnLoad != null : "fx:id=\"loadBtn\" was not injected: check your FXML file 'FXMLHnefataflView.fxml'.";
+        assert btnSave != null : "fx:id=\"btnSave\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
 
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         btnLoad.setOnAction(event -> handleLoadBtn(event));
+        btnSave.setOnAction(event -> handleBtnSave(event));
         //spelerPane.getChildren().add(view2);
         //spelerPane.getChildren().add(spelerBordView);
 
@@ -95,56 +100,9 @@ public class ZeeslagController {
     void handleMouseClick(MouseEvent mouseEvent) {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
-        /*
-        if(zeeslagModel.getHuidigeSpeler() == zeeslagModel.getSpelerEcht())  //is fout denk ik
-        {
-            boolean madeTurn = zeeslagModel.getBord().setHitmark(view.getBordModel().getRow(y), view.getBordModel().getColumn(x));
-            view.update();
-            if (zeeslagModel.Spelafgelopen()){
-                view.update(); // overbodig tot we na einde iets willen tonen denk ik
-            }
-            else if (madeTurn){
-                zeeslagModel.eindeBeurt();
-            }
-        }else{
-            boolean madeTurn = zeeslagModel.getBord().setHitmark(view2.getBordModel().getRow(y), view2.getBordModel().getColumn(x));
-            view2.update();
-
-            if (zeeslagModel.Spelafgelopen())
-            {
-                view2.update(); // overbodig tot we na einde iets willen tonen denk ik
-            }
-            else if (madeTurn)
-            {
-                zeeslagModel.eindeBeurt();
-            }
-        }
-     */
-        
+   
     }
     
-
-    /* if alle boten geplaatst zijn en spelgestart is 
-           if speler is spelerEcht
-              -teken vakje op row en column van hit, kleur rood en wit op tegenstanderPane
-           else 
-             -teken hit enkel , rood op spelerPane
-       else if alle boten geplaatst zijn 
-          - druk op de knop
-       else 
-            -selecteer boot
-            -verplaats boot naar klikcoordinate
-            -rotate (?) 
-    
-    // @lowie zegt: laat model weten dat er op vakje n geschoten is
-    // @lowie zegt: update view
-    */
-        /*if (view.getVakjeOn.isGeraakt()){
-            Vakje newVakje = new Rectangle(Column,Raw,30,30);
-            newVakje.setFill(RED);
-            model.addVakje(newVakje);
-            view.update();
-    */
     /**
      * actie op opstartenKnop
      * @param event 
@@ -197,6 +155,10 @@ public class ZeeslagController {
         view.update();
     }
     */
+
+    private void handleBtnSave(ActionEvent event) {
+       
+    }
     
 
     

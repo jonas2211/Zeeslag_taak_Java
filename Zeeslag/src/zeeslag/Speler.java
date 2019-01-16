@@ -22,7 +22,7 @@ public class Speler {
      */
     public Speler(Bord bord){
         this.bord=bord;
-        //spelerLevens=
+        
     }
     
     /**
