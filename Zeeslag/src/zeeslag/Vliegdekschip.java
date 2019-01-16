@@ -21,6 +21,11 @@ public class Vliegdekschip extends Boot{
     
     /**
     *    constructor
+     * @param size
+     * @param column
+     * @param row
+     * @param o
+     * @param type
     */
     public Vliegdekschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
