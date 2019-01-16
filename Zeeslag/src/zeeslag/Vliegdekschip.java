@@ -18,6 +18,7 @@ public class Vliegdekschip extends Boot{
     private int column;
     private int row;
     private Type type;
+    private int levens;
     
     /**
     *    constructor
@@ -31,7 +32,7 @@ public class Vliegdekschip extends Boot{
         super(size, column, row, o, type);
         this.size = 5;
         gezonken = false;
-        levens = size;
+        this.levens = size;
         this.row = row;
         this.column = column;
         this.rotatieHoek = 0;

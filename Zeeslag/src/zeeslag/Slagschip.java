@@ -17,6 +17,7 @@ public class Slagschip extends Boot{
     private int column;
     private int row;
     private Type type;
+    private int levens;
     
     /**
     *    constructor
@@ -30,7 +31,7 @@ public class Slagschip extends Boot{
         super(size, column, row, o, type);
         this.size = 4;
         gezonken = false;
-        levens = size;
+        this.levens = size;
         this.row = row;
         this.column = column;
         this.rotatieHoek = 0;
