@@ -13,7 +13,6 @@ import java.util.Iterator;
  * @author Bavo, Jonas, Rens
  */
 public class Boot {
-
     
     private int size;
     int levens;
@@ -29,6 +28,12 @@ public class Boot {
 
     /**
      *  constructor
+      * @param gezonken
+      * @param size
+      * @param type
+      * @param o
+      * @param column
+      * @param row
      */
     public Boot(int size, int column, int row, Orientatie o, Type type) {
         this.gezonken = false;
@@ -101,6 +106,9 @@ public class Boot {
     
     /**
     *  coordinaten meegeven aan boot
+    * 
+     * @param coordinaten
+     * @param type
     */
     public Boot(int[] coordinaten, Type type) {
         this.row = coordinaten[0];
@@ -138,7 +146,7 @@ public class Boot {
     /**
      * coordinaten computer
      */
-    //TODO;
+    
     private int[][] vliegdekschipComp = {   //coordinaten vliegdekschip
          
         {8, 4}, {8, 5}, {8, 6}, {8, 7}, {8, 8}
@@ -163,9 +171,14 @@ public class Boot {
     
     
 
+<<<<<<< HEAD
     /*
     *  is boot levend
     */
+=======
+    
+   
+>>>>>>> a458d5f2163de437c74bfa428db5381bc0915c35
 
 
     /**
@@ -352,6 +365,7 @@ public class Boot {
         }
         return false;
     }
+
     
     
     /**
