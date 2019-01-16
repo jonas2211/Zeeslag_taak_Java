@@ -9,25 +9,34 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- *
+ * klasse voor algemene speler
  * @author Bavo, Jonas, Rens
  */
 public class Speler {
     Bord bord;
     private int spelerLevens;
     
-    //constructor
+    /**
+     * constructor
+     * @param bord 
+     */
     public Speler(Bord bord){
         this.bord=bord;
         //spelerLevens=
     }
     
-    //getters
+    /**
+     * get spelerlevens
+     * @return 
+     */
     public int getSpelerLevens() {
         return spelerLevens;
     }
     
-    //lijst met boten opvragen
+    /**
+     * get boten
+     * @return 
+     */
     public Iterator<Boot> getBoten(){
         return getBoten();
         

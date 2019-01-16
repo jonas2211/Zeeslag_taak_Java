@@ -15,12 +15,20 @@ public class SpelerEcht extends Speler {
         private Boot bootModel;
         private Bord bordModel;
 
+    /**
+     * constructor
+     * @param bord 
+     */
     public SpelerEcht(Bord bord) {
         super(bord); 
     }
     
-    // kijkt of boot van spelerEcht gezonken is 
-    public boolean isGezonken(Type ype){
+    /**
+     * kijken of boot van speler gezonken is
+     * @param type
+     * @return 
+     */
+    public boolean isGezonken(Type type){
         boolean gezonken = false; 
         Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){

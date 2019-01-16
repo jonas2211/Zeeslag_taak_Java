@@ -15,11 +15,19 @@ public class SpelerComputer extends Speler {
        private Boot bootModel;
        private Bord bordModel;
        
+    /**
+     * constructor
+     * @param bord 
+     */
     public SpelerComputer(Bord bord) {
         super(bord);
     }
     
-    //kijkt of boot van spelerComputer gezonken is
+    /**
+     * kijken of boot van computer gezonken is
+     * @param type
+     * @return 
+     */
     public boolean isGezonken(Type type){
         boolean gezonken = false; 
         
