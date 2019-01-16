@@ -40,6 +40,9 @@ public class Boot {
         this.orientatie = o;
         rotatieHoek = 0;
         
+        /**
+         * voeg boten van speler toe aan botenlistComp
+         */
         for (int i = 0; i < (vliegdekschip.length)-4; i++)
         {
             Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));

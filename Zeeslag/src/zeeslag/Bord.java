@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package zeeslag;
-import com.sun.xml.internal.bind.v2.runtime.Coordinator;
+//import com.sun.xml.internal.bind.v2.runtime.Coordinator;
 import java.util.ArrayList;
 import java.util.Iterator;
 /**
@@ -15,7 +15,7 @@ public class Bord {
     private int boten = 5;
     private int row, column;
     private Boot bootModel;
-    private Vakje vakje;
+    //private Vakje vakje;
     private Hitmark hitmrk;
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
     private int aantalBoten;
@@ -79,19 +79,21 @@ public class Bord {
         */
     }
     public void klasseHitmark(){
-    for(Boot b: bootModel.getBoten()){ //voor boot in botenlijst
-            for(Vakje v : b.getAlleCoordinaten()){//voor vakje in getallecoordinaten
-                if(schietenSpeler(getRow(), row)== hitmrk.CoordinatenPaar(row.getRow(), column)&&schietenSpeler(row, row)==hitmrk.CoordinatenPaar().getColumn()){
-                    HitmarkList.add(new Hitmark(hit=true));
+    for(int[] b: bootModel.getAlleCoordinaten()){ //voor boot in botenlijst
+            
+                int row = b[0];
+                int column = b[1];
+                if(getRow()== bootModel.getRow() && getColumn() == bootModel.getColumn()){
+                    HitmarkList.add(hitmrk );
                 }// als x en y coo waar geschoten wordt gelijk is x en y coo vakje
                 //hitmark.hit = true
                 else
                 {
-                    HitmarkList.add(new Hitmark(hit=false));
+                return;
                 }
             }
         }
-    }
+    
     
     public void schietenSpeler(int x, int y){
         row = x/30;
@@ -105,6 +107,7 @@ public class Bord {
     public int getColumn(){
         return column;
     }
+    
     
     public void schietenComputer(){
         row = (int)(Math.random())*10;
@@ -193,7 +196,7 @@ public class Bord {
         }
         return true;
     }
-    
+    /*
     public boolean setHitmark(int row, int column){
         Iterator<Boot> boten = bootModel.getBoten();
         int[][] alleCoo = bootModel.getAlleCoordinaten();
@@ -209,9 +212,10 @@ public class Bord {
         }
          return false;
     }
+    */
     /*
     public boolean sethitMark(int row, int column){
-        for(Boot bootModel : bootModel.getBoten()){
+        for(Boot j : bootModel.getBoten()){
             for (int[] coordinaten : bootModel.getAlleCoordinaten()){
                 if(coordinaten == new int[] {row,column}){
                     HitmarkList.add(new Hitmark(row, column, true));
@@ -221,7 +225,7 @@ public class Bord {
         }
         return false;
     }    
-*/    
+*/
 
             /*if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 HitmarkList.add(new Hitmark(row, column));
