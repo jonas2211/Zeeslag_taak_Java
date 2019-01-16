@@ -12,98 +12,40 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 /**
- *
+ * klasse waar view van boot in wordt gemaakt
  * @author Bavo, Jonas, Rens
  */
-public class BootView extends Region {
-    //private int x, y; 
-    //nodig?
+public class BootView extends Region{
     private Boot bootModel;
     private Rectangle rechthoek;
-    private Circle cirkel;
-    private Polygon driehoek;
    
-    
-    private Vliegdekschip boot1;
-    private Slagschip boot2;
-    private Torpedobootjager boot3;
-    private Duikboot boot4;
-    private Patrouilleschip boot5;
-    
-  
-
+    /*
+    *   constructor
+    */
     public BootView(Boot model){
         this.bootModel = model;
         this.update();
-        /*
-        this.driehoek = new Polygon( 0.0, -40.0,40.0, -10.0,-40.0, -10.0 );
-        this.rechthoek = new Rectangle(30, 30*(bootModel.getSize()-2), 0.0, 0.0);
-        this.cirkel = new Circle(15, 0.0, 0, Color.GRAY);
-        //this.rechthoek = new Rectangle(40, 40, Color.BLUE);
-        this.getChildren().addAll(driehoek, rechthoek, cirkel);
-        */
-        
     }
     
-    
-// moet nog aangewerkt worden
+    /*
+    *   update functie voor boten te tekenen
+    */
     public void update() {
-        
         Rectangle rect= new Rectangle(30*bootModel.getSize(), 1*30, Color.GRAY);;
-        getChildren().add(rect);
-        /*
-        if (bootModel.getType() == Type.VLIEGDEKSCHIP){
-            //teken vliegdekschip
-            driehoek.setLayoutX(boot1.getRow());
-            driehoek.setLayoutY(boot1.getColumn());
-            rechthoek.setLayoutX(boot1.getRow());
-            rechthoek.setLayoutY(boot1.getColumn());
-            cirkel.setLayoutX(boot1.getRow());
-            cirkel.setLayoutY(boot1.getColumn());
-            
-        }
-        else if (bootModel.getType() == Type.TORPEDOBOOTJAGER){
-            //teken torpedobootjager
-        }
-        else if (bootModel.getType() == Type.DUIKBOOT){
-        //teken duikboot
-        }
-        else if (bootModel.getType() == Type.SLAGSCHIP){
-            //teken slagschip
-        }
-        else if (bootModel.getType() == Type.PATROUILLESCHIP){
-            //teken patrouilleschip
-        }
-        */
-        
-
-/*
-            //if (boot.getOrientatie() == Orientatie.HORIZONTAAL) {
-            Polygon bootNeus = new Polygon(1,2,1);
-            bootNeus.setFill(Color.RED);
-            Rectangle bootBody = new Rectangle(30 * 5 +15, 30); //5 moet getSize worden
-            bootBody.setFill(Color.GRAY);
-            Circle bootStaart = new Circle(15, Color.GRAY);
-
-            getChildren().addAll(bootNeus, bootBody, bootStaart);
-        */
-            /*
-        } else {
-
-            Rectangle achtergrond = new Rectangle(30, 30 * boot.getSize());
-            achtergrond.setFill(Color.GRAY);
-            getChildren().addAll(achtergrond);
-        }
-*/
+        getChildren().add(rect);  
     }
+    
+    /*
+    *   column opvragen
+    */
     public int Column(int x){
-        return x/30;//70 veranderen door dikte vakje
+        return x/30;
     }
 
+    /*
+    *   row opvragen
+    */
     public int Raw(int y){
-        return y/30;//70 veranderen door dikte vakje
+        return y/30;
     }
 }
-
-
-//test
