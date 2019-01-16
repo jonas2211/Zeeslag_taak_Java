@@ -2,7 +2,7 @@ package Zeeslag;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import zeeslag.Boot;
+
 /*
 * @auctor Rens, Bavo, Jonas
 *klasse voor schietmarkering
@@ -14,7 +14,10 @@ public class Vakje extends Rectangle{
     private int x, y;
     private Bord bordModel;
 
-    public Vakje(Boot bootModel, boolean geraakt, int x, int y) {
+    /*
+    *   constructor
+    */
+    public Vakje(Bord bordModel, boolean geraakt, int x, int y) {
         super(30,30);
         this.bootModel = bootModel;
         this.x = x;
@@ -22,6 +25,10 @@ public class Vakje extends Rectangle{
         setFill(Color.ROYALBLUE);
         setStroke(Color.BLACK);
     }
+    
+    /*
+    * schiet methode
+    */
     public boolean schieten(){
         geschoten = true;
         setFill(Color.WHITE);

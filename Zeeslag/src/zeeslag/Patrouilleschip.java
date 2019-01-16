@@ -20,6 +20,9 @@ public class Patrouilleschip extends Boot{
     private int row;
     private Type type;
     
+    /**
+    *    constructor
+    */
     public Patrouilleschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 2;

@@ -17,7 +17,10 @@ public class Duikboot extends Boot{
     private int column;
     private int row;
     private Type type;
-
+    
+    /**
+    *    constructor
+    */
     public Duikboot(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 3;

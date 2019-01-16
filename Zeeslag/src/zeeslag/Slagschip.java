@@ -18,6 +18,9 @@ public class Slagschip extends Boot{
     private int row;
     private Type type;
     
+    /**
+    *    constructor
+    */
     public Slagschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 4;
