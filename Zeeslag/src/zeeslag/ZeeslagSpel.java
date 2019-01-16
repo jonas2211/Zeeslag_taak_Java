@@ -28,60 +28,103 @@ public class ZeeslagSpel {
     private SpelerComputer computer;
     private boolean start;
     
-
+    /**
+     * constructor
+     */
     public ZeeslagSpel() {
         this.opstarten();
     }
     
+    /**
+     * get bord
+     * @return bord
+     */
+    public Bord getBord() {
+        return bord;
+    }
+
+    /**
+     * get huidigeSpeler
+     * @return huidigeSpeler
+     */
+    public Speler getHuidigeSpeler() {
+        return huidigeSpeler;
+    }
+
+    /**
+     * get spelerEcht
+     * @return spelerEcht
+     */
+    public SpelerEcht getSpelerEcht() {
+        return spelerEcht;
+    }
+
+    /**
+     * get computer
+     * @return computer
+     */
+    public SpelerComputer getComputer() {
+        return computer;
+    }
+    
+    
+    /**
+     * is boot geselecteerd
+     * @return 
+     */
+    public boolean isBootGeselecteerd() {
+         return bord.isBootGeselecteerd();
+    }
+     
+    /**
+     * verplaatsen van boot
+     * @param row
+     * @param column
+     * @return 
+     */
+    public boolean verplaatsBootNaar(int row, int column){
+        return bord.verplaatsBootNaar(row, column);
+    }
+    
+    /**
+     * selecteren van boot
+     * @param row
+     * @param column
+     * @return 
+     */
+     public boolean selecteerBootOn(int row, int column) {
+         return bord.selecteerBootOn(row, column);
+     }
+    
+    /**
+    * selecteer boot off 
+    */
+    public void selecteerBootOff(){
+         bord.selecteerBootOff();
+    }
+
+    /**
+     * opstarten van spel 
+     */
     public void opstarten(){
         //this.bord = new Bord();
         this.spelerEcht = new SpelerEcht(bord);
         this.computer = new SpelerComputer(bord);
         this.huidigeSpeler = spelerEcht;
     }
+    
+    /**
+     * start van spel nadat boten geplaatst zijn 
+     */
     public void Start(){
         this.start = false;
         
     }
     
-    
-    //getters
-    public Bord getBord() {
-        return bord;
-    }
-
-    public Speler getHuidigeSpeler() {
-        return huidigeSpeler;
-    }
-
-    public SpelerEcht getSpelerEcht() {
-        return spelerEcht;
-    }
-
-    public SpelerComputer getComputer() {
-        return computer;
-    }
-    
-    
-    //andere methodes
-    public boolean isBootGeselecteerd() {
-         return bord.isBootGeselecteerd();
-     }
      
-    public boolean verplaatsBootNaar(int row, int column){
-        return bord.verplaatsBootNaar(row, column);
-    }
-    
-     public boolean selecteerBootOn(int row, int column) {
-         return bord.selecteerBootOn(row, column);
-     }
-    
-     public void selecteerBootOff(){
-         bord.selecteerBootOff();
-     }
- 
-     
-    //methode spelerwissel
+    /**
+     * geeft aan wanneer beurten moeten omdraaien
+     */
     public void eindeBeurt(){
         if (huidigeSpeler instanceof SpelerEcht){
             huidigeSpeler = computer;
@@ -91,7 +134,10 @@ public class ZeeslagSpel {
         }
     }
     
-    // eindespelchecker wie heeft gewonnen
+    /**
+     * is spel afgelopen?
+     * @return agelopen of  niet afgelopen
+     */
     public boolean Spelafgelopen(){
         if (spelerEcht.isGezonken(Type.VLIEGDEKSCHIP) ==true && spelerEcht.isGezonken(Type.SLAGSCHIP)== true && spelerEcht.isGezonken(Type.TORPEDOBOOTJAGER)==true && spelerEcht.isGezonken(Type.DUIKBOOT)==true && spelerEcht.isGezonken(Type.PATROUILLESCHIP)==true)
         {
@@ -105,10 +151,13 @@ public class ZeeslagSpel {
         }
         else
         {
-            return false;
-                    
+            return false;          
         }
     }
+    
+    /**
+     * opslaan naar json 
+     */
     public void saveToJSON(){
     Gson gsonner = new GsonBuilder().setPrettyPrinting().create();
         String json = gsonner.toJson(this);
@@ -116,13 +165,20 @@ public class ZeeslagSpel {
             JsonWriter writer = gsonner.newJsonWriter(new FileWriter("savedModel.json.txt"));
             writer.jsonValue(json);
         } catch (java.io.IOException e) {
-     
+            
         }
     }
+    
+    /**
+     * save methode
+     */
     public static void Save(){
         
     }
     
+    /**
+     * inladen van spel
+     */
     public static void loadFromJson() {
         Gson gson = new Gson();
         try {
