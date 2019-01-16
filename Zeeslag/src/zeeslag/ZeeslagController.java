@@ -99,6 +99,7 @@ public class ZeeslagController {
      *
      * @param mouseEvent
      */
+    /*
     void handleMouseClickOnTegenstanderPane(MouseEvent mouseEvent) {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
@@ -109,7 +110,7 @@ public class ZeeslagController {
         zeeslagModel.getComputerBord().setHitmark(rij, kolom);
         tegenStanderBordView.update();
     }
-
+*/
     /**
      * actie op opstartenKnop
      *
