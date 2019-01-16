@@ -95,6 +95,7 @@ public class SpelerBordView extends Region {
         }
     }
 
+<<<<<<< HEAD
     /**
      * get kolom
      *
@@ -103,6 +104,15 @@ public class SpelerBordView extends Region {
      */
     public int Column(int x) {
         return x / 30;//70 veranderen door dikte vakje
+=======
+   /**
+    * get kolom
+    * @param x
+    * @return kolom
+    */
+    public int getColumn(int x){
+        return x/30;//70 veranderen door dikte vakje
+>>>>>>> d3ae7602e2c265e11d5839c6aea977a04640b371
     }
 
     /**
@@ -111,8 +121,13 @@ public class SpelerBordView extends Region {
      * @param y
      * @return rij
      */
+<<<<<<< HEAD
     public int Raw(int y) {
         return y / 30;//70 veranderen door dikte vakje
+=======
+    public int getRow(int y){
+        return y/30;//70 veranderen door dikte vakje
+>>>>>>> d3ae7602e2c265e11d5839c6aea977a04640b371
     }
 
 }
