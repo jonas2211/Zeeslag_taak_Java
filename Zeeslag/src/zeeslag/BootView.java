@@ -36,6 +36,6 @@ public class BootView extends Region{
     }
 
     public int Raw(int y){
-        return y/30;/
+        return y/30;
     }
 }

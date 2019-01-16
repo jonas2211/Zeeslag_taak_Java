@@ -142,12 +142,9 @@ public class TegenstanderBordView extends Region {
             }
             this.getChildren().addAll(rechth);
         }*/
-    }
+    
 
     
-<<<<<<< HEAD
-
-=======
 public int Column(int x){
         return x/30;//70 veranderen door dikte vakje
     }
@@ -156,7 +153,6 @@ public int Column(int x){
         return y/30;//70 veranderen door dikte vakje
     }
 }
->>>>>>> f0109576f849123b39cfd5ad2f69298bc0c639c1
 
 
 
