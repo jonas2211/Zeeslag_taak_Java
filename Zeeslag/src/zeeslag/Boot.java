@@ -164,13 +164,7 @@ public class Boot {
     
 
     
-    /*
-    *  is boot levend
-    */
-    public boolean levend(){
-        return levens>0;
-            
-    }
+   
 
 
     /**
@@ -357,6 +351,7 @@ public class Boot {
         }
         return false;
     }
+
     
     
     /**
