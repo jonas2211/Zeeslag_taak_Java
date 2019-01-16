@@ -19,7 +19,7 @@ import javafx.scene.shape.*;
 public class TegenstanderBordView extends Region {
     
     private Bord bordModel;
-    private Boot bootModel;
+    //private Boot bootModel;
     private ArrayList<Hitmark> hit;
 
     
@@ -28,9 +28,9 @@ public class TegenstanderBordView extends Region {
      * @param bordModel
      * @param bootModel
      */
-    public TegenstanderBordView(Bord bordModel, Boot bootModel) { //in de constructor komt welk bord het moet afbeelden
+    public TegenstanderBordView(Bord bordModel) { //in de constructor komt welk bord het moet afbeelden
         this.bordModel = bordModel; //model van het bord
-        this.bootModel = bootModel;
+        //this.bootModel = bootModel;
         this.update();
         
     /**
