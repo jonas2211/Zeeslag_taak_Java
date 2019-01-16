@@ -4,6 +4,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 /*
+* bron voor code : https://www.youtube.com/watch?v=SudEpvy3msY&fbclid=IwAR09vosDwTxyXC0Dybj6MsTXfjzJafnul2XPcvwd4XKtflaRZO9ft9mVsx8
 * @auctor Rens, Bavo, Jonas
 *klasse voor schietmarkering
 */
