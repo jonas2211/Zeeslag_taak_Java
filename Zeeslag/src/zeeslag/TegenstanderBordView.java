@@ -111,8 +111,8 @@ public class TegenstanderBordView extends Region {
             this.getChildren().add(rechth);
         }
     }
-        /*
-        for (Hitmark hitmrk : bordModel.getHitmarkList()) {
+        
+        /*for (Hitmark hitmrk : bordModel.getHitmarkList()) {
             Rectangle rechth = new Rectangle(hitmrk.getRow() * 30, hitmrk.getColumn() * 30, 29, 29);
             //for en if regel moet aagepast worden dit weet ik niet
     
@@ -135,17 +135,17 @@ public class TegenstanderBordView extends Region {
                 lijn2.setEndY(bootModel.getRow());
                 //tweede lijn voor kruis op rood vierkant
                 //x en y moet nog vervangen worden bij lijn en rechthoek    
-                this.getChildren().addAll(rechth, lijn, lijn2);
-            } else {
+                this.getChildren().addAll(rechth, lijn, lijn2);*/
+            /*} else {
                 rechth.setFill(Color.WHITE);
                 //x en y nog vervangen
             }
             this.getChildren().addAll(rechth);
-        }
+        }*/
     }
-*/
+
     
-}
+
 
 
 
