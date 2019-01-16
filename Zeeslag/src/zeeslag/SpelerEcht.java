@@ -16,9 +16,10 @@ public class SpelerEcht extends Speler {
         private Bord bordModel;
 
     public SpelerEcht(Bord bord) {
-        super(bord);
-        
+        super(bord); 
     }
+    
+    // kijkt of boot van spelerEcht gezonken is 
     public boolean isGezonken(Type ype){
         boolean gezonken = false; 
         Iterator<Boot> botenList = bordModel.getBoten();
@@ -28,7 +29,6 @@ public class SpelerEcht extends Speler {
                 if (boot.isGezonken()== false){
                     return false;
                 }
-                
             }else if(bootModel.getType() == Type.SLAGSCHIP){
                 if (boot.isGezonken()== false){
                     return false;
@@ -47,38 +47,6 @@ public class SpelerEcht extends Speler {
                 }
             }
         }
-        return true;
-            
-        }
-        
-        /*
-        for (Boot boot: bord.getBoten()){
-            if(bootModel.getType() == Type.VLIEGDEKSCHIP){
-                if (boot.isGezonken()== false){
-                    return false;
-                }
-                
-            }else if(bootModel.getType() == Type.SLAGSCHIP){
-                if (boot.isGezonken()== false){
-                    return false;
-                }   
-            }else if(bootModel.getType()== Type.TORPEDOBOOTJAGER){
-                if (boot.isGezonken()== false){
-                    return false;
-                }   
-            }else if(bootModel.getType() == Type.DUIKBOOT){
-                if (boot.isGezonken()== false){
-                    return false;
-                }  
-            }else if(bootModel.getType() == Type.PATROUILLESCHIP){
-                if (boot.isGezonken()== false){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-*/
+        return true;   
+    }     
 }
-
-
