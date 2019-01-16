@@ -78,11 +78,12 @@ public class Bord {
         */
     }
     public void klasseHitmark(){
-    for(Boot b: bootModel.getBoten()){
-            for(Vakje v : b.getAlleCoordinaten()){
+    for(Boot b: bootModel.getBoten()){ //voor boot in botenlijst
+            for(Vakje v : b.getAlleCoordinaten()){//voor vakje in getallecoordinaten
                 if(schietenSpeler(getRow(), row)== hitmrk.CoordinatenPaar(row.getRow(), column)&&schietenSpeler(row, row)==hitmrk.CoordinatenPaar().getColumn()){
                     HitmarkList.add(new Hitmark(hit=true));
-                }
+                }// als x en y coo waar geschoten wordt gelijk is x en y coo vakje
+                //hitmark.hit = true
                 else
                 {
                     HitmarkList.add(new Hitmark(hit=false));
