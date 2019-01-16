@@ -159,6 +159,17 @@ public class Boot {
     };
     
     
+<<<<<<< HEAD
+=======
+    
+    /*
+    *  is boot levend
+    */
+    public boolean levend(){
+        return levens>0;
+            
+    }
+>>>>>>> e1c3ef55cd09018c0086706fc4bb73e70d774769
 
     /**
     *  getters
