@@ -24,14 +24,19 @@ public class SpelerBordView extends Region {
     private Bord bordModel;
 
     private ArrayList<Hitmark> hit;
-
+    /**
+     * get bordModel
+     * @return dit bordModel
+     */
     public Bord getBordModel() {
         return bordModel;
     }
     
     
 
-    
+    /**
+     * update spelerBordView
+     */
     void update(){  
         Rectangle rechthoek = new Rectangle (300,300,Color.rgb(55, 131, 186));
         //twijfel tusse aquamarine en paleturquoise
@@ -95,7 +100,9 @@ public class SpelerBordView extends Region {
         
             
     }
-    
+   /**
+    * update de hitmarks
+    */ 
    private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
        Iterator <Hitmark> hit = bordModel.getHitmarks();
        while(hit.hasNext()){
@@ -180,10 +187,19 @@ public class SpelerBordView extends Region {
     
     }
 */
+   /**
+    * get kolom
+    * @param x
+    * @return kolom
+    */
     public int Column(int x){
         return x/30;//70 veranderen door dikte vakje
     }
-
+    /**
+     * get rij
+     * @param y
+     * @return rij
+     */
     public int Raw(int y){
         return y/30;//70 veranderen door dikte vakje
     }
