@@ -12,7 +12,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ *Verdeling:
+ * 
+ * Jonas-->40%, Rens-->30%, Bavo-->30%
+ * 
+ * 
  * @author Bavo, Jonas, Rens
  */
 public class ZeeslagMain extends Application {
