@@ -145,7 +145,10 @@ public class TegenstanderBordView extends Region {
     
 
     
-public int Column(int x){
+
+
+
+    public int Column(int x){
         return x/30;//70 veranderen door dikte vakje
     }
 
@@ -153,6 +156,7 @@ public int Column(int x){
         return y/30;//70 veranderen door dikte vakje
     }
 }
+
 
 
 
