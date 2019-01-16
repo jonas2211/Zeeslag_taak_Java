@@ -39,7 +39,7 @@ public class BootView extends Region{
     /**
      * kolommen
      * @param x
-     * @return 
+     * @return kolom
      */
     
     public int Column(int x){
@@ -49,7 +49,7 @@ public class BootView extends Region{
     /**
      * rij
      * @param y
-     * @return 
+     * @return rij
      */
     public int Raw(int y){
         return y/30;
