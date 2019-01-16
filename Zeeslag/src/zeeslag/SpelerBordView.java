@@ -15,7 +15,7 @@ import javafx.scene.shape.*;
  * @author Bavo, Jonas, Rens
  */
 public class SpelerBordView extends Region {
-    public SpelerBordView() {
+    public SpelerBordView(Bord spelerBord) {
         this.update();
        //this.updateHitMarks();
 

@@ -37,7 +37,7 @@ public class ZeeslagController {
     private Button btnOpstarten;
     
     @FXML
-    private Button btnSave;
+    private Button saveBtn;
 
     
     private ZeeslagSpel zeeslagModel;
@@ -59,12 +59,12 @@ public class ZeeslagController {
         assert btnStart != null : "fx:id=\"btnStart\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnDraaien != null : "fx:id=\"btnDraaien\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
         assert btnLoad != null : "fx:id=\"loadBtn\" was not injected: check your FXML file 'FXMLHnefataflView.fxml'.";
-        assert btnSave != null : "fx:id=\"btnSave\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
+        assert saveBtn != null : "fx:id=\"btnSave\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
 
         tegenstanderPane.setOnMouseClicked(event-> handleMouseClick(event));
         spelerPane.setOnMouseClicked(event-> handleMouseClick(event));
         btnLoad.setOnAction(event -> handleLoadBtn(event));
-        btnSave.setOnAction(event -> handleBtnSave(event));
+        saveBtn.setOnAction(event -> handleBtnSave(event));
         //spelerPane.getChildren().add(view2);
         //spelerPane.getChildren().add(spelerBordView);
 
@@ -77,8 +77,8 @@ public class ZeeslagController {
     public void setModel(ZeeslagSpel zeeslagModel) {
         this.zeeslagModel = zeeslagModel;
 
-        view = new TegenstanderBordView(zeeslagModel.getBord());
-        view2 = new SpelerBordView(/*zeeslagModel.getBord()*/);
+        view = new TegenstanderBordView(zeeslagModel.getComputerBord());
+        view2 = new SpelerBordView(zeeslagModel.getSpelerBord());
         spelerPane.getChildren().add(view2);
         spelerPane.setFocusTraversable(true);
         tegenstanderPane.getChildren().add(view);

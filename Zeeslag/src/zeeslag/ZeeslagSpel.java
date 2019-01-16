@@ -14,37 +14,47 @@ import java.io.FileWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
 /**
  *
  * @author Bavo, Jonas, Rens
  */
 public class ZeeslagSpel {
-    
-    private Bord bord;
+
+    private Bord spelerBord;
+    private Bord computerBord;
     private Speler huidigeSpeler;
     private SpelerEcht spelerEcht;
     private SpelerComputer computer;
     private boolean start;
-    
+
     /**
      * constructor
      */
     public ZeeslagSpel() {
         this.opstarten();
     }
-    
+
     /**
-     * get bord
-     * @return bord
+     * get spelerBord
+     *
+     * @return spelerBord
      */
-    public Bord getBord() {
-        return bord;
+    public Bord getSpelerBord() {
+        return spelerBord;
+    }
+
+    /**
+     * get spelerBord
+     *
+     * @return spelerBord //AANPASSEN
+     */
+    public Bord getComputerBord() {
+        return computerBord;
     }
 
     /**
      * get huidigeSpeler
+     *
      * @return huidigeSpeler
      */
     public Speler getHuidigeSpeler() {
@@ -53,6 +63,7 @@ public class ZeeslagSpel {
 
     /**
      * get spelerEcht
+     *
      * @return spelerEcht
      */
     public SpelerEcht getSpelerEcht() {
@@ -61,132 +72,129 @@ public class ZeeslagSpel {
 
     /**
      * get computer
+     *
      * @return computer
      */
     public SpelerComputer getComputer() {
         return computer;
     }
-    
-    
+
     /**
      * is boot geselecteerd
-     * @return 
+     *
+     * @return
      */
     public boolean isBootGeselecteerd() {
-         return bord.isBootGeselecteerd();
-    }
-     
-    /**
-     * verplaatsen van boot
-     * @param row
-     * @param column
-     * @return 
-     */
-    public boolean verplaatsBootNaar(int row, int column){
-        return bord.verplaatsBootNaar(row, column);
-    }
-    
-    /**
-     * selecteren van boot
-     * @param row
-     * @param column
-     * @return 
-     */
-     public boolean selecteerBootOn(int row, int column) {
-         return bord.selecteerBootOn(row, column);
-     }
-    
-    /**
-    * selecteer boot off 
-    */
-    public void selecteerBootOff(){
-         bord.selecteerBootOff();
+        return spelerBord.isBootGeselecteerd();
     }
 
     /**
-     * opstarten van spel 
+     * verplaatsen van boot
+     *
+     * @param row
+     * @param column
+     * @return
      */
-    public void opstarten(){
-        //this.bord = new Bord();
-        this.spelerEcht = new SpelerEcht(bord);
-        this.computer = new SpelerComputer(bord);
+    public boolean verplaatsBootNaar(int row, int column) {
+        return spelerBord.verplaatsBootNaar(row, column);
+    }
+
+    /**
+     * selecteren van boot
+     *
+     * @param row
+     * @param column
+     * @return
+     */
+    public boolean selecteerBootOn(int row, int column) {
+        return spelerBord.selecteerBootOn(row, column);
+    }
+
+    /**
+     * selecteer boot off
+     */
+    public void selecteerBootOff() {
+        spelerBord.selecteerBootOff();
+    }
+
+    /**
+     * opstarten van spel
+     */
+    public void opstarten() {
+        this.spelerBord = new Bord();
+        this.computerBord = new Bord();
+        this.spelerEcht = new SpelerEcht(spelerBord);
+        this.computer = new SpelerComputer(spelerBord);
         this.huidigeSpeler = spelerEcht;
     }
-    
+
     /**
-     * start van spel nadat boten geplaatst zijn 
+     * start van spel nadat boten geplaatst zijn
      */
-    public void Start(){
+    public void Start() {
         this.start = false;
-        
+
     }
-    
-     
+
     /**
      * geeft aan wanneer beurten moeten omdraaien
      */
-    public void eindeBeurt(){
-        if (huidigeSpeler instanceof SpelerEcht){
+    public void eindeBeurt() {
+        if (huidigeSpeler instanceof SpelerEcht) {
             huidigeSpeler = computer;
-        }
-        else{
+        } else {
             huidigeSpeler = spelerEcht;
         }
     }
-    
+
     /**
      * is spel afgelopen?
-     * @return agelopen of  niet afgelopen
+     *
+     * @return agelopen of niet afgelopen
      */
-    public boolean Spelafgelopen(){
-        if (spelerEcht.isGezonken(Type.VLIEGDEKSCHIP) ==true && spelerEcht.isGezonken(Type.SLAGSCHIP)== true && spelerEcht.isGezonken(Type.TORPEDOBOOTJAGER)==true && spelerEcht.isGezonken(Type.DUIKBOOT)==true && spelerEcht.isGezonken(Type.PATROUILLESCHIP)==true)
-        {
+    public boolean Spelafgelopen() {
+        if (spelerEcht.isGezonken(Type.VLIEGDEKSCHIP) == true && spelerEcht.isGezonken(Type.SLAGSCHIP) == true && spelerEcht.isGezonken(Type.TORPEDOBOOTJAGER) == true && spelerEcht.isGezonken(Type.DUIKBOOT) == true && spelerEcht.isGezonken(Type.PATROUILLESCHIP) == true) {
             System.out.println(" De computer heeft gewonnen.");
             return true;
-        }
-        else if(computer.isGezonken(Type.VLIEGDEKSCHIP) ==true && computer.isGezonken(Type.SLAGSCHIP)== true && computer.isGezonken(Type.TORPEDOBOOTJAGER)==true && computer.isGezonken(Type.DUIKBOOT)==true && computer.isGezonken(Type.PATROUILLESCHIP)==true) 
-        {
+        } else if (computer.isGezonken(Type.VLIEGDEKSCHIP) == true && computer.isGezonken(Type.SLAGSCHIP) == true && computer.isGezonken(Type.TORPEDOBOOTJAGER) == true && computer.isGezonken(Type.DUIKBOOT) == true && computer.isGezonken(Type.PATROUILLESCHIP) == true) {
             System.out.println(" Gefeliciteert! Je hebt de computer verslagen!");
             return true;
-        }
-        else
-        {
-            return false;          
+        } else {
+            return false;
         }
     }
-    
+
     /**
-     * opslaan naar json 
+     * opslaan naar json
      */
-    public void saveToJSON(){
-    Gson gsonner = new GsonBuilder().setPrettyPrinting().create();
+    public void saveToJSON() {
+        Gson gsonner = new GsonBuilder().setPrettyPrinting().create();
         String json = gsonner.toJson(this);
         try {
             JsonWriter writer = gsonner.newJsonWriter(new FileWriter("savedModel.json.txt"));
             writer.jsonValue(json);
         } catch (java.io.IOException e) {
-            
+
         }
     }
-    
+
     /**
      * save methode
      */
-    public static void Save(){
-        
+    public static void Save() {
+
     }
-    
+
     /**
      * inladen van spel
      */
     public static void loadFromJson() {
         Gson gson = new Gson();
         try {
-            Level nieuw = gson.fromJson(new FileReader("dc.json.txt"),Level.class);
+            Level nieuw = gson.fromJson(new FileReader("dc.json.txt"), Level.class);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ZeeslagSpel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-}
 
+}

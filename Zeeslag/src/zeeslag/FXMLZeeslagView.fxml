@@ -9,7 +9,7 @@
       <AnchorPane fx:id="tegenstanderPane" layoutX="356.0" layoutY="133.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="40.0" />
       <Button fx:id="btnStart" layoutX="545.0" layoutY="159.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" text="start" AnchorPane.bottomAnchor="716.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="159.0" />
       <Button fx:id="btnDraaien" layoutX="535.0" layoutY="269.0" mnemonicParsing="false" text="draaien" AnchorPane.bottomAnchor="606.0" />
-      <Button fx:id="btnLoad" layoutX="660.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleLoadBtn" prefHeight="31.0" prefWidth="50.0" text="load" />
-      <Button fx:id="btnSave" layoutX="660.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleSaveBtn" prefHeight="31.0" prefWidth="50.0" text="save" />
+      <Button fx:id="btnLoad" layoutX="660.0" layoutY="159.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" text="load" />
+      <Button fx:id="saveBtn" layoutX="660.0" layoutY="269.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" text="save" />
    </children>
 </AnchorPane>

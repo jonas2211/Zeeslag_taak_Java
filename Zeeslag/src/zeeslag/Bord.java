@@ -24,8 +24,8 @@ public class Bord {
     
     public Bord(){
         //this.tegenstander =tegenstander;
-        this.row = bootModel.getRow();
-        this.column = bootModel.getColumn();
+        //this.row = bootModel.getRow();
+        //this.column = bootModel.getColumn();
     }
     
     /**
