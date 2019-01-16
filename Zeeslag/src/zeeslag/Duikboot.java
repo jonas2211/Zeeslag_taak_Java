@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package zeeslag;
 
 /**
  *
  * @author Bavo, Jonas, Rens
  */
+/*
 public class Duikboot extends Boot{
     private int size;
     private boolean gezonken;
@@ -18,7 +20,7 @@ public class Duikboot extends Boot{
     private int row;
     private Type type;
     private int levens;
-    
+    */
     /**
     *    constructor
     * @param size
@@ -27,6 +29,7 @@ public class Duikboot extends Boot{
     * @param o
     * @param type
     */
+/*
     public Duikboot(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 3;
@@ -39,3 +42,4 @@ public class Duikboot extends Boot{
         this.type = Type.DUIKBOOT;        
     }  
 }
+*/

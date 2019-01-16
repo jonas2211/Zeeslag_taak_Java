@@ -6,35 +6,32 @@
 package zeeslag;
 
 //import java.util.ArrayList;
-
 import java.util.Iterator;
-
 
 /**
  *
  * @author Bavo, Jonas, Rens
  */
-
 public class Hitmark {
 
     private boolean hit;
-    private int row,column;
+    private int row, column;
     //private Boot bootModel;
-   //private ArrayList<Boot>boten;
-   // private Speler spelerModel;
-    
+    //private ArrayList<Boot>boten;
+    // private Speler spelerModel;
+
 // x en y coordinaten zijn vaag
     public Hitmark(int row, int column, boolean hit) {
         this.hit = hit;
         this.row = row;
         this.column = column;
     }
-    
+
     public int[] getCoordinatenPaar() {
         int[] c = {this.row, this.column};
         return c;
     }
-    
+
     /*
     public void setHitmark(int row, int column){
         for(Boot bootModel : getBoten()){
@@ -50,12 +47,11 @@ public class Hitmark {
             }
         }
     }*/
-
-
     //getters
     public boolean isHit() {
         return hit;
     }
+
     /*
     public Iterator<Boot> getBoten() {
         return bootModel.getBoten();
@@ -69,6 +65,3 @@ public class Hitmark {
         return column;
     }
 }
-    
- 
-

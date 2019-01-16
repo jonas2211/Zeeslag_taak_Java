@@ -11,23 +11,26 @@ import java.util.Iterator;
  *
  * @author Bavo, Jonas, Rens
  */
+/*
 public class SpelerComputer extends Speler {
        private Boot bootModel;
        private Bord bordModel;
-       
+       */
     /**
      * constructor
      * @param bord 
      */
+/*
     public SpelerComputer(Bord bord) {
         super(bord);
     }
-    
+    */
     /**
      * kijken of boot van computer gezonken is
      * @param type
      * @return 
      */
+/*
     public boolean isGezonken(Type type){
         boolean gezonken = false; 
         
@@ -61,3 +64,4 @@ public class SpelerComputer extends Speler {
             
         }
 }
+*/

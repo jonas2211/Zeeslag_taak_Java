@@ -9,6 +9,7 @@ package zeeslag;
  *
  * @author Bavo, Jonas, Rens
  */
+/*
 public class Slagschip extends Boot{
     private int size;
     private boolean gezonken;
@@ -18,7 +19,7 @@ public class Slagschip extends Boot{
     private int row;
     private Type type;
     private int levens;
-    
+    */
     /**
     *    constructor
     * @param size
@@ -27,6 +28,7 @@ public class Slagschip extends Boot{
     * @param o
     * @param type
     */
+/*
     public Slagschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 4;
@@ -42,6 +44,7 @@ public class Slagschip extends Boot{
  
     
     }
+*/
     
     
 

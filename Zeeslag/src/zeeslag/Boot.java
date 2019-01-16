@@ -9,11 +9,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- *klasse met alle algemene datamembers voor boot
+ * klasse met alle algemene datamembers voor boot
+ *
  * @author Bavo, Jonas, Rens
  */
 public class Boot {
-    
+
     private int size;
     private int levens;
     private boolean gezonken;
@@ -27,13 +28,14 @@ public class Boot {
     //private ArrayList<Boot> BotenlistComp = new ArrayList<>();
 
     /**
-     *  constructor
-      * @param gezonken
-      * @param size
-      * @param type
-      * @param o
-      * @param column
-      * @param row
+     * constructor
+     *
+     * @param gezonken
+     * @param size
+     * @param type
+     * @param o
+     * @param column
+     * @param row
      *//*
     public Boot(int size, int column, int row, Orientatie o, Type type) {
         this.gezonken = false;
@@ -47,7 +49,7 @@ public class Boot {
         
         /**
          * voeg boten van speler toe aan botenlistComp
-         *//*
+     *//*
         for (int i = 0; i < (vliegdekschip.length)-4; i++)
         {
             Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
@@ -75,8 +77,8 @@ public class Boot {
         
         /**
          * voeg boten van computer toe aan botenlistComp
-         */
-        /*
+     */
+ /*
         for (int i = 0; i < (vliegdekschipComp.length)-4; i++)
         {
             BotenlistComp.add(new Boot (vliegdekschipComp[i], Type.VLIEGDEKSCHIP));
@@ -103,39 +105,42 @@ public class Boot {
         }
         
     }*/
-    
+
     /**
-    *  coordinaten meegeven aan boot
-    * 
+     * coordinaten meegeven aan boot
+     *
      * @param coordinaten
      * @param type
-    */
+     */
+    /*
     public Boot(int[] coordinaten, Type type) {
         this.row = coordinaten[0];
         this.column = coordinaten[1];
         this.type = type;
         this.gezonken = false;
     }
+     */
 
     public Boot(int row, int column, Type type, Orientatie orientatie) {
         this.row = row;
         this.column = column;
         this.type = type;
-        if (type == Type.DUIKBOOT){
+        if (type == Type.DUIKBOOT) {
             this.size = 3;
-        } else if (type == Type.VLIEGDEKSCHIP){          
+        } else if (type == Type.VLIEGDEKSCHIP) {
             this.size = 5;
-        } else if (type == Type.SLAGSCHIP){
+        } else if (type == Type.SLAGSCHIP) {
             this.size = 4;
-        } else if (type == Type.PATROUILLESCHIP){
+        } else if (type == Type.PATROUILLESCHIP) {
             this.size = 2;
-        } else if (type == Type.TORPEDOBOOTJAGER){
+        } else if (type == Type.TORPEDOBOOTJAGER) {
             this.size = 3;
-        } else 
-        this.gezonken = false;
+        } else {
+            this.gezonken = false;
+        }
         this.orientatie = orientatie; //standaard staat een boor hozizontaal
     }
-    
+
     /**
      * coordinaten EchteSpeler
      */
@@ -161,7 +166,7 @@ public class Boot {
          
         {5, 1}, {6, 1}
     };
-    */
+     */
     /**
      * coordinaten computer
      */
@@ -187,118 +192,132 @@ public class Boot {
          
         {8, 0}, {9, 0}
     };*/
-
-    
-
     /**
-    *  getters
-    */
+     * getters
+     */
     /**
      * get type van boot
+     *
      * @return type
      */
-
     public Type getType() {
         return type;
     }
+
     /**
      * get coordinaten boot enkel vakje
+     *
      * @return deze coordinaten
      */
     public int[] getCoordinaten() {
         int[] c = {this.row, this.column};
         return c;
     }
+
     /**
      * get rij
+     *
      * @return rij
      */
     public int getRow() {
         return row;
     }
+
     /**
      * get kolom
+     *
      * @return kolom
      */
     public int getColumn() {
         return column;
     }
+
     /**
      * get size boot
+     *
      * @return size
      */
     public int getSize() {
         return size;
     }
+
     /**
      * get levens boot
+     *
      * @return levens
      */
     public int getLevens() {
         return levens;
     }
+
     /**
      * get orientatie boot
+     *
      * @return orientatie
      */
     public Orientatie getOrientatie() {
         return orientatie;
     }
+
     /**
      * get rotatiehoek
+     *
      * @return de rotatiehoek
      */
     public int getRotatieHoek() {
         return rotatieHoek;
     }
+
     /**
      * get boten speler
+     *
      * @return lijst van boten speler
      */
-     /**
+    /**
      * get alle coordinaten van de boot
+     *
      * @return alleCoordinaten
      */
-    
+
     public int[][] getAlleCoordinaten() {
         int[][] alleCoordinaten = new int[size][2];
         for (int i = 0; i < size; i++) {
             if (orientatie == Orientatie.VERTICAAL) {
                 alleCoordinaten[i][0] = row + i;
                 alleCoordinaten[i][1] = column;
-            } else if (orientatie == Orientatie.HORIZONTAAL){
+            } else if (orientatie == Orientatie.HORIZONTAAL) {
                 alleCoordinaten[i][0] = row;
                 alleCoordinaten[i][1] = column + i;
             }
         }
         return alleCoordinaten;
     }
+
     /* 
     *setters en andere methodes
-    */
-    
-    
+     */
+
     /**
      * stel de size in
-     * @param size 
+     *
+     * @param size
      */
-    
     public void setSize(int size) {
         this.size = size;
     }
-   
+
     /**
      * verander naar gezonken
-     * @param gezonken 
+     *
+     * @param gezonken
      */
     public void setGezonken(boolean gezonken) {
         this.gezonken = gezonken;
     }
-    
+
     /**
      * boot geraakt, gezonken of levens--
      */
-    
     public void Geraakt() {
         if (levens == 0) {
             gezonken = true;
@@ -307,13 +326,13 @@ public class Boot {
             levens--;
         }
     }
-    
+
     /**
      * verander de coordinaten
+     *
      * @param row
-     * @param column 
+     * @param column
      */
-    
     private void setCoordinaten(int row, int column) {
         this.row = row;
         this.column = column;
@@ -321,11 +340,11 @@ public class Boot {
 
     /**
      * kunnen we de boot verplaatsen?
+     *
      * @param row
      * @param column
      * @return gaat of gaat niet
      */
-    
     public boolean verplaatsNaar(int row, int column) {
         if (this.row == row || this.column == column) {
             setCoordinaten(row, column);
@@ -335,37 +354,33 @@ public class Boot {
             return false;
         }
     }
-    
+
     /**
      * roteer
      */
-    
     public void roteer() {
-        if(orientatie==Orientatie.HORIZONTAAL){
-            orientatie=Orientatie.VERTICAAL;
-        }   
-        else
-        {
-            if(orientatie==Orientatie.VERTICAAL){
-                orientatie=Orientatie.HORIZONTAAL;
+        if (orientatie == Orientatie.HORIZONTAAL) {
+            orientatie = Orientatie.VERTICAAL;
+        } else {
+            if (orientatie == Orientatie.VERTICAAL) {
+                orientatie = Orientatie.HORIZONTAAL;
             }
         }
     }
+
     /**
      * is de boot levend?
+     *
      * @return levend of niet
      */
-     
-    
-     public boolean levend(){
-        if(levens>0){
+
+    public boolean levend() {
+        if (levens > 0) {
             return true;
         }
         return false;
     }
 
-    
-    
     /**
      * coordinaten boten
      */
@@ -388,10 +403,10 @@ public class Boot {
     public boolean isGezonken() {
         return gezonken;
     }
-        /*
+    /*
     public void Hit() {
         this.gezonken = false;
         levens = levens -1;
     } hit en geraakt doen hetzelfde
-         */
-    }
+     */
+}

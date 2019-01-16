@@ -21,9 +21,9 @@ public class StartBootView extends Region{
 
     public StartBootView(Boot bootModel) {
         this.bootModel = bootModel;
-        this.update();
+     //   this.update();
     }
-    
+    /*
     public void update(){
         Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
@@ -72,6 +72,7 @@ public class StartBootView extends Region{
     public int Raw(int y){
         return y/30;//70 veranderen door dikte vakje
     }
+*/
 }
     
     

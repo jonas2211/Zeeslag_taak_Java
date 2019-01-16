@@ -6,10 +6,10 @@
 package zeeslag;
 
 /**
- *orientatie is horizontaal en verticaal
+ * orientatie is horizontaal of verticaal
+ *
  * @author Bavo, Jonas, Rens
  */
-
 public enum Orientatie {
     HORIZONTAAL, VERTICAAL
 }

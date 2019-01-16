@@ -60,7 +60,7 @@ public class ZeeslagController {
         assert saveBtn != null : "fx:id=\"btnSave\" was not injected: check your FXML file 'FXMLZeeslagView.fxml'.";
 
         tegenstanderPane.setOnMouseClicked(event -> handleMouseClickOnTegenstanderPane(event));
-        spelerPane.setOnMouseClicked(event-> handleMouseClickOnSpelerPane(event));  
+        spelerPane.setOnMouseClicked(event -> handleMouseClickOnSpelerPane(event));
         btnLoad.setOnAction(event -> handleLoadBtn(event));
         saveBtn.setOnAction(event -> handleBtnSave(event));
         //spelerPane.getChildren().add(view2);
@@ -171,7 +171,7 @@ public class ZeeslagController {
     }
      */
     private void handleBtnSave(ActionEvent event) {
-           //TODO
+        //TODO
     }
 
     private void handleMouseClickOnSpelerPane(MouseEvent event) {

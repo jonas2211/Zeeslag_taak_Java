@@ -13,45 +13,48 @@ import javafx.scene.shape.Rectangle;
 
 /**
  * klasse waar view van boot in wordt gemaakt
+ *
  * @author Bavo, Jonas, Rens
  */
-public class BootView extends Region{
+public class BootView extends Region {
+
     private Boot bootModel;
     private Rectangle rechthoek;
-   
+
     /*
     *   constructor
      * @param bootModel
-    */
-    public BootView(Boot model){
-        this.bootModel = model;
+     */
+    public BootView(Boot bootModel) {
+        this.bootModel = bootModel;
         this.update();
     }
-    
+
     /*
     *   update functie voor boten te tekenen
-    */
+     */
     public void update() {
-        Rectangle rect= new Rectangle(30*bootModel.getSize(), 1*30, Color.GRAY);;
-        getChildren().add(rect);  
+        Rectangle rect = new Rectangle(30 * bootModel.getSize(), 1 * 30, Color.GRAY);;
+        getChildren().add(rect);
     }
-    
+
     /**
      * kolommen
+     *
      * @param x
      * @return kolom
      */
-    
-    public int Column(int x){
-        return x/30;
+    public int Column(int x) {
+        return x / 30;
     }
 
     /**
      * rij
+     *
      * @param y
      * @return rij
      */
-    public int Raw(int y){
-        return y/30;
+    public int Raw(int y) {
+        return y / 30;
     }
 }

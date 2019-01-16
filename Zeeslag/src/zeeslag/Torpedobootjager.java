@@ -9,6 +9,7 @@ package zeeslag;
  *klasse van eigenschappen torpedobootjager
  * @author Bavo, Jonas, Rens
  */
+/*
 public class Torpedobootjager extends Boot{
     private int size;
     private boolean gezonken;
@@ -18,7 +19,7 @@ public class Torpedobootjager extends Boot{
     private int row;
     private Type type;
     private int levens;
-    
+    */
     /**
     *    constructor
     * @param size
@@ -27,6 +28,7 @@ public class Torpedobootjager extends Boot{
     * @param o
     * @param type
     */
+/*
     public Torpedobootjager(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 3;
@@ -39,3 +41,4 @@ public class Torpedobootjager extends Boot{
         this.type = Type.TORPEDOBOOTJAGER;
     }
 }
+*/

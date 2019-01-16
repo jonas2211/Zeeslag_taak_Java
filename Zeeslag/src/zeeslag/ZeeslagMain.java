@@ -12,29 +12,29 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *Verdeling:
- * 
+ * Verdeling:
+ *
  * Jonas-->40%, Rens-->30%, Bavo-->30%
- * 
- * 
+ *
+ *
  * @author Bavo, Jonas, Rens
  */
 public class ZeeslagMain extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         //model 
         ZeeslagSpel zeeslagModel = new ZeeslagSpel();
-        
+
         //view 
         FXMLLoader lader = new FXMLLoader(getClass().getResource("FXMLZeeslagView.fxml"));
         Parent root = lader.load();
-        
+
         ZeeslagController zeeslagController = lader.getController();
-        
+
         //controller linken
         zeeslagController.setModel(zeeslagModel);
-                
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -46,5 +46,5 @@ public class ZeeslagMain extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

@@ -47,41 +47,41 @@ public class Bord {
         if (type == Type.VLIEGDEKSCHIP) {
             if (o == Orientatie.HORIZONTAAL) {
                 rij = (int) (Math.random() * 10);
-                kolom = (int) (Math.random() * 4);
+                kolom = (int) (Math.random() * 5);
             } else if (o == Orientatie.VERTICAAL) {
-                rij = (int) (Math.random() * 4);
+                rij = (int) (Math.random() * 5);
                 kolom = (int) (Math.random() * 10);
             }
         } else if (type == Type.SLAGSCHIP) {
             if (o == Orientatie.HORIZONTAAL) {
                 rij = (int) (Math.random() * 10);
-                kolom = (int) (Math.random() * 4);
+                kolom = (int) (Math.random() * 6);
             } else if (o == Orientatie.VERTICAAL) {
-                rij = (int) (Math.random() * 4);
+                rij = (int) (Math.random() * 6);
                 kolom = (int) (Math.random() * 10);
             }
-        } else if (type == Type.VLIEGDEKSCHIP) {
+        } else if (type == Type.DUIKBOOT) {
             if (o == Orientatie.HORIZONTAAL) {
                 rij = (int) (Math.random() * 10);
-                kolom = (int) (Math.random() * 4);
+                kolom = (int) (Math.random() * 7);
             } else if (o == Orientatie.VERTICAAL) {
-                rij = (int) (Math.random() * 4);
+                rij = (int) (Math.random() * 7);
                 kolom = (int) (Math.random() * 10);
             }
-        } else if (type == Type.VLIEGDEKSCHIP) {
+        } else if (type == Type.TORPEDOBOOTJAGER) {
             if (o == Orientatie.HORIZONTAAL) {
                 rij = (int) (Math.random() * 10);
-                kolom = (int) (Math.random() * 4);
+                kolom = (int) (Math.random() * 7);
             } else if (o == Orientatie.VERTICAAL) {
-                rij = (int) (Math.random() * 4);
+                rij = (int) (Math.random() * 7);
                 kolom = (int) (Math.random() * 10);
             }
-        } else if (type == Type.VLIEGDEKSCHIP) {
+        } else if (type == Type.PATROUILLESCHIP) {
             if (o == Orientatie.HORIZONTAAL) {
                 rij = (int) (Math.random() * 10);
-                kolom = (int) (Math.random() * 4);
+                kolom = (int) (Math.random() * 8);
             } else if (o == Orientatie.VERTICAAL) {
-                rij = (int) (Math.random() * 4);
+                rij = (int) (Math.random() * 8);
                 kolom = (int) (Math.random() * 10);
             }
         }
@@ -91,6 +91,7 @@ public class Bord {
     /**
      * hitmark
      */
+    //!!!!!!!!
     public void klasseHitmark() { //WEGDOEN VOOR UPLOADEN, dit is cringe
         for (int[] b : bootModel.getAlleCoordinaten()) { //voor boot in botenlijst
 

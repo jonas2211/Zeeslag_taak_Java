@@ -22,12 +22,14 @@ public class SpelerEcht extends Speler {
     public SpelerEcht(Bord bord) {
         super(bord); 
     }
+}
     
     /**
      * kijken of boot van speler gezonken is
      * @param type
      * @return 
      */
+    /*
     public boolean isGezonken(Type type){
         boolean gezonken = false; 
         Iterator<Boot> botenList = bootModel.getBoten();
@@ -58,3 +60,4 @@ public class SpelerEcht extends Speler {
         return true;   
     }     
 }
+*/

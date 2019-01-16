@@ -23,10 +23,11 @@ public class BordView extends Region {
     */
     public BordView(Bord bord) {
         this.bordModel = bord;
-        this.update();
+     //   this.update();
     }
+}
 
-    
+    /*
     public void update() {
         Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
@@ -36,13 +37,14 @@ public class BordView extends Region {
             bootView.setTranslateY(boten.getRow() * 30);
             getChildren().add(bootView);
         }
+    */
         /*
         for (Boot b : botenList) {
             BootView bootView = new BootView(b);
             bootView.setTranslateX(b.getColumn() * 30);
             bootView.setTranslateY(b.getRow() * 30);
             getChildren().add(bootView);
-*/
+
 
         }
         
@@ -62,3 +64,4 @@ public class BordView extends Region {
     }
     
 }
+*/

@@ -10,41 +10,41 @@ import java.util.Iterator;
 
 /**
  * klasse voor algemene speler
+ *
  * @author Bavo, Jonas, Rens
  */
 public class Speler {
+
     Bord bord;
     private int spelerLevens;
-    
+
     /**
      * constructor
-     * @param bord 
+     *
+     * @param bord
      */
-    public Speler(Bord bord){
-        this.bord=bord;
-        
+    public Speler(Bord bord) {
+        this.bord = bord;
+
     }
-    
+
     /**
      * get spelerlevens
-     * @return 
+     *
+     * @return
      */
     public int getSpelerLevens() {
         return spelerLevens;
     }
-    
+
     /**
      * get boten
-     * @return 
+     *
+     * @return
      */
-    public Iterator<Boot> getBoten(){
+    public Iterator<Boot> getBoten() {
         return getBoten();
-        
-        
-        
-        
-        
+
     }
-    
-    
+
 }
