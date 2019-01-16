@@ -34,7 +34,7 @@ public class ZeeslagSpel {
     }
     
     public void opstarten(){
-        this.bord = new Bord();
+        //this.bord = new Bord();
         this.spelerEcht = new SpelerEcht(bord);
         this.computer = new SpelerComputer(bord);
         this.huidigeSpeler = spelerEcht;
