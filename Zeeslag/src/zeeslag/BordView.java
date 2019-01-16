@@ -18,13 +18,16 @@ public class BordView extends Region {
     private Boot bootModel;
     //getekendeBoot = new BootView(hier moet een boot-object komen);
 
- public BordView(Bord bord) {
+    /**
+    *    constructor
+    */
+    public BordView(Bord bord) {
         this.bordModel = bord;
         this.update();
     }
 
+    
     public void update() {
-
         Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
             Boot boten = botenList.next();
