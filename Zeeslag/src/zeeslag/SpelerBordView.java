@@ -97,7 +97,7 @@ public class SpelerBordView extends Region {
     * @param x
     * @return kolom
     */
-    public int Column(int x){
+    public int getColumn(int x){
         return x/30;//70 veranderen door dikte vakje
     }
     /**
@@ -105,7 +105,7 @@ public class SpelerBordView extends Region {
      * @param y
      * @return rij
      */
-    public int Raw(int y){
+    public int getRow(int y){
         return y/30;//70 veranderen door dikte vakje
     }
    
