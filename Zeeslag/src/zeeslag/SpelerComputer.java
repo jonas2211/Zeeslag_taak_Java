@@ -9,7 +9,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author Rens Remans
+ * @author Bavo, Jonas, Rens
  */
 public class SpelerComputer extends Speler {
        private Boot bootModel;

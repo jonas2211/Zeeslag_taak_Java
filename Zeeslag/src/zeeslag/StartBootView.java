@@ -13,7 +13,7 @@ import javafx.scene.shape.*;
 
 /**
  *
- * @author Rens Remans
+ * @author Bavo, Jonas, Rens
  */
 public class StartBootView extends Region{
     private Boot bootModel;

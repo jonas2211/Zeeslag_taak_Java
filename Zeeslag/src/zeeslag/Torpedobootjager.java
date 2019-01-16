@@ -7,7 +7,7 @@ package zeeslag;
 
 /**
  *klasse van eigenschappen torpedobootjager
- * @author Rens Remans
+ * @author Bavo, Jonas, Rens
  */
 public class Torpedobootjager extends Boot{
     private int size;

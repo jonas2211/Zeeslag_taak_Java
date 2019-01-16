@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class ZeeslagSpel {
     

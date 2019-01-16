@@ -10,7 +10,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author Bavo
+ * @author Bavo, Jonas, Rens
  */
 public class Speler {
     Bord bord;

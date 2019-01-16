@@ -11,7 +11,7 @@ import java.util.Iterator;
 import javafx.scene.layout.Region;
 /**
  *
- * @author jonas
+ * @author Bavo, Jonas, Rens
  */
 public class BordView extends Region {
     private Bord bordModel;

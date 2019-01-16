@@ -7,7 +7,7 @@ package zeeslag;
 
 /**
  *klasse van eigenschappen patrouilleschip
- * @author Rens Remans
+ * @author Bavo, Jonas, Rens
  */
 
 

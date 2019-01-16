@@ -7,7 +7,7 @@ package zeeslag;
 
 /**
  *
- * @author Rens Remans
+ * @author Bavo, Jonas, Rens
  */
 public class Slagschip extends Boot{
     private int size;

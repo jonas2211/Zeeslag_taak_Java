@@ -9,7 +9,7 @@ package zeeslag;
 
 /**
  *
- * @author Bavo
+ * @author Bavo, Jonas, Rens
  */
 
 public class Hitmark {

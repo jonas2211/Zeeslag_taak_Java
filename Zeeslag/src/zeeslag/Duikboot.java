@@ -7,7 +7,7 @@ package zeeslag;
 
 /**
  *
- * @author Rens Remans
+ * @author Bavo, Jonas, Rens
  */
 public class Duikboot extends Boot{
     private int size;
