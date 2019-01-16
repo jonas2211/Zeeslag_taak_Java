@@ -36,16 +36,21 @@ public class BootView extends Region{
         getChildren().add(rect);  
     }
     
-    /*
-    *   column opvragen
-    */
+    /**
+     * kolommen
+     * @param x
+     * @return 
+     */
+    
     public int Column(int x){
         return x/30;
     }
 
-    /*
-    *   row opvragen
-    */
+    /**
+     * rij
+     * @param y
+     * @return 
+     */
     public int Raw(int y){
         return y/30;
     }

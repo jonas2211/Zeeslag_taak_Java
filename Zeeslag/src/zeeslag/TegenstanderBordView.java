@@ -42,12 +42,18 @@ public class TegenstanderBordView extends Region {
         return bordModel;
     }
 
-    
+    /**
+     *  update achtergrond
+     *  update hitmarks
+     */
     public void update() {
         updateBackground(); 
         updateHitMarks();  
     }
-
+    
+    /**
+     * update achtergrond 
+     */
     private void updateBackground() {
         Rectangle rechthoek = new Rectangle(300, 300, Color.rgb(55, 131, 186));
         this.getChildren().addAll(rechthoek);
@@ -72,7 +78,9 @@ public class TegenstanderBordView extends Region {
         }
     }
 
-    
+    /**
+     * update hitmarks 
+     */
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
         Iterator <Hitmark> hit = bordModel.getHitmarks();
         while(hit.hasNext()){
@@ -87,10 +95,20 @@ public class TegenstanderBordView extends Region {
         }
     }
 
+    /**
+     * kolommen
+     * @param x
+     * @return 
+     */
     public int Column(int x){
         return x/30;
     }
 
+    /**
+     * rijen
+     * @param y
+     * @return 
+     */
     public int Raw(int y){
         return y/30;
     }
