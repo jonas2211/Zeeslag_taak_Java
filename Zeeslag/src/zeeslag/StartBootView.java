@@ -112,6 +112,13 @@ public class StartBootView extends Region{
         }
         
     }
+    public int Column(int x){
+        return x/30;//70 veranderen door dikte vakje
+    }
+
+    public int Raw(int y){
+        return y/30;//70 veranderen door dikte vakje
+    }
 }
     
     
