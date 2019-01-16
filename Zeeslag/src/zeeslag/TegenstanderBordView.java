@@ -28,9 +28,10 @@ public class TegenstanderBordView extends Region {
      * @param bordModel
      * @param bootModel
      */
-    public TegenstanderBordView(Bord bordModel) { //in de constructor komt welk bord het moet afbeelden
-        this.bordModel = bordModel; //model van het bord
+    public TegenstanderBordView(Bord bordModel) { 
+        this.bordModel = bordModel; 
         this.update();
+        this.updateHitMarks();
         
     /**
      *  get bordmodel
