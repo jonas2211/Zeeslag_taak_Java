@@ -23,8 +23,8 @@ public class Boot {
     private Type type;
     private Bord bordModel;
     private Hitmark hit;
-    private ArrayList<Boot> Botenlist = new ArrayList<>();
-    private ArrayList<Boot> BotenlistComp = new ArrayList<>();
+    //private ArrayList<Boot> Botenlist = new ArrayList<>();
+    //private ArrayList<Boot> BotenlistComp = new ArrayList<>();
 
     /**
      *  constructor
@@ -34,7 +34,7 @@ public class Boot {
       * @param o
       * @param column
       * @param row
-     */
+     *//*
     public Boot(int size, int column, int row, Orientatie o, Type type) {
         this.gezonken = false;
         this.type = type;
@@ -47,7 +47,7 @@ public class Boot {
         
         /**
          * voeg boten van speler toe aan botenlistComp
-         */
+         *//*
         for (int i = 0; i < (vliegdekschip.length)-4; i++)
         {
             Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
@@ -76,7 +76,7 @@ public class Boot {
         /**
          * voeg boten van computer toe aan botenlistComp
          */
-        
+        /*
         for (int i = 0; i < (vliegdekschipComp.length)-4; i++)
         {
             BotenlistComp.add(new Boot (vliegdekschipComp[i], Type.VLIEGDEKSCHIP));
@@ -102,7 +102,7 @@ public class Boot {
             BotenlistComp.add(new Boot (patrouilleschipComp[i], Type.PATROUILLESCHIP));
         }
         
-    }
+    }*/
     
     /**
     *  coordinaten meegeven aan boot
@@ -116,11 +116,30 @@ public class Boot {
         this.type = type;
         this.gezonken = false;
     }
+
+    public Boot(int row, int column, Type type, Orientatie orientatie) {
+        this.row = row;
+        this.column = column;
+        this.type = type;
+        if (type == Type.DUIKBOOT){
+            this.size = 3;
+        } else if (type == Type.VLIEGDEKSCHIP){          
+            this.size = 5;
+        } else if (type == Type.SLAGSCHIP){
+            this.size = 4;
+        } else if (type == Type.PATROUILLESCHIP){
+            this.size = 2;
+        } else if (type == Type.TORPEDOBOOTJAGER){
+            this.size = 3;
+        } else 
+        this.gezonken = false;
+        this.orientatie = orientatie; //standaard staat een boor hozizontaal
+    }
     
     /**
      * coordinaten EchteSpeler
      */
-    
+    /*
     private int[][] vliegdekschip = {   //coordinaten vliegdekschip
          
         {0, 1}, {1, 1}, {2, 1}, {3,1}, {4,1}
@@ -142,11 +161,11 @@ public class Boot {
          
         {5, 1}, {6, 1}
     };
-    
+    */
     /**
      * coordinaten computer
      */
-    
+    /*
     private int[][] vliegdekschipComp = {   //coordinaten vliegdekschip
          
         {8, 4}, {8, 5}, {8, 6}, {8, 7}, {8, 8}
@@ -167,7 +186,7 @@ public class Boot {
     private int[][] patrouilleschipComp = {   //coordinaten Patrouilleschip
          
         {8, 0}, {9, 0}
-    };
+    };*/
 
     
 
@@ -236,18 +255,7 @@ public class Boot {
      * get boten speler
      * @return lijst van boten speler
      */
-    public Iterator<Boot> getBoten() {
-        return Botenlist.iterator();
-    }
-    /**
-     * get boten van computer
-     * @return lijst van boten computer
-     */
-    public Iterator<Boot> getBotenComp(){
-        return BotenlistComp.iterator();
-    }
-
-    /**
+     /**
      * get alle coordinaten van de boot
      * @return alleCoordinaten
      */
@@ -256,11 +264,11 @@ public class Boot {
         int[][] alleCoordinaten = new int[size][2];
         for (int i = 0; i < size; i++) {
             if (orientatie == Orientatie.VERTICAAL) {
-                alleCoordinaten[i][0] = row + size * i;
+                alleCoordinaten[i][0] = row + i;
                 alleCoordinaten[i][1] = column;
-            } else {
+            } else if (orientatie == Orientatie.HORIZONTAAL){
                 alleCoordinaten[i][0] = row;
-                alleCoordinaten[i][1] = column + size * i;
+                alleCoordinaten[i][1] = column + i;
             }
         }
         return alleCoordinaten;
@@ -361,7 +369,7 @@ public class Boot {
     /**
      * coordinaten boten
      */
-    private void CoordinateBoten() {    
+    /*private void CoordinateBoten() {    
         Iterator<Boot> boten = getBoten();
         while(boten.hasNext()){
             Boot coordinaten = boten.next();

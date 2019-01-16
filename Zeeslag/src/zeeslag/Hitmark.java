@@ -19,7 +19,7 @@ public class Hitmark {
 
     private boolean hit;
     private int row,column;
-    private Boot bootModel;
+    //private Boot bootModel;
    //private ArrayList<Boot>boten;
    // private Speler spelerModel;
     
@@ -30,7 +30,7 @@ public class Hitmark {
         this.column = column;
     }
     
-    public int[] CoordinatenPaar() {
+    public int[] getCoordinatenPaar() {
         int[] c = {this.row, this.column};
         return c;
     }
@@ -56,10 +56,10 @@ public class Hitmark {
     public boolean isHit() {
         return hit;
     }
-    
+    /*
     public Iterator<Boot> getBoten() {
         return bootModel.getBoten();
-    }
+    }*/
 
     public int getRow() {
         return row;

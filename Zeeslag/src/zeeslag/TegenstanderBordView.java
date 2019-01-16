@@ -11,46 +11,34 @@ import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 
-
 /**
  *
  * @author Bavo, Jonas, Rens
  */
 public class TegenstanderBordView extends Region {
-    
-    private Bord bordModel;
-    //private Boot bootModel;
-    private ArrayList<Hitmark> hit;
 
-    
+    private Bord bordModel;
+
     /**
      * constructor
+     *
      * @param bordModel
-     * @param bootModel
      */
-       public TegenstanderBordView(Bord bordModel) { //in de constructor komt welk bord het moet afbeelden
+    public TegenstanderBordView(Bord bordModel) { //in de constructor komt welk bord het moet afbeelden
         this.bordModel = bordModel; //model van het bord
         this.update();
-        }
-    /**
-     *  get bordmodel
-     * @return bordModel
-     */
-     public Bord getBordModel() {
-        return bordModel;
     }
 
     /**
-     *  update achtergrond
-     *  update hitmarks
+     * update achtergrond update hitmarks
      */
     public void update() {
-        updateBackground(); 
-        updateHitMarks();  
+        updateBackground();
+        updateHitMarks();
     }
-    
+
     /**
-     * update achtergrond 
+     * update achtergrond
      */
     private void updateBackground() {
         Rectangle rechthoek = new Rectangle(300, 300, Color.rgb(55, 131, 186));
@@ -77,38 +65,48 @@ public class TegenstanderBordView extends Region {
     }
 
     /**
-     * update hitmarks 
+     * update hitmarks
      */
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        Iterator <Hitmark> hit = bordModel.getHitmarks();
-        while(hit.hasNext()){
-            Hitmark hits = hit.next();
-            Rectangle rechth = new Rectangle(hits.getRow() * 30, hits.getColumn() * 30, 29, 29);
+        Iterator<Hitmark> hitMarks = bordModel.getHitmarks();
+        while (hitMarks.hasNext()) {
+            Hitmark hits = hitMarks.next();
+            Rectangle rechth = new Rectangle(hits.getColumn() * 30, hits.getRow() * 30, 29, 29);
             if (hits.isHit() == true) {
                 rechth.setFill(Color.RED);
-           } else {
-                rechth.setFill(Color.rgb(55, 131, 186));
+            } else {
+                rechth.setFill(Color.WHITE);
             }
             this.getChildren().add(rechth);
         }
     }
 
     /**
-     * kolommen
-     * @param x
-     * @return 
+     * zet x-pixels om naar kolom
+     *
+     * @ param x het aantal pixels
+     * @return de kolom
      */
-    public int Column(int x){
-        return x/30;
+    public int getColumn(int x) {
+        return x / 30;
     }
 
     /**
-     * rijen
-     * @param y
-     * @return 
+     * zet y-pixels om naar rij
+     *
+     * @para m y het aantal pixels
+     * @return de rij
      */
-    public int Raw(int y){
-        return y/30;
+    public int getRij(int y) {
+        return y / 30;
+    }
+
+    /**
+     * get bordmodel
+     *
+     * @return bordModel
+     */
+    public Bord getBordModel() {
+        return bordModel;
     }
 }
-
