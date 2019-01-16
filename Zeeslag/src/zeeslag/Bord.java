@@ -16,6 +16,7 @@ public class Bord {
     private int row, column;
     private Boot bootModel;
     private Vakje vakje;
+    private Hitmark hitmrk;
     private ArrayList<Boot> Botenlist = new ArrayList<>();
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
     private ArrayList<Boot> BotenlistComp = new ArrayList<>();
@@ -175,9 +176,9 @@ public class Bord {
         * for-loops voor bootdelen
         *
         */
-        for(Boot b: Botenlist){
+        /*for(Boot b: Botenlist){
             for(Vakje v:b.getAlleCoordinaten()){
-                if(schotX== vakje.CoordinatenPaar().getRow()&&schotY==vakje.CoordinatenPaar().getColumn()){
+                if(schotX== hitmrk.CoordinatenPaar(row.getRow(), column)&&schotY==hitmrk.CoordinatenPaar().getColumn()){
                     HitmarkList.add(new Hitmark(hit=true));
                 }
                 else
@@ -185,7 +186,7 @@ public class Bord {
                     HitmarkList.add(new Hitmark(hit=false));
                 }
             }
-        }
+        }*/
         //Vakje, hit en schotX nog veranderen
         
         
