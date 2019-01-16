@@ -14,10 +14,18 @@ public class Vakje extends Rectangle{
     private int x, y;
     //private Bord bordModel;
 
-    /*
-    *   constructor
-    */
-    public Vakje(boolean geraakt, int x, int y) {
+    
+
+    /**
+     *    constructor
+     * @param bordModel
+     * @param geraakt
+     * @param x
+     * @param y 
+     */
+    
+    public Vakje(Bord bordModel, boolean geraakt, int x, int y) {
+
         super(30,30);
         //this.bootModel = bootModel;
         this.x = x;
