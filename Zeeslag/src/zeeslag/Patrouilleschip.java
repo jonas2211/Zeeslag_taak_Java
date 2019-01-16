@@ -22,11 +22,11 @@ public class Patrouilleschip extends Boot{
     
     /**
     *    constructor
-     * @param size
-     * @param column
-     * @param row
-     * @param o
-     * @param type
+    * @param size
+    * @param column
+    * @param row
+    * @param o
+    * @param type
     */
     public Patrouilleschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);

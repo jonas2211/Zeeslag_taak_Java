@@ -6,7 +6,7 @@
 package zeeslag;
 
 /**
- *
+ * type zijn alle types van boten binnen het spel zeeslag
  * @author Bavo, Jonas, Rens
  */
 public enum Type {
