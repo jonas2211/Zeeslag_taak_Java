@@ -18,7 +18,6 @@ public class Bord {
     //private Vakje vakje;
     private Hitmark hitmrk;
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
-    private int aantalBoten;
     
     // moet er een klasse hitmark zijn of kunnen we een arraylist maken via klasse Bord voor hitmarks?
 
@@ -85,6 +84,7 @@ public class Bord {
                 int column = b[1];
                 if(getRow()== bootModel.getRow() && getColumn() == bootModel.getColumn()){
                     HitmarkList.add(hitmrk );
+                    hitmrk.isHit()=true;
                 }// als x en y coo waar geschoten wordt gelijk is x en y coo vakje
                 //hitmark.hit = true
                 else
