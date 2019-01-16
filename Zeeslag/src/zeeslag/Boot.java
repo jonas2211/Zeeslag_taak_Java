@@ -159,136 +159,88 @@ public class Boot {
     };
     
     
-    
-    /*
-    *  is boot levend
-    */
-    public boolean levend(){
-        if(levens>0){
-            return true;
-        }
-        return false;
-    }
 
-    /*
+    /**
     *  getters
     */
-    public boolean isGezonken() {
-        return gezonken;
-    }
+    /**
+     * get type van boot
+     * @return type
+     */
 
     public Type getType() {
         return type;
     }
-
+    /**
+     * get coordinaten boot enkel vakje
+     * @return deze coordinaten
+     */
     public int[] getCoordinaten() {
         int[] c = {this.row, this.column};
         return c;
     }
-
+    /**
+     * get rij
+     * @return rij
+     */
     public int getRow() {
         return row;
     }
-
+    /**
+     * get kolom
+     * @return kolom
+     */
     public int getColumn() {
         return column;
     }
-
+    /**
+     * get size boot
+     * @return size
+     */
     public int getSize() {
         return size;
     }
-
+    /**
+     * get levens boot
+     * @return levens
+     */
     public int getLevens() {
         return levens;
     }
-
+    /**
+     * get orientatie boot
+     * @return orientatie
+     */
     public Orientatie getOrientatie() {
         return orientatie;
     }
-
+    /**
+     * get rotatiehoek
+     * @return de rotatiehoek
+     */
     public int getRotatieHoek() {
         return rotatieHoek;
     }
-    
+    /**
+     * get boten speler
+     * @return lijst van boten speler
+     */
     public Iterator<Boot> getBoten() {
         return Botenlist.iterator();
     }
-    
+    /**
+     * get boten van computer
+     * @return lijst van boten computer
+     */
     public Iterator<Boot> getBotenComp(){
         return BotenlistComp.iterator();
     }
 
+    /**
+     * get alle coordinaten van de boot
+     * @return alleCoordinaten
+     */
     
-    /* 
-    *setters en andere methodes
-    */
-    
-    
-    /*
-    *   size instellen voor boot
-    */
-    public void setSize(int size) {
-        this.size = size;
-    }
-   
-    /*
-    *   is boot gezonken
-    */
-    public void setGezonken(boolean gezonken) {
-        this.gezonken = gezonken;
-    }
-    
-    /*
-    *   is de boot geraakt
-    */
-    public void Geraakt() {
-        if (levens == 0) {
-            gezonken = true;
-            System.out.println("gezonken");
-        } else {
-            levens--;
-        }
-    }
-    
-    /*
-    *   boot een coordinaat geven
-    */
-    private void setCoordinaten(int row, int column) {
-        this.row = row;
-        this.column = column;
-    }
-
-    /*
-    *   boot verplaatsen naar andere plaats
-    */
-    public boolean verplaatsNaar(int row, int column) {
-        if (this.row == row || this.column == column) {
-            setCoordinaten(row, column);
-            return true;
-            //stel de nieuwe kolom en/of nieuwe rij in als rij en/of kolom;
-        } else {
-            return false;
-        }
-    }
-    
-    /*
-    *   boot roteren
-    */
-    public void roteer() {
-        if(orientatie==Orientatie.HORIZONTAAL){
-            orientatie=Orientatie.VERTICAAL;
-        }   
-        else
-        {
-            if(orientatie==Orientatie.VERTICAAL){
-                orientatie=Orientatie.HORIZONTAAL;
-            }
-        }
-    }
-
-    /*
-    *   alle coordinaten van de boot opvragen
-    */
     public int[][] getAlleCoordinaten() {
         int[][] alleCoordinaten = new int[size][2];
         for (int i = 0; i < size; i++) {
@@ -302,8 +254,101 @@ public class Boot {
         }
         return alleCoordinaten;
     }
+    /* 
+    *setters en andere methodes
+    */
     
     
+    /**
+     * stel de size in
+     * @param size 
+     */
+    
+    public void setSize(int size) {
+        this.size = size;
+    }
+   
+    /**
+     * verander naar gezonken
+     * @param gezonken 
+     */
+    public void setGezonken(boolean gezonken) {
+        this.gezonken = gezonken;
+    }
+    
+    /**
+     * boot geraakt, gezonken of levens--
+     */
+    
+    public void Geraakt() {
+        if (levens == 0) {
+            gezonken = true;
+            System.out.println("gezonken");
+        } else {
+            levens--;
+        }
+    }
+    
+    /**
+     * verander de coordinaten
+     * @param row
+     * @param column 
+     */
+    
+    private void setCoordinaten(int row, int column) {
+        this.row = row;
+        this.column = column;
+    }
+
+    /**
+     * kunnen we de boot verplaatsen?
+     * @param row
+     * @param column
+     * @return gaat of gaat niet
+     */
+    
+    public boolean verplaatsNaar(int row, int column) {
+        if (this.row == row || this.column == column) {
+            setCoordinaten(row, column);
+            return true;
+            //stel de nieuwe kolom en/of nieuwe rij in als rij en/of kolom;
+        } else {
+            return false;
+        }
+    }
+    
+    /**
+     * roteer
+     */
+    
+    public void roteer() {
+        if(orientatie==Orientatie.HORIZONTAAL){
+            orientatie=Orientatie.VERTICAAL;
+        }   
+        else
+        {
+            if(orientatie==Orientatie.VERTICAAL){
+                orientatie=Orientatie.HORIZONTAAL;
+            }
+        }
+    }
+    /**
+     * is de boot levend?
+     * @return levend of niet
+     */
+     
+    
+     public boolean levend(){
+        if(levens>0){
+            return true;
+        }
+        return false;
+    }
+    
+    
+    /**
+     * coordinaten boten
+     */
     private void CoordinateBoten() {    
         Iterator<Boot> boten = getBoten();
         while(boten.hasNext()){
@@ -316,7 +361,13 @@ public class Boot {
             //hitmark.hit = true;
         }
     }
-    
+    /**
+     * is gezonken
+     * @return gezonken
+     */
+    public boolean isGezonken() {
+        return gezonken;
+    }
         /*
     public void Hit() {
         this.gezonken = false;
