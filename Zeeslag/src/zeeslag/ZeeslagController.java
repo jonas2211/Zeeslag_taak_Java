@@ -175,7 +175,14 @@ public class ZeeslagController {
     }
 
     private void handleMouseClickOnSpelerPane(MouseEvent event) {
-        //TODO
+        int x = (int) Math.random();
+        int y = (int) Math.random();
+        System.out.println(y + "," + x);
+        int kolom = spelerBordView.getColumn(x);
+        int rij = spelerBordView.getRow(y);
+        System.out.println(rij + "," + kolom);
+        zeeslagModel.getSpelerBord().setHitmark(rij, kolom);
+        spelerBordView.update();
     }
 
 }
