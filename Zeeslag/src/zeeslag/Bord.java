@@ -12,7 +12,7 @@ import java.util.Iterator;
  * @author Bavo, Jonas, Rens
  */
 public class Bord {
-    private int boten = 5;
+    //private int boten = 5;
     private int row, column;
     private Boot bootModel;
     //private Vakje vakje;
@@ -22,8 +22,8 @@ public class Bord {
     
    
     
-    public Bord(boolean tegenstander){
-        tegenstander=tegenstander;
+    public Bord(){
+        //this.tegenstander =tegenstander;
         this.row = bootModel.getRow();
         this.column = bootModel.getColumn();
     }
@@ -208,7 +208,7 @@ public class Bord {
          return false;
     }
     */
-    /*
+    
     public boolean sethitMark(int row, int column){
         for(Boot j : bootModel.getBoten()){
             for (int[] coordinaten : bootModel.getAlleCoordinaten()){
@@ -220,7 +220,7 @@ public class Bord {
         }
         return false;
     }    
-*/
+
 
             /*if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 HitmarkList.add(new Hitmark(row, column));

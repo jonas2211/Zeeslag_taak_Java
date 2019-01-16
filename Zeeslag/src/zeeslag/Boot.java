@@ -15,7 +15,7 @@ import java.util.Iterator;
 public class Boot {
     
     private int size;
-    int levens;
+    private int levens;
     private boolean gezonken;
     private int row, column;
     private Orientatie orientatie;

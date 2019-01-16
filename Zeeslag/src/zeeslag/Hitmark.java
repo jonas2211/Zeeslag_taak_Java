@@ -21,15 +21,16 @@ public class Hitmark {
    // private Speler spelerModel;
     
 // x en y coordinaten zijn vaag
+    /**
+     * constructor hitmark
+     * @param row
+     * @param column
+     * @param hit 
+     */
     public Hitmark(int row, int column, boolean hit) {
         this.hit = hit;
         this.row = row;
         this.column = column;
-    }
-    
-    public int[] CoordinatenPaar() {
-        int[] c = {this.row, this.column};
-        return c;
     }
     
     //DOELSTELLINGEN FUNCTIE HITMARKER:
@@ -53,10 +54,17 @@ public class Hitmark {
 
 
     //getters
-    public boolean isHit() {
-        return hit;
+    
+    /**
+     * get coordinaten vakje
+     * @return deze coordinaten
+     */
+    public int[] CoordinatenPaar() {
+        int[] c = {this.row, this.column};
+        return c;
     }
-
+    
+    
     
     
     /*public Boot getBoot() {
@@ -76,14 +84,30 @@ public class Hitmark {
             }
     }
     */
-
+    /**
+     * get rij
+     * @return rij
+     */
     public int getRow() {
         return row;
     }
-
+    /**
+     * get kolom
+     * @return kolom
+     */
     public int getColumn() {
         return column;
     }
+    
+    //ander methodes
+    
+    /**
+         * is geraakt?
+         * @return geraakt
+         */
+        public boolean isHit() {
+            return hit;
+        }
 }
     
  

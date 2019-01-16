@@ -65,7 +65,10 @@ public class ZeeslagController {
 
         
         //botenPane.getChildren().add(bootView);
-    }
+    }/**
+     * setModel
+     * @param zeeslagModel 
+     */
     public void setModel(ZeeslagSpel zeeslagModel) {
         this.zeeslagModel = zeeslagModel;
 
@@ -85,7 +88,10 @@ public class ZeeslagController {
         tegenstanderPane.getChildren().add(view);
     }
 */
-    
+    /**
+     * actie met muisklik
+     * @param mouseEvent 
+     */
     void handleMouseClick(MouseEvent mouseEvent) {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
@@ -139,33 +145,47 @@ public class ZeeslagController {
             model.addVakje(newVakje);
             view.update();
     */
-
+    /**
+     * actie op opstartenKnop
+     * @param event 
+     */
     void btnOpstartenHandler(ActionEvent event){
         System.out.println("Reset spel");
         zeeslagModel.opstarten();
         update();
         
     }
-    
+    /**
+     * actie op startKnop
+     * @param event 
+     */
     void btnStartHandler(ActionEvent event){
         System.out.println("Start het spel");
         zeeslagModel.Start();
         update();
         
     }
-    
+    /**
+     * actie op draaiKnop
+     * @param event 
+     */
     void btnDraaienHandler(ActionEvent event){
         System.out.println("Draai boot");
         bootModel.roteer();
         update();
   
     }
-    
+    /**
+     * actie op loadKnop
+     * @param event 
+     */
     public void handleLoadBtn(ActionEvent event){
         System.out.println("laad vorige spel");
         ZeeslagSpel.loadFromJson();
     }
-    
+    /**
+     * update Views
+     */
     void update(){
         view.update();
         view2.update();
