@@ -7,7 +7,7 @@
 package zeeslag;
 
 /**
- *
+ *klasse van eigenschappen vliegdekschip
  * @author Rens Remans
  */
 public class Vliegdekschip extends Boot{

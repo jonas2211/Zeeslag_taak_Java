@@ -17,8 +17,9 @@ public class SpelerComputer extends Speler {
        
     public SpelerComputer(Bord bord) {
         super(bord);
-         
     }
+    
+    //kijkt of boot van spelerComputer gezonken is
     public boolean isGezonken(Type type){
         boolean gezonken = false; 
         
@@ -51,32 +52,4 @@ public class SpelerComputer extends Speler {
         return true;
             
         }
-    /*
-        for (Boot boot: bord.getBoten()){
-            if(bootModel.getType() == Type.VLIEGDEKSCHIP){
-                if (boot.isGezonken()== false){
-                    return false;
-                }
-                
-            }else if(bootModel.getType() == Type.SLAGSCHIP){
-                if (boot.isGezonken()== false){
-                    return false;
-                }   
-            }else if(bootModel.getType() == Type.TORPEDOBOOTJAGER){
-                if (boot.isGezonken()== false){
-                    return false;
-                }   
-            }else if(bootModel.getType() == Type.DUIKBOOT){
-                if (boot.isGezonken()== false){
-                    return false;
-                }  
-            }else if(bootModel.getType() == Type.PATROUILLESCHIP){
-                if (boot.isGezonken()== false){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-*/
 }

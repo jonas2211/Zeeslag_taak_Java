@@ -6,7 +6,7 @@
 package zeeslag;
 
 /**
- *
+ *klasse van eigenschappen torpedobootjager
  * @author Rens Remans
  */
 public class Torpedobootjager extends Boot{

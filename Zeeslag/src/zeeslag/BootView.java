@@ -19,22 +19,32 @@ public class BootView extends Region{
     private Boot bootModel;
     private Rectangle rechthoek;
    
-    //constructor
+    /*
+    *   constructor
+    */
     public BootView(Boot model){
         this.bootModel = model;
         this.update();
     }
     
-    // update functie voor boten te tekenen
+    /*
+    *   update functie voor boten te tekenen
+    */
     public void update() {
         Rectangle rect= new Rectangle(30*bootModel.getSize(), 1*30, Color.GRAY);;
         getChildren().add(rect);  
     }
     
+    /*
+    *   column opvragen
+    */
     public int Column(int x){
         return x/30;
     }
 
+    /*
+    *   row opvragen
+    */
     public int Raw(int y){
         return y/30;
     }
