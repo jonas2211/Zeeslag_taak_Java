@@ -17,71 +17,10 @@ public class Bord {
     private Boot bootModel;
     private Vakje vakje;
     private Hitmark hitmrk;
-    private ArrayList<Boot> Botenlist = new ArrayList<>();
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
-    private ArrayList<Boot> BotenlistComp = new ArrayList<>();
     
     // moet er een klasse hitmark zijn of kunnen we een arraylist maken via klasse Bord voor hitmarks?
-    
-    /**
-     * coordinaten EchteSpeler
-     */
-    
-    private int[][] vliegdekschip = {   //coordinaten vliegdekschip
-         
-        {0, 1}, {1, 1}, {2, 1}, {3,1}, {4,1}
-        //bv. {Boot.getX,Boot.getY}, ....
-    };
-    private int[][] slagschip  = {   //coordinaten slagschip
-         
-        {8, 6}, {8, 7}, {8, 8}, {8,9}
-    };
-    private int[][] duikboot = {   //coordinaten onderzeeer
-         
-        {7, 3}, {8, 3}, {9, 3}
-    };
-    private int[][] torpedobootjager = {   //coordinaten torpedoboojager
-         
-        {4, 6}, {4, 7}, {4, 8}
-    };
-    private int[][] patrouilleschip = {   //coordinaten Patrouilleschip
-         
-        {5, 1}, {6, 1}
-    };
-    
-    /**
-     * coordinaten computer
-     */
-    //TODO;
-    private int[][] vliegdekschipComp = {   //coordinaten vliegdekschip
-         
-        {8, 4}, {8, 5}, {8, 6}, {8, 7}, {8, 8}
-        //bv. {Boot.getX,Boot.getY}, ....
-    };
-    private int[][] slagschipComp  = {   //coordinaten slagschip
-         
-        {2, 6}, {2, 7}, {2, 8}, {2,9}
-    };
-    private int[][] duikbootComp = {   //coordinaten onderzeeer
-         
-        {2, 2}, {3, 2}, {4, 2}
-    };
-    private int[][] torpedobootjagerComp = {   //coordinaten torpedoboojager
-         
-        {4, 7}, {5, 7}, {6, 7}
-    };
-    private int[][] patrouilleschipComp = {   //coordinaten Patrouilleschip
-         
-        {8, 0}, {9, 0}
-    };
-    
-    
-    
-    
-    
-    
-    
-    
+
     /*
     private int[][] CoBoten = {   //coordinaten neus
          
@@ -111,63 +50,6 @@ public class Bord {
         this.row = bootModel.getRow();
         this.column = bootModel.getColumn();
         */
-        /**
-         * voeg boten van EchteSpeler toe aan Botenlist
-         */
-           
-        for (int i = 0; i < (vliegdekschip.length)-4; i++)
-        {
-            Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
-        }
-
-        for (int i = 0; i < (slagschip.length)-3; i++)
-        {
-            Botenlist.add(new Boot (slagschip[i], Type.SLAGSCHIP));
-        }
-        
-        for (int i = 0; i < (duikboot.length)-2; i++)
-        {
-            Botenlist.add(new Boot (duikboot[i], Type.DUIKBOOT));
-        }
-        
-        for (int i = 0; i < (torpedobootjager.length)-2; i++)
-        {
-            Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
-        }
-        
-        for (int i = 0; i < (patrouilleschip.length)-1; i++)
-        {
-            Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
-        }
-        
-        /**
-         * voeg boten van computer toe aan botenlistComp
-         */
-        
-        for (int i = 0; i < (vliegdekschipComp.length)-4; i++)
-        {
-            BotenlistComp.add(new Boot (vliegdekschipComp[i], Type.VLIEGDEKSCHIP));
-        }
-
-        for (int i = 0; i < (slagschip.length)-3; i++)
-        {
-            BotenlistComp.add(new Boot (slagschipComp[i], Type.SLAGSCHIP));
-        }
-        
-        for (int i = 0; i < (duikbootComp.length)-2; i++)
-        {
-            BotenlistComp.add(new Boot (duikbootComp[i], Type.DUIKBOOT));
-        }
-        
-        for (int i = 0; i < (torpedobootjagerComp.length)-2; i++)
-        {
-            BotenlistComp.add(new Boot (torpedobootjagerComp[i], Type.TORPEDOBOOTJAGER));
-        }
-        
-        for (int i = 0; i < (patrouilleschipComp.length)-1; i++)
-        {
-            BotenlistComp.add(new Boot (patrouilleschipComp[i], Type.PATROUILLESCHIP));
-        }
         
         
         
@@ -176,17 +58,9 @@ public class Bord {
         * for-loops voor bootdelen
         *
         */
-        /*for(Boot b: Botenlist){
-            for(Vakje v:b.getAlleCoordinaten()){
-                if(schotX== hitmrk.CoordinatenPaar(row.getRow(), column)&&schotY==hitmrk.CoordinatenPaar().getColumn()){
-                    HitmarkList.add(new Hitmark(hit=true));
-                }
-                else
-                {
-                    HitmarkList.add(new Hitmark(hit=false));
-                }
-            }
-        }*/
+        
+        
+        
         //Vakje, hit en schotX nog veranderen
         
         
@@ -203,6 +77,37 @@ public class Bord {
         }
         */
     }
+    public void klasseHitmark(){
+    for(Boot b: bootModel.getBoten()){
+            for(Vakje v : b.getAlleCoordinaten()){
+                if(schietenSpeler(getRow(), row)== hitmrk.CoordinatenPaar(row.getRow(), column)&&schietenSpeler(row, row)==hitmrk.CoordinatenPaar().getColumn()){
+                    HitmarkList.add(new Hitmark(hit=true));
+                }
+                else
+                {
+                    HitmarkList.add(new Hitmark(hit=false));
+                }
+            }
+        }
+    }
+    
+    public void schietenSpeler(int x, int y){
+        row = x/30;
+        column = y/30;
+    }
+    
+    public int getRow(){
+        return row;
+    }
+    
+    public int getColumn(){
+        return column;
+    }
+    
+    public void schietenComputer(){
+        row = (int)(Math.random())*10;
+        column = (int)(Math.random())*10;
+    }
     /*
     public boolean zetSchip (Boot boot, int row, int column){
         int lengte = bootModel.getSize();
@@ -217,7 +122,9 @@ public class Bord {
   
     //getters
     public Boot getBootOn(int row, int column) {
-        for (Boot bootModel : Botenlist) {
+        Iterator<Boot> boten = bootModel.getBoten();
+        while(boten.hasNext()){
+            Boot coordinaten = boten.next();
             if (bootModel.getRow() == row && bootModel.getColumn() == column) {
                 return bootModel;
             }            
@@ -228,9 +135,7 @@ public class Bord {
             //geen boot op gegeven rij en kolom
     }
     
-    public Iterator<Boot> getBoten() {
-        return Botenlist.iterator();
-    }
+    
     
     public Iterator<Hitmark> getHitmarks(){
         return HitmarkList.iterator();
@@ -288,21 +193,41 @@ public class Bord {
     }
     
     public boolean setHitmark(int row, int column){
-        for(Boot bootModel : Botenlist){
-            for (int[] coordinaten : bootModel.getAlleCoordinaten()){
+        Iterator<Boot> boten = bootModel.getBoten();
+        int[][] alleCoo = bootModel.getAlleCoordinaten();
+         while(boten.hasNext()){
+            Boot coordinaten = boten.next();
+            while(alleCoo.hasNext()){
+                Boot alleCoordinaten = alleCoo.next();
                 if (coordinaten == new int[] {row, column}){
                     HitmarkList.add(new Hitmark(row, column, true));
                     return true;
                 }
             }
+        }
+         return false;
+    }
+    /*
+    public boolean sethitMark(int row, int column){
+        for(Boot bootModel : bootModel.getBoten()){
+            for (int[] coordinaten : bootModel.getAlleCoordinaten()){
+                if(coordinaten == new int[] {row,column}){
+                    HitmarkList.add(new Hitmark(row, column, true));
+                    return true;
+                }
+            }
+        }
+        return false;
+    }    
+*/    
+
             /*if (bootModel.getRow() == row && bootModel.getColumn() == column){
                 HitmarkList.add(new Hitmark(row, column));
                 
                     bootModel.Geraakt();
             }*/
-        }
-        return false;
-    }
+       
+    
 
     public ArrayList<Hitmark> getHitmarkList() {
         return HitmarkList;
