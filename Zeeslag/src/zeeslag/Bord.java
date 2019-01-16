@@ -18,6 +18,7 @@ public class Bord {
     //private Vakje vakje;
     private Hitmark hitmrk;
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
+    private int aantalBoten;
     
     // moet er een klasse hitmark zijn of kunnen we een arraylist maken via klasse Bord voor hitmarks?
 

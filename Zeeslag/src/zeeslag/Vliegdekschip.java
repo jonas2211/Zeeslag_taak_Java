@@ -7,8 +7,8 @@
 package zeeslag;
 
 /**
- *klasse van eigenschappen vliegdekschip
- * @author Bavo, Jonas, Rens
+ *    klasse van eigenschappen vliegdekschip
+ *    @author Bavo, Jonas, Rens
  */
 public class Vliegdekschip extends Boot{
     private int size;
@@ -19,6 +19,9 @@ public class Vliegdekschip extends Boot{
     private int row;
     private Type type;
     
+    /**
+    *    constructor
+    */
     public Vliegdekschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 5;
