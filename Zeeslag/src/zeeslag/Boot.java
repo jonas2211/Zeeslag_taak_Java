@@ -168,17 +168,7 @@ public class Boot {
          
         {8, 0}, {9, 0}
     };
-    
-    
 
-<<<<<<< HEAD
-    /*
-    *  is boot levend
-    */
-=======
-    
-   
->>>>>>> a458d5f2163de437c74bfa428db5381bc0915c35
 
 
     /**
