@@ -23,7 +23,7 @@ public class SpelerComputer extends Speler {
     public boolean isGezonken(Type type){
         boolean gezonken = false; 
         
-        Iterator<Boot> botenList = bordModel.getBoten();
+        Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
             Boot boot = botenList.next();
             if(bootModel.getType() == Type.VLIEGDEKSCHIP){

@@ -15,6 +15,7 @@ import javafx.scene.layout.Region;
  */
 public class BordView extends Region {
     private Bord bordModel;
+    private Boot bootModel;
     //getekendeBoot = new BootView(hier moet een boot-object komen);
 
  public BordView(Bord bord) {
@@ -24,7 +25,7 @@ public class BordView extends Region {
 
     public void update() {
 
-        Iterator<Boot> botenList = bordModel.getBoten();
+        Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
             Boot boten = botenList.next();
             BootView bootView = new BootView(boten);

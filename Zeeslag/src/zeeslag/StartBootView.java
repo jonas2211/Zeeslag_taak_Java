@@ -25,7 +25,7 @@ public class StartBootView extends Region{
     }
     
     public void update(){
-        Iterator<Boot> botenList = bordModel.getBoten();
+        Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
             Boot boot = botenList.next();
             

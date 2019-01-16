@@ -22,7 +22,7 @@ public class SpelerEcht extends Speler {
     // kijkt of boot van spelerEcht gezonken is 
     public boolean isGezonken(Type ype){
         boolean gezonken = false; 
-        Iterator<Boot> botenList = bordModel.getBoten();
+        Iterator<Boot> botenList = bootModel.getBoten();
         while (botenList.hasNext()){
             Boot boot = botenList.next();
             if(bootModel.getType() == Type.VLIEGDEKSCHIP){

@@ -29,7 +29,7 @@ public class Speler {
     
     //lijst met boten opvragen
     public Iterator<Boot> getBoten(){
-        return bord.getBoten();
+        return getBoten();
         
         
         
