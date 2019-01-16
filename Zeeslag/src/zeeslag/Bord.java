@@ -19,64 +19,18 @@ public class Bord {
     private Hitmark hitmrk;
     private ArrayList<Hitmark> HitmarkList = new ArrayList<>();
     
-    // moet er een klasse hitmark zijn of kunnen we een arraylist maken via klasse Bord voor hitmarks?
-
-    /*
-    private int[][] CoBoten = {   //coordinaten neus
-         
-        {3, 1}, {3, 3}, {3, 5}, {3, 7}, {3, 9},
-        {4, 1}, {4, 3}, {4, 5}, {4, 7}, {4, 9},
-                {5, 3}, {5, 5}, {5, 7}, {5, 9},
-                                {6, 7}, {6, 9},
-                                        {7, 7},
-
-        //bv. {Boot.getX,Boot.getY}, ....
-    };
     
-       
-    
-    //de coordinaten die hierboven nu staan moeten uiteindelijk vervangen
-    //door de coordinaten die de speler kiest
-    */
    
     
     public Bord(boolean tegenstander){
-        /*
-        if(bootModel.getType() == Type.VLIEGDEKSCHIP){
-            Botenlist.add(new Boot(bootModel.getType()));
-        }
-        
-        this.tegenstander=tegenstander;
+        tegenstander=tegenstander;
         this.row = bootModel.getRow();
         this.column = bootModel.getColumn();
-        */
-        
-        
-        
-        //HitmarkList.add(new Hitmark(1, 1, true));
-        /*
-        * for-loops voor bootdelen
-        *
-        */
-        
-        
-        
-        //Vakje, hit en schotX nog veranderen
-        
-        
-        
-        /*for (int i =0; i<bootBody.length; i++){
-            boten.add(new Boot (5, bootBody[i], Orientatie.VERTICAAL));
-        }
-        
-        for (int i =0; i<bootNeus.length; i++){
-            boten.add(new Boot (5, bootNeus[i], Orientatie.VERTICAAL, Soort.NEUS));
-        }
-        for (int i =0; i<bootStaart.length; i++){
-            boten.add(new Boot (5, bootStaart[i], Orientatie.VERTICAAL, Soort.NEUS));
-        }
-        */
     }
+    
+    /**
+     * hitmark
+     */
     public void klasseHitmark(){
     for(int[] b: bootModel.getAlleCoordinaten()){ //voor boot in botenlijst
             
@@ -95,37 +49,32 @@ public class Bord {
         }
     
     
-    public void schietenSpeler(int x, int y){
-        row = x/30;
-        column = y/30;
-    }
-    
+    /**
+     * get rij
+     * @return rij
+     */
     public int getRow(){
         return row;
     }
-    
+    /**
+     * get kolom
+     * @return kolom
+     */
     public int getColumn(){
         return column;
     }
     
     
-    public void schietenComputer(){
-        row = (int)(Math.random())*10;
-        column = (int)(Math.random())*10;
-    }
-    /*
-    public boolean zetSchip (Boot boot, int row, int column){
-        int lengte = bootModel.getSize();
-        
-        if (bootModel.getOrientatie() == Orientatie.VERTICAAL){
-            for(int i = row; i < row + lengte; i++){
-                this.row = 
-            }
-        }
-    }
-    */
+    
   
     //getters
+    
+    /**
+     * get boot op deze coordinaat
+     * @param row
+     * @param column
+     * @return deze boot of null
+     */
     public Boot getBootOn(int row, int column) {
         Iterator<Boot> boten = bootModel.getBoten();
         while(boten.hasNext()){
@@ -141,20 +90,36 @@ public class Bord {
     }
     
     
-    
+    /**
+     * get hitmarks van schoten
+     * @return lijst van hitmarks
+     */
     public Iterator<Hitmark> getHitmarks(){
         return HitmarkList.iterator();
     }
-
+    /**
+     * get geselecteerde boot
+     * @return deze boot
+     */
     public Boot getGeselecteerdeBoot() {
         return bootModel;
     }
     
     //boolean methodes
+    
+    /**
+     * boot geselecteerd
+     * @return als een boot geselecteerd is
+     */
     public boolean isBootGeselecteerd() {
         return (bootModel!= null);
     }
-    
+    /**
+     * is een boot geselecteerd?
+     * @param row
+     * @param column
+     * @return op boot of niet op boot
+     */
     public boolean selecteerBootOn(int row, int column) {
         boolean onBoot = false;
         //eerst boot niet geselecteerd
@@ -166,11 +131,18 @@ public class Bord {
         return onBoot;
     }
     
-    
+    /**
+     * boot niet meer geselecteerd
+     */
     public void selecteerBootOff(){
         bootModel = null;
     }
-    
+    /**
+     * verplaats de boot naar een andere coordinaat als deze vrij is
+     * @param row
+     * @param column
+     * @return onBoot
+     */
     public boolean verplaatsBootNaar(int row, int column) {
         boolean onBoot = false;
         
@@ -182,7 +154,30 @@ public class Bord {
         }
         return onBoot;
     }
-    
+    /**
+     * schieten op een coordinaat
+     * @param x
+     * @param y 
+     */
+    public void schietenSpeler(int x, int y){
+        row = x/30;
+        column = y/30;
+    }
+    /**
+     * schot op random coordinaat door computer
+     */
+    public void schietenComputer(){
+        row = (int)(Math.random())*10;
+        column = (int)(Math.random())*10;
+    }
+    /**
+     * is plaats vrij?
+     * @param startRow
+     * @param startColumn
+     * @param endRow
+     * @param endColumn
+     * @return vrij of niet
+     */
     private boolean isPlaatsVrij(int startRow, int startColumn, int endRow, int endColumn) {
         for (int i = Math.min(startRow, endRow) + 1; i <= Math.max(startRow, endRow) - 1; i++) {
             if (getBootOn(i, startColumn) != null) {
@@ -232,15 +227,6 @@ public class Bord {
                 
                     bootModel.Geraakt();
             }*/
-       
-    
-
-    public ArrayList<Hitmark> getHitmarkList() {
-        return HitmarkList;
-    }
-    
-    
-    
 }
     
 
