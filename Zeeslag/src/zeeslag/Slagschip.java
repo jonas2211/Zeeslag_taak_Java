@@ -20,6 +20,11 @@ public class Slagschip extends Boot{
     
     /**
     *    constructor
+     * @param size
+     * @param column
+     * @param row
+     * @param o
+     * @param type
     */
     public Slagschip(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);

@@ -21,6 +21,7 @@ public class BootView extends Region{
    
     /*
     *   constructor
+     * @param bootModel
     */
     public BootView(Boot model){
         this.bootModel = model;
