@@ -9,10 +9,12 @@ import javafx.scene.shape.Rectangle;
 */
 
 public class Vakje extends Rectangle{
-    private Boot bootModel;
+    //private Boot bootModel;
     private boolean geschoten = false;
     private int x, y;
-    private Bord bordModel;
+    //private Bord bordModel;
+
+    
 
     /**
      *    constructor
@@ -23,8 +25,9 @@ public class Vakje extends Rectangle{
      */
     
     public Vakje(Bord bordModel, boolean geraakt, int x, int y) {
+
         super(30,30);
-        this.bootModel = bootModel;
+        //this.bootModel = bootModel;
         this.x = x;
         this.y = y;
         setFill(Color.ROYALBLUE);
@@ -34,6 +37,7 @@ public class Vakje extends Rectangle{
     /*
     * schiet methode
     */
+    /*
     public boolean schieten(){
         geschoten = true;
         setFill(Color.WHITE);
@@ -47,5 +51,5 @@ public class Vakje extends Rectangle{
         }
         return false;
     }
-    
+    */
 }
