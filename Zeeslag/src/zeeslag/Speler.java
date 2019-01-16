@@ -16,18 +16,18 @@ public class Speler {
     Bord bord;
     private int spelerLevens;
     
-    
+    //constructor
     public Speler(Bord bord){
         this.bord=bord;
         //spelerLevens=
     }
     
     //getters
-
     public int getSpelerLevens() {
         return spelerLevens;
     }
     
+    //lijst met boten opvragen
     public Iterator<Boot> getBoten(){
         return bord.getBoten();
         
