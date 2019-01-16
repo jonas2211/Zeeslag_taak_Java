@@ -1,43 +1,46 @@
 package Zeeslag;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
-public class Vakje {
-    private int aantal;
-    private boolean geraakt;
-    private boolean gemist;
-    private int row, column;
-    
-    
-    public Vakje(int []coordinaten) {
-        aantal = 100;
-        geraakt = false;
-        gemist = false;
-        this.row=coordinaten[0];
-        this.column= coordinaten[1];
-        
-    }
+/*
+* @auctor Rens, Bavo, Jonas
+*klasse voor schietmarkering
+*/
 
-    public boolean isGeraakt() {
-        return geraakt;
-    }
+public class Vakje extends Rectangle{
+    private Boot bootModel;
+    private boolean geschoten = false;
+    private int x, y;
+    private Bord bordModel;
 
-    public boolean isGemist() {
-        return gemist;
-    }
-
-    public int [] getCoordinaat(int row, int column) {
-        int[]coordinaat={this.row,this.column};
-        return coordinaat;
-    }
-
-    public int getRow() {
-        return row;
-    }
-
-    public int getColumn() {
-        return column;
+    /*
+    *   constructor
+    */
+    public Vakje(Bord bordModel, boolean geraakt, int x, int y) {
+        super(30,30);
+        this.bootModel = bootModel;
+        this.x = x;
+        this.y = y;
+        setFill(Color.ROYALBLUE);
+        setStroke(Color.BLACK);
     }
     
-    
+    /*
+    * schiet methode
+    */
+    public boolean schieten(){
+        geschoten = true;
+        setFill(Color.WHITE);
+        if (bootModel != null){
+            bootModel.Geraakt();
+            setFill(Color.RED);
+            if (!bootModel.levend()){
+                bordModel.aantalBoten--;
+            }
+            return true;
+        }
+        return false;
+    }
     
 }

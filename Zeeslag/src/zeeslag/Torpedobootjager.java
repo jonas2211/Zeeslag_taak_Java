@@ -18,6 +18,9 @@ public class Torpedobootjager extends Boot{
     private int row;
     private Type type;
     
+    /**
+    *    constructor
+    */
     public Torpedobootjager(int size, int column, int row, Orientatie o, Type type) {
         super(size, column, row, o, type);
         this.size = 3;
