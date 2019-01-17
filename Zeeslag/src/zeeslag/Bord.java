@@ -86,37 +86,21 @@ public class Bord {
         botenLijstComp.add(new Boot(rij, kolom, type, o));
     }
 
-    /**
-     * hitmark
-     */
-    //!!!!!!!!
-    public void klasseHitmark() { //WEGDOEN VOOR UPLOADEN, dit is cringe
-        for (int[] b : bootModel.getAlleCoordinaten()) { //voor boot in botenlijst
-
-            int row = b[0];
-            int column = b[1];
-            if (getRow() == bootModel.getRow() && getColumn() == bootModel.getColumn()) {
-                hitmarkList.add(hitmrk);
-                //hitmrk.isHit()=true;
-            } else {
-                return;
-            }
-        }
-    }
+    
 
     /**
-     * get rij
+     * get rij bord
      *
-     * @return rij
+     * @return rij bord
      */
     public int getRow() {
         return row;
     }
 
     /**
-     * get kolom
+     * get kolom bord
      *
-     * @return kolom
+     * @return kolom bord
      */
     public int getColumn() {
         return column;
