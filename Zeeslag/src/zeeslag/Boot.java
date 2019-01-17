@@ -23,6 +23,13 @@ public class Boot {
     private int rotatieHoek;
     private Type type;   
     
+    /**
+     * constructor boot
+     * @param row
+     * @param column
+     * @param type
+     * @param orientatie 
+     */
     public Boot(int row, int column, Type type, Orientatie orientatie) {
         this.row = row;
         this.column = column;
@@ -50,7 +57,7 @@ public class Boot {
     /**
      * get type van boot
      *
-     * @return type
+     * @return type van boot
      */
     public Type getType() {
         return type;
@@ -67,18 +74,18 @@ public class Boot {
     }
 
     /**
-     * get rij
+     * get rij van boot 
      *
-     * @return rij
+     * @return rij boot
      */
     public int getRow() {
         return row;
     }
 
     /**
-     * get kolom
+     * get kolom van boot
      *
-     * @return kolom
+     * @return kolom boot
      */
     public int getColumn() {
         return column;
@@ -87,7 +94,7 @@ public class Boot {
     /**
      * get size boot
      *
-     * @return size
+     * @return size van boot
      */
     public int getSize() {
         return size;
@@ -105,7 +112,7 @@ public class Boot {
     /**
      * get orientatie boot
      *
-     * @return orientatie
+     * @return orientatie van boot
      */
     public Orientatie getOrientatie() {
         return orientatie;
@@ -114,13 +121,16 @@ public class Boot {
     /**
      * get rotatiehoek
      *
-     * @return de rotatiehoek
+     * @return de rotatiehoek van boot
      */
     public int getRotatieHoek() {
         return rotatieHoek;
     }
 
-
+    /**
+     * get alle coordinaten
+     * @return elke coordinaat van elk vakje in een boot
+     */
     public int[][] getAlleCoordinaten() {
         int[][] alleCoordinaten = new int[size][2];
         for (int i = 0; i < size; i++) {
@@ -142,14 +152,14 @@ public class Boot {
     /**
      * stel de size in
      *
-     * @param size
+     * @param size 
      */
     public void setSize(int size) {
         this.size = size;
     }
 
     /**
-     * verander naar gezonken
+     * verander boot naar gezonken
      *
      * @param gezonken
      */
@@ -170,7 +180,7 @@ public class Boot {
     }
 
     /**
-     * verander de coordinaten
+     * verander de coordinaten van boot
      *
      * @param row
      * @param column
@@ -198,7 +208,7 @@ public class Boot {
     }
 
     /**
-     * roteer
+     * roteer de boot 
      */
     public void roteer() {
         if (orientatie == Orientatie.HORIZONTAAL) {
