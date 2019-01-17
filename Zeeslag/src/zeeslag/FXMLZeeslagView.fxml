@@ -5,8 +5,8 @@
 
 <AnchorPane id="AnchorPane" fx:id="btnSave" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zeeslag.ZeeslagController">
    <children>
-      <AnchorPane fx:id="spelerPane" layoutX="250.0" layoutY="492.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-      <AnchorPane fx:id="tegenstanderPane" layoutX="356.0" layoutY="133.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane fx:id="spelerPane" layoutX="250.0" layoutY="492.0" prefHeight="300.0" prefWidth="300.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
+      <AnchorPane fx:id="tegenstanderPane" layoutX="356.0" layoutY="133.0" prefHeight="300.0" prefWidth="300.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="40.0" />
       <Button fx:id="btnStart" layoutX="545.0" layoutY="159.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" text="start" AnchorPane.bottomAnchor="716.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="159.0" />
       <Button fx:id="btnDraaien" layoutX="535.0" layoutY="269.0" mnemonicParsing="false" text="draaien" AnchorPane.bottomAnchor="606.0" />
       <Button fx:id="btnLoad" layoutX="660.0" layoutY="159.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" text="load" />
