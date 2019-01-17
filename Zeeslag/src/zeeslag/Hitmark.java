@@ -20,32 +20,48 @@ public class Hitmark {
     //private ArrayList<Boot>boten;
     // private Speler spelerModel;
 
-// x en y coordinaten zijn vaag
+/**
+ * constructor Hitmark
+ * @param row
+ * @param column
+ * @param hit 
+ */
     public Hitmark(int row, int column, boolean hit) {
         this.hit = hit;
         this.row = row;
         this.column = column;
     }
-
+    /**
+     * get coordinaten van een vakje
+     * @return deze coordinaten
+     */
     public int[] getCoordinatenPaar() {
         int[] c = {this.row, this.column};
         return c;
     }
 
     //getters
+    
+    /**
+     * is geraakt?
+     * @return geraakt
+     */
     public boolean isHit() {
         return hit;
     }
 
-    /*
-    public Iterator<Boot> getBoten() {
-        return bootModel.getBoten();
-    }*/
-
+    
+    /**
+     * get rij hitmark
+     * @return rij hitmark
+     */
     public int getRow() {
         return row;
     }
-
+    /**
+     * get kolom hitmark
+     * @return kolom hitmark
+     */
     public int getColumn() {
         return column;
     }

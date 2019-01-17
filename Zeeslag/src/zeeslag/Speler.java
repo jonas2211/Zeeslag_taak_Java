@@ -31,7 +31,7 @@ public class Speler {
     /**
      * get spelerlevens
      *
-     * @return
+     * @return levens van speler
      */
     public int getSpelerLevens() {
         return spelerLevens;
@@ -40,7 +40,7 @@ public class Speler {
     /**
      * get boten
      *
-     * @return
+     * @return de boten uit Boot
      */
     public Iterator<Boot> getBoten() {
         return getBoten();
