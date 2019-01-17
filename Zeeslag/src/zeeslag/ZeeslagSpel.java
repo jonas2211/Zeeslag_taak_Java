@@ -23,14 +23,12 @@ public class ZeeslagSpel {
 
     private Bord spelerBord;
     private Bord computerBord;
-    private Speler huidigeSpeler;
-    private SpelerEcht spelerEcht;
-    //private SpelerComputer computer;
     private boolean start;
 
     /**
      * constructor
      */
+    
     public ZeeslagSpel() {
         this.opstarten();
     }
@@ -45,42 +43,15 @@ public class ZeeslagSpel {
     }
 
     /**
-     * get spelerBord
+     * get computerbord
      *
-     * @return spelerBord //AANPASSEN
+     * @return computerBord 
      */
     public Bord getComputerBord() {
         return computerBord;
     }
 
-    /**
-     * get huidigeSpeler
-     *
-     * @return huidigeSpeler
-     */
-    public Speler getHuidigeSpeler() {
-        return huidigeSpeler;
-    }
-
-    /**
-     * get spelerEcht
-     *
-     * @return spelerEcht
-     */
-    public SpelerEcht getSpelerEcht() {
-        return spelerEcht;
-    }
-
-    /**
-     * get computer
-     *
-     * @return computer
-     */
-    /*
-    public SpelerComputer getComputer() {
-        return computer;
-    }
-     */
+    
     /**
      * is boot geselecteerd
      *
@@ -90,16 +61,6 @@ public class ZeeslagSpel {
         return spelerBord.isBootGeselecteerd();
     }
 
-    /**
-     * verplaatsen van boot
-     *
-     * @param row
-     * @param column
-     * @return
-     */
-    public boolean verplaatsBootNaar(int row, int column) {
-        return spelerBord.verplaatsBootNaar(row, column);
-    }
 
     /**
      * selecteren van boot
@@ -125,9 +86,6 @@ public class ZeeslagSpel {
     public void opstarten() {
         this.spelerBord = new Bord();
         this.computerBord = new Bord();
-        this.spelerEcht = new SpelerEcht(spelerBord);
-        //this.computer = new SpelerComputer(spelerBord);
-        this.huidigeSpeler = spelerEcht;
     }
 
     /**
@@ -138,36 +96,7 @@ public class ZeeslagSpel {
 
     }
 
-    /**
-     * geeft aan wanneer beurten moeten omdraaien
-     */
     
-    /*public void eindeBeurt() {
-        if (huidigeSpeler instanceof SpelerEcht) {
-            huidigeSpeler = computer;
-        } else {
-            huidigeSpeler = spelerEcht;
-        }
-    }*/
-     
-    /**
-     * is spel afgelopen?
-     *
-     * @return agelopen of niet afgelopen
-     */
-    /*
-    public boolean Spelafgelopen() {
-        if (spelerEcht.isGezonken(Type.VLIEGDEKSCHIP) == true && spelerEcht.isGezonken(Type.SLAGSCHIP) == true && spelerEcht.isGezonken(Type.TORPEDOBOOTJAGER) == true && spelerEcht.isGezonken(Type.DUIKBOOT) == true && spelerEcht.isGezonken(Type.PATROUILLESCHIP) == true) {
-            System.out.println(" De computer heeft gewonnen.");
-            return true;
-        } else if (computer.isGezonken(Type.VLIEGDEKSCHIP) == true && computer.isGezonken(Type.SLAGSCHIP) == true && computer.isGezonken(Type.TORPEDOBOOTJAGER) == true && computer.isGezonken(Type.DUIKBOOT) == true && computer.isGezonken(Type.PATROUILLESCHIP) == true) {
-            System.out.println(" Gefeliciteert! Je hebt de computer verslagen!");
-            return true;
-        } else {
-            return false;
-        }
-    }
-     */
     /**
      * opslaan naar json
      */
@@ -183,9 +112,6 @@ public class ZeeslagSpel {
         }
     }
 
-    /**
-     * save methode
-     */
  
 
     /**

@@ -21,9 +21,15 @@ public class SpelerBordView extends Region {
         this.update();
 
     }
-    private BootView view;
+    /**
+     * update spelerBordView
+     */
+    void update() {
+        this.updateBackground();
+        //this.updateHitMarks();
+    }
+    
     private Bord bordModel;
-
     private ArrayList<Hitmark> hit;
 
     /**
@@ -36,9 +42,10 @@ public class SpelerBordView extends Region {
     }
 
     /**
-     * update spelerBordView
+     * tekent de achtergrond en de boten op het spelerBordView
      */
-    void update() {
+    
+    private void updateBackground(){
         Rectangle rechthoek = new Rectangle(300, 300, Color.rgb(55, 131, 186));
         this.getChildren().addAll(rechthoek);
         for (int i = 0; i < 11; i++) { //verticaal
@@ -77,8 +84,8 @@ public class SpelerBordView extends Region {
     /**
      * update de hitmarks
      */
-    private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        Iterator<Hitmark> hit = bordModel.getHitmarks();
+    private void updateHitMarks() { 
+        Iterator<Hitmark> hit = bordModel.getHitmarksComp();
         while (hit.hasNext()) {
             Hitmark hits = hit.next();
             Rectangle rechth = new Rectangle(hits.getRow() * 30, hits.getColumn() * 30, 29, 29);
@@ -96,36 +103,36 @@ public class SpelerBordView extends Region {
     /**
      * get kolom
      *
-     * @param x
+     * @param u
      * @return kolom
      */
-    public int Column(int x) {
-        return x / 30;//70 veranderen door dikte vakje
+    public int Column(int u) {
+        return u / 30;
     }
 
    /**
     * get kolom
-    * @param x
+    * @param u
     * @return kolom
     */
-    public int getColumn(int x){
-        return x/30;//70 veranderen door dikte vakje
+    public int getColumn(int u){
+        return u/30;
 
     }
 
     /**
      * get rij
      *
-     * @param y
+     * @param v
      * @return rij
      */
 
-    public int Raw(int y) {
-        return y / 30;//70 veranderen door dikte vakje
+    public int Row(int v) {
+        return v / 30;
     }
 
-    public int getRow(int y){
-        return y/30;//70 veranderen door dikte vakje
+    public int getRow(int v){
+        return v/30;
 
     }
 

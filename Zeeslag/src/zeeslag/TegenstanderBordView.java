@@ -68,7 +68,7 @@ public class TegenstanderBordView extends Region {
      * update hitmarks
      */
     private void updateHitMarks() { // we weten op welke vakken al geschoten is aan de hand van het model
-        Iterator<Hitmark> hitMarks = bordModel.getHitmarks();
+        Iterator<Hitmark> hitMarks = bordModel.getHitmarksSpeler();
         while (hitMarks.hasNext()) {
             Hitmark hits = hitMarks.next();
             Rectangle rechth = new Rectangle(hits.getColumn() * 30, hits.getRow() * 30, 29, 29);

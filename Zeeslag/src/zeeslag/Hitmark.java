@@ -5,7 +5,7 @@
  */
 package zeeslag;
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -16,9 +16,7 @@ public class Hitmark {
 
     private boolean hit;
     private int row, column;
-    //private Boot bootModel;
-    //private ArrayList<Boot>boten;
-    // private Speler spelerModel;
+
 
 /**
  * constructor Hitmark
@@ -43,7 +41,7 @@ public class Hitmark {
     //getters
     
     /**
-     * is geraakt?
+     * is hit?
      * @return geraakt
      */
     public boolean isHit() {

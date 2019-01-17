@@ -47,7 +47,7 @@ public class Boot {
         } else {
             this.gezonken = false;
         }
-        this.orientatie = orientatie; //standaard staat een boor hozizontaal
+        this.orientatie = orientatie;
     }
 
     /**
@@ -66,7 +66,7 @@ public class Boot {
     /**
      * get coordinaten boot enkel vakje
      *
-     * @return deze coordinaten
+     * @return de coordinaten
      */
     public int[] getCoordinaten() {
         int[] c = {this.row, this.column};
@@ -129,7 +129,7 @@ public class Boot {
 
     /**
      * get alle coordinaten
-     * @return elke coordinaat van elk vakje in een boot
+     * @return elke coordinaat van elk vakje van de boot
      */
     public int[][] getAlleCoordinaten() {
         int[][] alleCoordinaten = new int[size][2];
