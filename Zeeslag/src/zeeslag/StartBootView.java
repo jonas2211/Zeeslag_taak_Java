@@ -19,6 +19,10 @@ public class StartBootView extends Region{
     private Boot bootModel;
     private Bord bordModel;
 
+    /**
+     * constructor startBootView
+     * @param bootModel 
+     */
     public StartBootView(Boot bootModel) {
         this.bootModel = bootModel;
      
