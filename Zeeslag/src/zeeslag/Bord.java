@@ -271,7 +271,5 @@ public class Bord {
     public Iterator<Boot> getBotenComp() {
         return botenLijstComp.iterator();
     }
-    public void save (){
-        
-    }
+    
 }
