@@ -11,6 +11,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -140,15 +141,15 @@ public class ZeeslagSpel {
     /**
      * geeft aan wanneer beurten moeten omdraaien
      */
-    /*
-    public void eindeBeurt() {
+    
+    /*public void eindeBeurt() {
         if (huidigeSpeler instanceof SpelerEcht) {
             huidigeSpeler = computer;
         } else {
             huidigeSpeler = spelerEcht;
         }
-    }
-     */
+    }*/
+     
     /**
      * is spel afgelopen?
      *
@@ -176,6 +177,7 @@ public class ZeeslagSpel {
         try {
             JsonWriter writer = gsonner.newJsonWriter(new FileWriter("savedModel.json.txt"));
             writer.jsonValue(json);
+            writer.close();
         } catch (java.io.IOException e) {
 
         }
@@ -184,20 +186,29 @@ public class ZeeslagSpel {
     /**
      * save methode
      */
-    public static void Save() {
-
-    }
+ 
 
     /**
      * inladen van spel
      */
-    public static void loadFromJson() {
-        Gson gson = new Gson();
+    public static ZeeslagSpel loadFromJson() {
+        
+        
         try {
-            Level nieuw = gson.fromJson(new FileReader("dc.json.txt"), Level.class);
+            Gson gson = new Gson();
+            FileReader f = null;
+            f = new FileReader("savedModel.json.txt");
+            ZeeslagSpel nieuw = gson.fromJson(f, ZeeslagSpel.class);
+            f.close();
+            return nieuw;
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ZeeslagSpel.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        catch (IOException ex) {
+            Logger.getLogger(ZeeslagSpel.class.getName()).log(Level.SEVERE, null, ex);
         }
+      return null;
     }
+    
 
 }

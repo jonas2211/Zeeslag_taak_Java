@@ -32,21 +32,6 @@ public class Hitmark {
         return c;
     }
 
-    /*
-    public void setHitmark(int row, int column){
-        for(Boot bootModel : getBoten()){
-            if (bootModel.getRow() == row && bootModel.getColumn() == column){
-                if (bootModel.getLevens() == 0){
-                    bootModel.isGezonken();
-                    System.out.println("gezonken");
-                }
-                else
-                {
-                    bootModel.Geraakt();
-                }
-            }
-        }
-    }*/
     //getters
     public boolean isHit() {
         return hit;

@@ -19,7 +19,6 @@ public class SpelerBordView extends Region {
 
     public SpelerBordView(Bord spelerBord) {
         this.update();
-        //this.updateHitMarks();
 
     }
     private BootView view;
@@ -41,7 +40,6 @@ public class SpelerBordView extends Region {
      */
     void update() {
         Rectangle rechthoek = new Rectangle(300, 300, Color.rgb(55, 131, 186));
-        //twijfel tusse aquamarine en paleturquoise
         this.getChildren().addAll(rechthoek);
         for (int i = 0; i < 11; i++) { //verticaal
             Line lijn = new Line();

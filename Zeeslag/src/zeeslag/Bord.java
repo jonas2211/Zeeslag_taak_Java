@@ -15,10 +15,8 @@ import java.util.Iterator;
  */
 public class Bord {
 
-    //private int boten = 5;
     private int row, column;
     private Boot bootModel;
-    //private Vakje vakje;
     private Hitmark hitmrk;
     private ArrayList<Hitmark> hitmarkList;
     private ArrayList<Boot> botenLijstComp;
@@ -246,6 +244,7 @@ public class Bord {
      * @param endColumn
      * @return vrij of niet
      */
+    
     private boolean isPlaatsVrij(int startRow, int startColumn, int endRow, int endColumn) {
         for (int i = Math.min(startRow, endRow) + 1; i <= Math.max(startRow, endRow) - 1; i++) {
             if (getBootOn(i, startColumn) != null) {
@@ -287,5 +286,8 @@ public class Bord {
      */
     public Iterator<Boot> getBotenComp() {
         return botenLijstComp.iterator();
+    }
+    public void save (){
+        
     }
 }

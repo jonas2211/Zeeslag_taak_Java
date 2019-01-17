@@ -21,106 +21,8 @@ public class Boot {
     private int row, column;
     private Orientatie orientatie;
     private int rotatieHoek;
-    private Type type;
-    private Bord bordModel;
-    private Hitmark hit;
-    //private ArrayList<Boot> Botenlist = new ArrayList<>();
-    //private ArrayList<Boot> BotenlistComp = new ArrayList<>();
-
-    /**
-     * constructor
-     *
-     * @param gezonken
-     * @param size
-     * @param type
-     * @param o
-     * @param column
-     * @param row
-     *//*
-    public Boot(int size, int column, int row, Orientatie o, Type type) {
-        this.gezonken = false;
-        this.type = type;
-        this.size = size;
-        this.levens = size;
-        this.row = row;
-        this.column = column;
-        this.orientatie = o;
-        rotatieHoek = 0;
-        
-        /**
-         * voeg boten van speler toe aan botenlistComp
-     *//*
-        for (int i = 0; i < (vliegdekschip.length)-4; i++)
-        {
-            Botenlist.add(new Boot (vliegdekschip[i], Type.VLIEGDEKSCHIP));
-        }
-
-        for (int i = 0; i < (slagschip.length)-3; i++)
-        {
-            Botenlist.add(new Boot (slagschip[i], Type.SLAGSCHIP));
-        }
-        
-        for (int i = 0; i < (duikboot.length)-2; i++)
-        {
-            Botenlist.add(new Boot (duikboot[i], Type.DUIKBOOT));
-        }
-        
-        for (int i = 0; i < (torpedobootjager.length)-2; i++)
-        {
-            Botenlist.add(new Boot (torpedobootjager[i], Type.TORPEDOBOOTJAGER));
-        }
-        
-        for (int i = 0; i < (patrouilleschip.length)-1; i++)
-        {
-            Botenlist.add(new Boot (patrouilleschip[i], Type.PATROUILLESCHIP));
-        }
-        
-        /**
-         * voeg boten van computer toe aan botenlistComp
-     */
- /*
-        for (int i = 0; i < (vliegdekschipComp.length)-4; i++)
-        {
-            BotenlistComp.add(new Boot (vliegdekschipComp[i], Type.VLIEGDEKSCHIP));
-        }
-
-        for (int i = 0; i < (slagschip.length)-3; i++)
-        {
-            BotenlistComp.add(new Boot (slagschipComp[i], Type.SLAGSCHIP));
-        }
-        
-        for (int i = 0; i < (duikbootComp.length)-2; i++)
-        {
-            BotenlistComp.add(new Boot (duikbootComp[i], Type.DUIKBOOT));
-        }
-        
-        for (int i = 0; i < (torpedobootjagerComp.length)-2; i++)
-        {
-            BotenlistComp.add(new Boot (torpedobootjagerComp[i], Type.TORPEDOBOOTJAGER));
-        }
-        
-        for (int i = 0; i < (patrouilleschipComp.length)-1; i++)
-        {
-            BotenlistComp.add(new Boot (patrouilleschipComp[i], Type.PATROUILLESCHIP));
-        }
-        
-    }*/
-
-    /**
-     * coordinaten meegeven aan boot
-     *
-     * @param coordinaten
-     * @param type
-     */
-    /*
-    public Boot(int[] coordinaten, Type type) {
-        this.row = coordinaten[0];
-        this.column = coordinaten[1];
-        this.type = type;
-        this.gezonken = false;
-    }
-     */
-
+    private Type type;   
+    
     public Boot(int row, int column, Type type, Orientatie orientatie) {
         this.row = row;
         this.column = column;
@@ -142,59 +44,9 @@ public class Boot {
     }
 
     /**
-     * coordinaten EchteSpeler
-     */
-    /*
-    private int[][] vliegdekschip = {   //coordinaten vliegdekschip
-         
-        {0, 1}, {1, 1}, {2, 1}, {3,1}, {4,1}
-        //bv. {Boot.getX,Boot.getY}, ....
-    };
-    private int[][] slagschip  = {   //coordinaten slagschip
-         
-        {8, 6}, {8, 7}, {8, 8}, {8,9}
-    };
-    private int[][] duikboot = {   //coordinaten onderzeeer
-         
-        {7, 3}, {8, 3}, {9, 3}
-    };
-    private int[][] torpedobootjager = {   //coordinaten torpedoboojager
-         
-        {4, 6}, {4, 7}, {4, 8}
-    };
-    private int[][] patrouilleschip = {   //coordinaten Patrouilleschip
-         
-        {5, 1}, {6, 1}
-    };
-     */
-    /**
-     * coordinaten computer
-     */
-    /*
-    private int[][] vliegdekschipComp = {   //coordinaten vliegdekschip
-         
-        {8, 4}, {8, 5}, {8, 6}, {8, 7}, {8, 8}
-        //bv. {Boot.getX,Boot.getY}, ....
-    };
-    private int[][] slagschipComp  = {   //coordinaten slagschip
-         
-        {2, 6}, {2, 7}, {2, 8}, {2,9}
-    };
-    private int[][] duikbootComp = {   //coordinaten onderzeeer
-         
-        {2, 2}, {3, 2}, {4, 2}
-    };
-    private int[][] torpedobootjagerComp = {   //coordinaten torpedoboojager
-         
-        {4, 7}, {5, 7}, {6, 7}
-    };
-    private int[][] patrouilleschipComp = {   //coordinaten Patrouilleschip
-         
-        {8, 0}, {9, 0}
-    };*/
-    /**
      * getters
      */
+    
     /**
      * get type van boot
      *
@@ -268,16 +120,6 @@ public class Boot {
         return rotatieHoek;
     }
 
-    /**
-     * get boten speler
-     *
-     * @return lijst van boten speler
-     */
-    /**
-     * get alle coordinaten van de boot
-     *
-     * @return alleCoordinaten
-     */
 
     public int[][] getAlleCoordinaten() {
         int[][] alleCoordinaten = new int[size][2];
@@ -382,31 +224,11 @@ public class Boot {
     }
 
     /**
-     * coordinaten boten
-     */
-    /*private void CoordinateBoten() {    
-        Iterator<Boot> boten = getBoten();
-        while(boten.hasNext()){
-            Boot coordinaten = boten.next();
-            if (hit.CoordinatenPaar() == getCoordinaten()){
-                hit.isHit();    
-            }
-            // voor coordinatenpaar in boot.getbezettevakjes:
-            // if hitMarker.getcoordinatenpaar == coordinatenpaar;
-            //hitmark.hit = true;
-        }
-    }
-    /**
      * is gezonken
      * @return gezonken
      */
     public boolean isGezonken() {
         return gezonken;
     }
-    /*
-    public void Hit() {
-        this.gezonken = false;
-        levens = levens -1;
-    } hit en geraakt doen hetzelfde
-     */
+
 }

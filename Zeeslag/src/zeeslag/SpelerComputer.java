@@ -5,7 +5,6 @@
  */
 package zeeslag;
 
-import java.util.Iterator;
 
 /**
  *

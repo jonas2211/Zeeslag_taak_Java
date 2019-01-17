@@ -61,8 +61,9 @@ public class ZeeslagController {
 
         tegenstanderPane.setOnMouseClicked(event -> handleMouseClickOnTegenstanderPane(event));
         spelerPane.setOnMouseClicked(event -> handleMouseClickOnSpelerPane(event));
-        btnLoad.setOnAction(event -> handleLoadBtn(event));
-        saveBtn.setOnAction(event -> handleBtnSave(event));
+        btnLoad.setOnAction(event -> setModel(zeeslagModel.loadFromJson()));
+        saveBtn.setOnAction(event -> zeeslagModel.saveToJSON());
+        
         //spelerPane.getChildren().add(view2);
         //spelerPane.getChildren().add(spelerBordView);
 
@@ -99,7 +100,7 @@ public class ZeeslagController {
      *
      * @param mouseEvent
      */
-    /*
+    
     void handleMouseClickOnTegenstanderPane(MouseEvent mouseEvent) {
         int x = (int) mouseEvent.getX();
         int y = (int) mouseEvent.getY();
@@ -110,7 +111,7 @@ public class ZeeslagController {
         zeeslagModel.getComputerBord().setHitmark(rij, kolom);
         tegenStanderBordView.update();
     }
-*/
+
     /**
      * actie op opstartenKnop
      *
@@ -154,7 +155,7 @@ public class ZeeslagController {
      */
     public void handleLoadBtn(ActionEvent event) {
         System.out.println("laad vorige spel");
-        ZeeslagSpel.loadFromJson();
+        setModel(ZeeslagSpel.loadFromJson());
     }
 
     /**

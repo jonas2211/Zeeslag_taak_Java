@@ -7,8 +7,6 @@ package zeeslag;
 
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 /**
@@ -19,7 +17,6 @@ import javafx.scene.shape.Rectangle;
 public class BootView extends Region {
 
     private Boot bootModel;
-    private Rectangle rechthoek;
 
     /*
     *   constructor
